@@ -7,7 +7,7 @@
 
 ## :page_facing_up: Informações
 
-O projeto foi realizado utilizando o framework [ReactJs](https://pt-br.reactjs.org/docs/getting-started.html) conectando com o [Firebase](https://firebase.google.com/docs) que ajudou na autenticação, cadastro, login e persistência dos dados.
+O projeto foi realizado utilizando o framework [VRPEX](https://docs.fivem.net/natives/) conectando com o [OXMYSQL](https://github.com/overextended/oxmysql) 
 
 ❔ **Como Iniciar a Base**
 
@@ -19,7 +19,9 @@ O projeto foi realizado utilizando o framework [ReactJs](https://pt-br.reactjs.o
 [FiveM-Key](https://keymaster.fivem.net/login) ➡ Você vai precisar gerar sua KEY, após isso você vai colocar ela em <em> UnityCleanV2\Base\config\keys.cfg</em> na linha 2. <br/><br/>
 [Steam-Key](https://steamcommunity.com/dev/apikey) ➡ Você vai precisar gerar sua WebApiKey, após isso você vai colocar ela em <em> UnityCleanV2\Base\config\keys.cfg</em> na linha 1. <br/><br/>
 
-> Instruções
+
+💠 **Instruções**
+
 
 Após baixar a base e os arquivos acima, relembrando, você precisa baixar os [artifacts](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master) e jogar dentro da pasta <em>artifacts</em>, após isso você vai colocar a [KEY](https://keymaster.fivem.net/login) e a [WebApiKey](https://steamcommunity.com/dev/apikey) no local citado.
 
@@ -31,9 +33,14 @@ Feito isso basta iniciar o <em>start.exe</em> e o servidor vai estar online em s
 <div align="left">
 <img src="https://media.discordapp.net/attachments/795622143433637889/1015383900773679234/unknown.png?" />
 <img src="https://cdn.discordapp.com/attachments/795622143433637889/1015384376789438474/unknown.png?" />
-</div>
+</div> <br/>
 
-<br/>
+💠 **Como coloco NPC?**
+
+Para ativar os NPCS na base você precisa abrir o arquivo `start.exe` com um bloco ne notas e mudar a opção `onesync_population false` para --> `onesync_population true`
+
+Feito isso você vai procurar pela pasta <em>unity-dispatch</em> e vai abrir o arquivo `dispatch.lua`, você vai ir nas linhas 10 e 39 e apagar os comentários.
+
 <br/>
 
 ⚠️ **Conteúdo Adicional**
