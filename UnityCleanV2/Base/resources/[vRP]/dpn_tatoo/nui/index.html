@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">		
+    <link href="dpn.css" rel="stylesheet" type="text/css"/>
+    
+</head>
+<body>
+    <div id="actionMenuroupa">
+        <div id="preto-backroupa" style="display: none;">
+            <div class="todas-as-informacoesroupa">
+                <div class="caixa-com-asalteracoesroupa">
+                    <div class="alteracoes-sem-transformroupa">
+                        <div class="titleroupa">Bem vindo(a) à loja de tatuagens</div>
+                        <div class="box-com-caracteristicasroupa">
+                        <div class="inicio-criacaoroupa">
+                            <div id="texto-inicialroupa" class="primeira-ajuda">Navegue pela barra lateral<br>para escolher a tatuagem<img style="position:relative;bottom: 1vw; left: 2vw;" src="imagem/seta.png"></div>
+                            <div id="texto-inicialroupa" class="terceira-ajuda" style="height: 0vw;">Satisfeito com o(a) personagem?<br>Clique abaixo e<br>pague por suas roupas<br> <img style="transform: rotate(90deg);" src="imagem/seta.png"></div>
+                        </div>
+
+
+                            <div id="todas-as-roupasroupa" style="display: none;">
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="buttonsroupa">
+                    <div class="btnroupa effect04roupa" data-sm-link-text="Confirmar" target="_blank"><span>Terminar</span></div>
+                    <div class="carrinhodecompraroupa">R$: 0,00</div>
+                    <div class="color-tudoroupa">
+                        <div class="btnlimpar efeitoLimpar" data-sm-link-text="Confirmar" target="_blank"><span>Limpar Tatuagens</span></div>
+                    </div>
+                  
+
+                </div>
+                <div class="alteracoes-fisicasroupa">
+
+                    <div class="box-alteracoesroupa">
+                        <div class="itemroupa" data-item="head" data-item-title="Tatuagens na cabeça">
+                            <img src="imagem/cabeca.png"  style="width: 2.1vw; left: 0.8vw;">
+                            <div class="name-itemroupa">Cabeça</div>
+                        </div>
+                        <div class="itemroupa" data-item="torso" data-item-title="Tatuagens no torso">
+                            <img src="imagem/torso.png"  style="width: 2.1vw; left: 0.7vw;">
+                            <div class="name-itemroupa">Torso</div>
+                        </div>
+                        <div class="itemroupa" data-item="leftarm" data-item-title="Tatuagens no braço esquerdo">
+                            <img src="imagem/bracoesquerdo.png" style="left: 0.9vw;width: 2.1vw">
+                            <div class="name-itemroupa" style="position:relative;top: 3.2vw;">Braço esquerdo</div>
+                        </div>
+                        <div class="itemroupa" data-item="rightarm" data-item-title="Tatuagens no braço direito">
+                            <img src="imagem/bracodireito.png" style="left: 0.9vw;width: 2.1vw">
+                            <div class="name-itemroupa" style="position:relative;top: 3.2vw;">Braço direito</div>
+                        </div>
+                        <div class="itemroupa" data-item="leftleg" data-item-title="Tatuagens na perna esquerda">
+                            <img src="imagem/perna.png">
+                            <div class="name-itemroupa" style="position:relative;top: 3vw;">Perna esquerda</div>
+                        </div>
+                        <div class="itemroupa" data-item="rightleg" data-item-title="Tatuagens na perna direita">
+                            <img src="imagem/perna-direita.png" >
+                            <div class="name-itemroupa"  style="position:relative;top: 3vw;">Perna direita</div>
+                        </div>
+                        <div class="itemroupa" data-item="hair" data-item-title="Micropigmentação">
+                            <img src="imagem/cabeca.png"  style="width: 2.1vw; left: 0.8vw;">
+                            <div class="name-itemroupa">Cabelo</div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+               
+            </div>
+            <div class="remove-clothes">
+                <div class="title-remove">Retirar Roupas</div>
+                <div class="item-clothes-remove mascara" data-clothes="mascara">
+                    <img src="imagem/mascara.png">
+                    <div class="desc-clothes">Mascara</div>
+                </div>
+                <div class="item-clothes-remove blusa" data-clothes="blusa">
+                    <img src="imagem/jaqueta.png">
+                    <div class="desc-clothes">Blusa</div>
+                </div>
+                <div class="item-clothes-remove luva" data-clothes="luva">
+                    <img src="imagem/luvas.png">
+                    <div class="desc-clothes">Luva</div>
+                </div>
+                <div class="item-clothes-remove calca" data-clothes="calca">
+                    <img src="imagem/calca.png">
+                    <div class="desc-clothes">Calça</div>
+                </div>
+                <div class="item-clothes-remove sapato" data-clothes="sapato">
+                    <img src="imagem/sapato.png">
+                    <div class="desc-clothes">Sapatos</div>
+                </div>
+
+            </div>
+            </div>
+            <div class="zoom-escolharoupa" style="display: none;">
+                <div id="rotate-zoomroupa" class="input-zoomroupa">
+                    <input type="range" id="rotateroupa" min="0" max="360" step="1" oninput="onRangeChange('rotacao',this.value)">
+                    <output class="bubbleroupa"></output>
+                    <div class="title-inputsroupa rotacaoroupa">Rotação</div>
+                </div>
+                <div id="rotate-input" class="input-zoomroupa">
+                    <input type="range" id="zoom" value="3" min="0" max="3" step="1" oninput="onRangeChange('zoom',this.value)">
+                    <div class="title-inputsroupa zoom">Zoom</div>
+                </div>
+            </div>
+            
+
+            <div class="confirmacaoroupa" style="display: none;">
+                <div class="box-confirmationroupa">
+                    <div class="titulo-confmationroupa">Aplicar Tatuagens</div>
+                    <div class="sub-title-confiramtionroupa">Você criará a personagem<br><b>Olga maria</b>,de <b>37 anos</b>.</div>
+                    <div class="buttonConfimationroupa aceitarroupa">Confirmar</div>
+                    <div class="buttonConfimationroupa rejeiarroupa">Retornar</div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <script src="jquery.js" type="text/javascript"></script>
+</body>
+</html>

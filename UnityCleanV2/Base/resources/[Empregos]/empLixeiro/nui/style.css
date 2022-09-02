@@ -1,0 +1,264 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-family: "Mukta", sans-serif;
+    width: 100%;
+    height: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-block: hidden;
+    overflow: hidden;
+
+}
+
+.container{
+    position: absolute;
+    width: 700px;
+    height: 445px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    background: #1b1b1b;
+    display: none;
+}
+
+.cima{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+}
+
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.title::before{
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 7%;
+    border-radius: 10px;
+    margin-top: 4%;
+    background: rgb(211, 183, 25);
+}
+
+.dinheiro-box{
+    width: 130px;
+    height: 40px;
+    margin-top: -4.5%;
+    margin-left: 75%;
+}
+
+.text1{
+    margin-top: 4%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.514);
+    font-weight: bold;
+}
+
+.dinheiro{
+    margin-top: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.box-lado{
+    width: 40%;
+    height: 200px;
+    margin-top: 16%;
+    margin-left: 10%;
+    border-radius: 10px;
+    border: 2px solid #3c3c3c;
+    background: #222222;
+}
+
+.box-lado .item{
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10%;
+    margin-top: 5.5%;
+}
+
+.item1{
+    width: 73%;
+    height: 100%;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.514);
+}
+
+.inf{
+    width: 25%;
+ 
+    text-align: right;
+}
+
+.box-lado2{
+    width: 40%;
+    height: 200px;
+    margin-left: 55%;
+    border-radius: 10px;
+
+    margin-top: -29%;
+}
+
+.levelbar{
+    width: 60%;
+    height: 10px;
+    margin-left: 20%;
+    margin-top: 1%;
+    border: 2px solid #3c3c3c;
+    background: #222222;
+    border-radius: 10px;
+}
+
+.bar1{
+    transition: all 1s;
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(211, 183, 25);
+}
+
+
+
+.box-lado2 img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.text-level{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 2%;
+    font-size: 16px;
+    text-align: center;
+}
+
+.text-level2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.iniciar{
+    width: 20%;
+    height: 30px;
+    background: rgb(63, 173, 20);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    margin-left: 40%;
+    margin-top: 2%;
+    transition: ease-in 0.5s;
+}
+
+.iniciar:hover{
+    transform: scale(1.05);
+}
+
+
+.status{
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 2%;
+    
+    margin: auto;
+}
+
+.s-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    width: 50%;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    margin-left: 25%;
+    background: rgb(27, 27, 27);
+    text-align: center;
+    position: relative;
+    top: -20%;
+}
+
+
+.s-item{
+    width: 100%;
+    height: 50px;
+    margin-top: 8%;
+    background: rgb(15, 15, 15,0.6);
+    border-radius: 10px;
+}
+
+.s-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: -1%;
+    color: #fff;
+    text-align: center;
+    transition: all 1s;
+}
+
+
+.levelbar2{
+    width: 60%;
+    height: 10px;
+    margin-left: 20%;
+    margin-top: 1%;
+    border: 2px solid #3c3c3c;
+    background: #222222;
+    border-radius: 10px;
+}
+
+.bar2{
+    transition: all 1s;
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(211, 183, 25);
+}
+
+.text-level3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 12px;
+    margin-top: -2%;
+    text-align: center;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>AlecrimDourado</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <audio id="loading-music" autoplay>
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
+    <div class="music-info">
+        <span style="display: block; text-align: center;"><font color="#ffffff">Painel de Controle</font></span>
+        <span style="display: block; text-align: center;">Pausar Musica: [P]</span>
+        <span style="display: block; text-align: center;">Volume Musica: [w/s]</span>
+    </div>
+	
+		<div class="loader"><font color="#000">Aguarde o carregamento da base...</div>
+		
+    <script src="index.js"></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js'></script>
+	<script type="text/javascript">
+		var music = document.getElementById("loading-music");
+		music.volume = 0.2;
+		document.addEventListener('keypress', (event) => {
+			if(event.key == "p") {
+				if(music.paused) {
+					music.play();
+				}else{
+					music.pause();
+				}
+			}else if(event.key == "s") {
+				music.volume = music.volume-0.05;
+			}else if(event.key == "w") {
+				music.volume = music.volume+0.05;
+			}else if(event.key == "7") {
+				music.src = "doremi.ogg"
+			}else if(event.key == "8") {
+				music.src = "parado.ogg"
+			}
+		});
+		
+	</script>
+
+</body>
+</html>

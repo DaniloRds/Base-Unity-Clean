@@ -1,0 +1,1657 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@font-face {
+    font-family: "Monument Extended Ultrabold";
+    src: url("fonts/MonumentExtended-Ultrabold.otf");
+}
+
+@font-face {
+    font-family: "Monument Extended Regular";
+    src: url("fonts/MonumentExtended-Regular.otf");
+}
+
+@font-face {
+    font-family: "DINPro-Regular";
+    src: url("fonts/DINPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "DINPro-Bold";
+    src: url("fonts/DINPro-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "DINPro-Black";
+    src: url("fonts/DINPro-Black.otf");
+}
+
+
+body {
+    overflow: hidden;
+    user-select: none;
+}
+
+.menu-container {
+    position: absolute;
+    width: 75%;
+    height: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    left: 0; right: 0; top: 0; bottom: 0;
+    margin: auto;
+    border: solid .5vw transparent;
+    background-image: linear-gradient(rgb(226, 226, 226),white), linear-gradient(90deg, #0DE6FF 0%, #9900FF 100%);
+    background-origin: padding-box, border-box;
+    background-clip: content-box, border-box;
+    border-radius: .5rem;
+    max-width: 1920px;
+    max-height: 1080px;
+    background-color: rgb(16, 23, 46);
+    display: none;
+}
+
+.menu-container-darkmode {
+    background-image: linear-gradient(#10131B,#10131B), linear-gradient(90deg, #0DE6FF 0%, #9900FF 100%);
+}
+
+.menu-background {
+    position: relative;
+    background: #373E47;
+    height: 60%;
+    width: 100%;
+}
+
+.menu-background-top {
+    position: relative;
+    height: 50%;
+    background: transparent linear-gradient(280deg, #9900FF 0%, #0DE6FF 100%) 0% 0% no-repeat padding-box;
+}
+
+.menu-background-bottom {
+    position: relative;
+    height: 50%;
+}
+
+.logo {
+    position: absolute;
+    margin: 3% 0 0 10%;
+    width: 8%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50%;
+}
+
+.menu-vehicle-img {
+    position: absolute;
+    bottom: 1%; left: 5%;
+    width: 50%;
+    height: 80%;
+}
+
+.menu-vehicle-img img{
+    position: absolute;
+    width: 100%;
+    bottom: 0; left: 0; right: 0;
+}
+
+.menu-vehicle-container {
+    position: absolute;
+    height: 75%;
+    width: 50%;
+    right: 10%;
+    bottom: 5%;
+    /* background-color: blue; */
+}
+
+.menu-vehicle-class {
+    position: relative;
+    background-color: white;
+    width: fit-content;
+    font-size: .7vw;
+    font-family: "DINPro-Black";
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #9900FF;
+    padding: .3% 1.5%;
+    border-radius: 15px;
+    float: right;
+}
+
+
+.menu-vehicle-name {
+    position: relative;
+    width: 100%;
+    margin-top: 5%;
+    font-size: 4.2vw;
+    font-family: "Monument Extended Ultrabold";
+    text-transform: uppercase;
+    color: white;
+    line-height: 90%;
+    text-align: right;
+    word-break: normal;
+}
+
+.menu-vehicle-buy-container {
+    position: absolute;
+    height: 75%;
+    width: 40%;
+    right: 10%;
+    bottom: 5%;
+}
+
+.menu-vehicle-price {
+    position: relative;
+    width: 100%;
+    font-size: 2.7vw;
+    font-family: "Monument Extended Ultrabold";
+    text-transform: uppercase;
+    color: white;
+    line-height: 90%;
+    text-align: right;
+}
+
+.menu-vehicle-buy-btn {
+    position: relative;
+    width: 20%;
+    height: 16%;
+    font-family: "Monument Extended Ultrabold";
+    color: white;
+    text-transform: uppercase;
+    background-color: #9900FF;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    font-size: .7vw;
+    float: right;
+    margin-top: 2%;
+    overflow: hidden;
+    text-align: center;
+    transition: background .5s, transform .3s;
+}
+
+.menu-vehicle-buy-btn:hover {
+    background-color:  #0087bd;
+}
+
+.menu-vehicle-buy-btn:active {
+    /* width: 22%;
+    height: 18%; */
+    transform: scale(1.1);
+}
+
+
+.menu-change-vehicle-container {
+    position: absolute;
+    bottom: 4%; left: 0; right: 0;
+    margin: auto;
+    width: 13%;
+    height: 6%;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+}
+
+.menu-change-vehicle-button {
+    width: 17%;
+    height: 25%;
+    border-radius: 6px;
+    background-color: #555F6C;
+    margin: auto 3%;
+    transition: transform .5s;
+}
+
+.menu-change-vehicle-button:hover {
+    /* background-color: #8b929b; */
+    transform: scale(1.1);
+    filter: brightness(140%);
+}
+
+.menu-change-vehicle-button:active {
+    background-color: #9900FF;
+}
+
+.menu-change-vehicle-button-focus {
+    background-color: #9900FF;
+}
+
+
+
+
+
+
+.middle-icons {
+    position: relative;
+    margin: 2% auto;
+    width: 90%;
+    height: 11%;
+    display: flex;
+    align-items: center;
+}
+
+.middle-icon-container {
+    position: relative;
+    margin: auto;
+    height: 70%;
+    width: 100%;
+    font-family: "DINPro-Regular";
+    font-size: .7vw;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .5s;
+    border-radius: 5px;
+    
+
+}
+
+.middle-icon-container img {
+    width: 15%;
+    height: 100%;
+    margin: auto auto auto 15%;
+}
+
+.middle-icon-container p {
+    margin: auto 15% auto 3%;
+}
+
+.middle-icons-darkmode {
+    filter: invert();
+}
+
+
+
+.middle {
+    border-left: solid 2px  #9900FF;
+    border-right: solid 2px  #9900FF;
+}
+
+
+
+
+
+.vehicle-classes {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vehicle-class-container {
+    position: relative;
+    margin: auto .7%;
+    width: 13%;
+    height: 90%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.vehicle-class-container img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    height: 100%;
+    transition: 2s -webkit-filter linear;
+}
+
+
+.vehicle-class-container:hover > .vehicle-class{
+    animation: fadeIn 1s forwards;
+}
+
+.vehicle-class-container:hover > .vehicle-classes-class{
+    animation: fadeIn 1s forwards;
+}
+
+
+@keyframes fadeIn {
+    0%{opacity: 0;  }
+    100%{opacity: 1; }
+  }
+
+  @keyframes fadeOut {
+    0%{opacity: 1;  }
+    100%{opacity: 0; }
+  }
+
+.fadeIn {
+    animation: fadeIn 250ms forwards;
+}  
+
+.fadeOut {
+    animation: fadeOut 250ms forwards;
+}
+
+
+.vehicle-class {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: blur(.5rem);
+    opacity: 0;
+    animation: fadeOut 1s forwards;
+}
+
+.vehicle-classes-class {
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    text-align: center;
+    font-family: "Monument Extended Ultrabold";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 1.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 1s forwards;
+}
+
+.vehicle-classes-class:before {
+    content : "";
+    position: absolute;
+    left    : 0; bottom  : 0; right: 0; bottom: 0;
+    margin: auto;
+    height  : 100%;
+    width   : 12%;
+    border-top: 2px solid  #0DE6FF;
+    border-bottom: 2px solid  #9900FF;
+  }
+
+
+
+
+.mais-procurados-title-container {
+    position: relative;
+    height: 10%;
+    width: 40%;
+    margin: 2% 10%;
+}
+
+.mais-procurados-title {
+    color: #9900FF;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    font-family: "Monument Extended Ultrabold";
+    line-height: 80%;
+}
+
+
+.mais-procurados-container {
+    position: relative;
+    width: 80%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 5% auto;
+    filter: drop-shadow(0 0 4px #00000056);
+}
+
+
+
+.mais-procurados-vehicle-container {
+    position: relative;
+    width: 16%;
+    height: 90%;
+    border-radius: 1.5rem;
+    background-color: rgb(251, 251, 251);
+    transition: transform .5s;
+    margin: auto 1%;
+}
+
+.mais-procurados-vehicle-container:hover > .mais-procurados-vehicle-bottom > .mais-procurados-vehicle-buy {
+    animation: fadeIn .5s forwards;
+}
+
+
+.mais-procurados-vehicle-container:hover {
+    /* width: 17%;
+    height: 95%; */
+    transform: scale(1.2);
+    z-index: 999;
+}
+
+
+
+.mais-procurados-vehicle-img {
+    position: relative;
+    height: 60%;
+    width: 100%;
+    background-color: rgb(251, 251, 251);
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mais-procurados-vehicle-img img{
+    width: 90%;
+}
+
+
+.mais-procurados-vehicle-name {
+    position: relative;
+    height: fit-content;
+    max-height: 20%;
+    width: 100%;
+    max-width: 105px;
+    font-family: "DINPro-Black";
+    font-size: .8vw;
+    line-height: 80%;
+    color: #9900FF;
+    text-transform: uppercase;
+    margin: auto 5%;
+    word-break: normal;
+    overflow: hidden;
+}
+
+
+.mais-procurados-vehicle-capacidade {
+    position: relative;
+    max-height: 20%;
+    width: 65%;
+    font-family: "DINPro-Regular";
+    font-size: .7vw;
+    color: #949494;
+    margin: 4% 5%;
+    overflow: hidden;
+}
+
+
+.mais-procurados-vehicle-class {
+    position: absolute;
+    font-family: "DINPro-Black";
+    text-transform: uppercase;
+    font-size: .4vw;
+    letter-spacing: 2px;
+    color: white;
+    background-color: #494949;
+    right: 5%; top: 60%;
+    padding: 1% 5%;
+    border-radius: 1rem;
+}
+
+.mais-procurados-vehicle-bottom {
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    font-family: "Monument Extended Regular";
+    text-transform: uppercase;
+    font-size: .5vw;
+    letter-spacing: 1px;
+    color: white;
+    background-color: #0087bd;
+    border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.mais-procurados-vehicle-new {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background-color: #9900FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mais-procurados-vehicle-price {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    right: 0;
+    font-family: 'Kanit', sans-serif;
+    font-size: .7vw;
+}
+
+.myvehicles-price {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    right: 0;
+    font-family: 'Kanit', sans-serif;
+    font-size: .7vw;
+}
+
+
+.mais-procurados-vehicle-buy {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: fadeOut .5s forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #4fb657;
+    color: white;
+    font-size: .7vw;
+}
+
+
+  ::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+
+
+
+.menu-compra-top {
+    position: relative;
+    width: 100%;
+    height: 12%;
+    background: transparent linear-gradient(280deg, #9900FF 0%, #0DE6FF 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    align-items: center;
+}
+
+
+.menu-compra-logo {
+    position: absolute;
+    width: 8%;
+    height: 60%;
+    left: 7%;
+}
+
+.menu-compra-logo img {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    margin: auto;
+    width: 50%;
+}
+
+
+.menu-compra-back-container {
+    position: relative;
+    height: 10%;
+    width: 10%;
+    margin-left: 7%;
+    display: flex;
+    align-items: center;
+    font-family: "DINPro-Black";
+    font-size: .7vw;
+    text-transform: uppercase;
+    color: gray;
+}
+
+.menu-compra-back-container p{
+    transition: transform .5s, color .5s;
+}
+
+.menu-compra-back-container p:hover {
+    transform: scale(1.1);
+    color: #9900FF;
+}
+
+.menu-compra-vehicle-container {
+    position: relative;
+    height: 70%;
+    width: 87%;
+    margin: auto;
+}
+
+.menu-compra-vehicle-class {
+    position: relative;
+    border-radius: 15px;
+    background-color: #9900FF;
+    height: 3%;
+    width: fit-content;
+    font-family: "DINPro-Black";
+    color: white;
+    text-transform: uppercase;
+    font-size: .5vw;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    padding: 0 .5%;
+    margin: .5%;
+}
+
+.menu-compra-vehicle-name {
+    position: relative;
+    color: black;
+    height: fit-content;
+    width: fit-content;
+    max-width: 75%;
+    font-family: "Monument Extended Ultrabold";
+    text-transform: uppercase;
+    font-size: 5vw;
+    letter-spacing: 4px;
+    padding: 0 .5%;
+    word-break: normal;
+    line-height: 90%;
+    margin-top: 1%;
+    overflow: hidden;
+}
+
+.menu-compra-vehicle-name-darkmode {
+    color: white;
+}
+
+.menu-compra-vehicle-price {
+    position: relative;
+    color: gray;
+    height: fit-content;
+    width: fit-content;
+    max-width: 60%;
+    font-family: "Monument Extended Ultrabold";
+    text-transform: uppercase;
+    font-size: 3.2vw;
+    letter-spacing: 4px;
+    padding: 0 .5%;
+    word-break: normal;
+    line-height: 90%;
+    margin-top: 1%;
+}
+
+
+.menu-compra-buttons-container {
+    position: relative;
+    width: 30%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    margin: 3% 0;
+}
+
+.menu-compra-buy {
+    position: relative;
+    width: 35%;
+    height: 60%;
+    margin:.5%;
+    font-family: "Monument Extended Ultrabold";
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    background-color:  #0087bd;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    font-size: .7vw;
+    margin-top: 2%;
+    overflow: hidden;
+    text-align: center;
+    transition: background .5s, transform .3s;
+}
+
+.menu-compra-buy:hover {
+    background-color: #9900FF;
+}
+
+.menu-compra-buy:active {
+    transform: scale(1.1);
+}
+
+
+
+
+.menu-compra-test {
+    position: relative;
+    width: 35%;
+    height: 60%;
+    margin: .5%;
+    font-family: "Monument Extended Ultrabold";
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    background-color:  #bda100;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    font-size: .7vw;
+    margin-top: 2%;
+    overflow: hidden;
+    text-align: center;
+    transition: background .5s, transform .3s;
+    margin-left: 5%;
+
+
+
+    /* descomentar caso queira desativar o test drive */
+    
+    /* display: none;*/ 
+
+
+}
+
+.menu-compra-test:hover {
+    background-color: #9900FF;
+}
+
+.menu-compra-test:active {
+    transform: scale(1.1);
+}
+
+
+
+.menu-compra-alugar {
+    position: relative;
+    width: 35%;
+    height: 60%;
+    margin: .5%;
+    font-family: "Monument Extended Ultrabold";
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    background-color:  #C9353B;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    font-size: .7vw;
+    margin-top: 2%;
+    overflow: hidden;
+    text-align: center;
+    transition: background .5s, transform .3s;
+    margin-left: 5%;
+
+
+
+    /* descomentar caso queira desativar a opção de alugar o veículo */
+    
+    /* display: none;*/ 
+
+
+}
+
+.menu-compra-alugar:hover {
+    background-color: #9900FF;
+}
+
+.menu-compra-alugar:active {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+.menu-compra-vehicle-img {
+    position: absolute;
+    right: 0;
+    top: 0; bottom: 0;
+    margin: auto;
+    width: 70%;
+    height: 80%;
+}
+
+.menu-compra-vehicle-img img {
+    position: absolute;
+    width: 100%;
+    left: 0; right: 0; top: 0; bottom: 0;
+    margin: auto;
+}
+
+
+.menu-compra-vehicle-info {
+    position: relative;
+    width: 25%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    font-family: "DINPro-Regular";
+    color: gray;
+    margin: .5% .5%;
+    font-size: .9vw;
+}
+
+
+
+
+
+
+
+
+.relacionados-title-container {
+    position: relative;
+    height: fit-content;
+    width: 40%;
+    margin: 1% 7%;
+}
+
+.relacionados-title {
+    color: #9900FF;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    font-family: "Monument Extended Ultrabold";
+    line-height: 80%;
+}
+
+
+.relacionados-container {
+    position: relative;
+    width: 80%;
+    height: 30%;
+    margin: 0 auto 5% auto;
+    filter: drop-shadow(0 0 4px #00000056);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.relacionados-vehicle-container {
+    position: relative;
+    width: 16%;
+    height: 90%;
+    border-radius: 1.5rem;
+    background-color: rgb(251, 251, 251);
+    transition: transform .5s;
+    flex: 0 0 auto;	
+    margin: 0 1.9%;
+    /* overflow: auto; */
+}
+
+.relacionados-vehicle-container:hover > .mais-procurados-vehicle-bottom > .mais-procurados-vehicle-buy {
+    animation: fadeIn .5s forwards;
+}
+
+
+.relacionados-vehicle-container:hover {
+    transform: scale(1.1);
+    z-index: 999;
+}
+
+.arrows-container {
+    position: absolute;
+    width: 85%;
+    height: 30%;
+    margin: auto;
+    left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    color: rgb(177, 177, 177);
+}
+
+.arrow {
+    transition: color .5s, transform .2s;
+}
+
+.arrow-right {
+    position: absolute;
+    right: 0;
+}
+
+.arrow:hover {
+    color: gray;
+}
+
+.arrow:active {
+    transform: scale(1.2);
+}
+
+
+
+
+.black-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    top: 0; right: 0; left: 0; bottom: 0;
+    margin: auto;
+    display: none;
+}
+
+.popup-container {
+    position: absolute;
+    top: 0; right: 0; left: 0; bottom: 0;
+    margin: auto;
+    width: 35%;
+    height: 40%;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 10px rgba(253, 253, 253, 0.15);
+    font-family: "DINPro-Regular";
+    color: white;
+    display: none;
+}
+
+
+
+.popup-color {
+    position: absolute;
+    top: 0; right: 0; left: 0; bottom: 0;
+    margin: auto;
+    width: 35%;
+    height: 40%;
+    background-color: rgba(255, 255, 255, 0.863);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 10px rgba(253, 253, 253, 0.15);
+    font-family: "DINPro-Bold";
+    color: white;
+    display: none;
+}
+
+.popup-color p {
+    color: #9900FF;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+.color-picker {
+    position: absolute;
+    top: 0; right:0; left: 0; bottom: 0;
+    width: 30%;
+	height: 40%;
+    margin: auto;
+    border: 5px solid rgba(0, 0, 0, 0.055);
+    border-radius: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,.3) 0%, #131313 50%, rgba(0,0,0,.3) 100%);
+}
+
+
+.vehicle-color {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0; right: 0;
+}
+
+.color-picker:hover, .color-picker:focus {
+	border-color: rgba(0, 0, 0, 0.603);
+}
+
+.continuar-btn {
+    position: absolute;
+    bottom: 5%; left: 0; right: 0;
+    padding: 1% 3%;
+    margin: auto;
+    outline: none;
+    border: none;
+    background-color: #9900FF;
+    border-radius: 15px;
+    color: white;
+    font-size: 1vw;
+    font-family: "DINPro-Bold";
+    text-transform: uppercase;
+    transition: background-color .5s, transform .3s;
+    width: 30%;
+    height: fit-content;
+}
+
+.continuar-btn:hover {
+    background-color: #C9353B;
+}
+
+.continuar-btn:active {
+    transform: scale(1.1);
+}
+
+
+.popup-top {
+    position: absolute;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 75%;
+    width: 100%;
+    background: linear-gradient(154deg, rgba(240,86,86,1) 0%, rgba(240,86,86,1) 50%, rgba(231,77,79,1) 50%, rgba(231,77,79,1));
+}  
+
+
+.loading { 
+    position: relative;
+    background: rgb(240, 240, 240);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.loading img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 20%;
+}
+
+
+.popup-bottom {
+    position: absolute;
+    background-color: white;
+    height: 25%;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+
+.popup-display {
+    display: none;
+}
+
+.popup-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: #0CBE64;
+}
+
+.fail {
+    background-color: #C9353B;
+}
+
+.popup-img img {
+    width: 75%;
+    height: 100%;
+    margin: auto;
+}
+
+.popup-icon {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin: 10% auto 3% auto;
+}
+
+.popup-icon i{
+    font-size: 5vw;
+    color: white;
+}
+
+
+.popup-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    font-family: "DINPro-Bold";
+}
+
+.popup-text {
+  font-size: .8vw;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2% 10% 0 10%;
+}
+
+.warning-text {
+    color: #0CBE64;
+    text-transform: uppercase;
+    text-align: center;
+    width: 90%;
+    height: fit-content;
+    font-size: 1.5vw;
+    font-family: "DINPro-Bold";
+    margin: 0 5%;
+}
+
+.popup-buttons {
+    position: absolute;
+    height: 25%;
+    width: 60%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-button {
+    background-color: rgba(0, 0, 0, 0.233);
+    outline: none;
+    border: none;
+    width: 40%;
+    height: 40%;
+    margin: auto 5%;
+    border-radius: 10px;
+    transition: background .5s;
+    color: white; 
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-family: "DINPro-Bold";
+}
+
+.popup-button:hover {
+    background-color: rgba(240,86,86,1); 
+}
+
+.popup-button:active {
+    background-color: rgb(160, 0, 252); 
+}
+
+
+
+
+
+  @keyframes popUpEntrada {
+    0%{opacity: 0; bottom: 100%;}
+    75%{bottom: 0;}
+    100%{opacity: 1;}
+  }
+
+  @keyframes popUpSaida {
+    0%{opacity: 1; top: 0;}
+    75%{opacity: 1;}
+    100%{opacity: 0;top: 100%;}
+  }
+
+
+.popUpEntrada{
+    display: block !important;
+    animation: popUpEntrada .7s;
+}
+.popUpSaida{
+    display: block !important;
+    animation: popUpSaida .7s;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+.other-buttons {
+    position: absolute;  
+    top: 1%; right: 1%;
+    width: 5%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.close-btn {
+    position: relative;
+    display: inline;
+    color: rgb(0, 193, 252);
+    font-size: 1.5vw;
+    transition: transform .5s, color .5s;
+    margin: auto;
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+    color: rgb(252, 7, 252);
+}
+
+.close-btn:active {
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+.mode-btn {
+    position: relative;
+    display: inline;
+    color: rgb(0, 193, 252);
+    font-size: 1.3vw;
+    transition: transform .5s, color .5s;
+    margin: auto;
+    bottom: 1px;
+}
+
+.mode-btn-tooltip {
+    position: absolute;
+    border-radius: 5px;
+    width: 400%;
+    height: 110%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0; bottom: 0; right: 150%;
+    margin: auto;
+    font-size: .5vw;
+    font-family: "DINPro-Regular";
+    text-align: center;
+    line-height: 100%;
+    opacity: 0;
+    visibility: hidden;
+
+    animation: fadeOutRight .3s forwards;
+}
+
+@keyframes fadeInLeft {
+    0% { opacity: 0; right: 0; visibility: visible; }
+    100% { opacity: 1; right: 150%; visibility: visible; }
+}
+
+@keyframes fadeOutRight {
+    0% { opacity: 1; right: 150%; visibility: visible;}
+    100% { opacity: 0; right: 0; visibility: hidden;}
+}
+
+
+.mode-btn-tooltip:before {
+    position: absolute;
+    content: "";
+    left: 92%; top: 0; bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: .4vw solid transparent;
+    border-right: .4vw solid transparent;
+    border-bottom: .4vw solid rgba(0, 0, 0, 0.7);
+    transform: rotate(90deg);
+}
+
+.mode-btn:hover .mode-btn-tooltip {
+    animation: fadeInLeft .3s forwards;
+}
+
+
+.mode-btn:hover  {
+    transform: scale(1.1);
+    color: rgb(252, 7, 252);
+}
+
+.mode-btn:active {
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+#menu-classe {
+    display: none;
+}
+
+.class-container {
+    position: relative;
+    width: 85%;
+    height: fit-content;
+    margin: 0 auto 5% auto;
+    filter: drop-shadow(0 0 4px #00000056);
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.class-vehicle-container {
+    position: relative;
+    width: 80%;
+    height: 25vh;
+    border-radius: 1.5rem;
+    background-color: rgb(251, 251, 251);
+    transition: transform .5s;
+    margin: 4% auto;
+    overflow: hidden;
+}
+
+.class-vehicle-container:hover > .mais-procurados-vehicle-bottom > .mais-procurados-vehicle-buy {
+    animation: fadeIn .5s forwards;
+}
+
+
+.class-vehicle-container:hover {
+    transform: scale(1.1);
+    z-index: 999;
+}
+
+
+
+
+.searchBox {
+    position: absolute;
+    top: 20%; right: 10%;
+    background-color: #9900FF;
+    width: 10%;
+    padding: 0 .8%;
+    height: 3%;
+    border-radius: 15px;
+    transition: filter .3s, transform .3s;
+    overflow: hidden;
+}
+
+.searchBox:hover {
+    transform: scale(1.1);
+}
+
+.searchBox:focus-within{
+    filter: drop-shadow(2px 2px 5px #9900FF);
+    transform: scale(1.1);
+}
+
+.searchBox input {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: .7vw;
+    font-family: "DINPro-Bold", "FontAwesome";
+    text-transform: uppercase;
+}
+
+::placeholder { 
+    color: white;
+    opacity: .7;
+  }
+
+
+
+
+.filterContainer {
+    position: absolute;
+    top: 20%; right: 23%;
+    background-color: #9900FF;
+    width: fit-content;
+    font-family: "DINPro-Bold";
+    color: rgba(255, 255, 255, .7);
+    padding: 0 .8%;
+    height: 3%;
+    font-size: .7vw;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    transition: transform .3s, color .3s;
+    text-transform: uppercase;
+}
+
+.filterContainer:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+.filterContainer:active {
+    transform: scale(1.2);
+}
+
+
+
+
+
+.myvehicles-container {
+    position: relative;
+    margin: auto auto 5% auto;
+    width: 80%;
+    height: 30%;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid;
+    border-color: transparent;
+    transition: filter .5s, border-color .5s;
+}
+.myvehicles-container:hover {
+    filter: drop-shadow(2px 2px 5px #9900FF);
+    border-color: #9900FF;
+}
+
+.myvehicles{
+    position: relative;
+    filter: blur(.5rem);
+    opacity: 0;
+    animation: fadeOut 1s forwards;
+    width: 100%;
+    height: 100%;
+}
+
+.myvehicles img {
+    position: absolute;
+    width: 100%;
+    top: -110%;
+    margin: auto;
+}
+
+.myvehicles-container img {
+    position: absolute;
+    top: -110%;
+    margin: auto;
+    width: 100%;
+    transition: 2s -webkit-filter linear;
+}
+
+.myvehicles-text {
+    position: absolute;
+    height: 25%;
+    width: 100%;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    text-align: center;
+    font-family: "Monument Extended Ultrabold";
+    text-shadow: 2px 2px #9900FF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(236, 236, 236);
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 1s forwards;
+}
+
+.myvehicles-text:before {
+    content : "";
+    position: absolute;
+    left    : 0; bottom  : 0; right: 0; bottom: 0;
+    margin: auto;
+    height  : 100%;
+    width   : 12%;
+    border-top: 2px solid  #0DE6FF;
+    border-bottom: 2px solid  #9900FF;
+  }
+
+
+
+.myvehicles-container:hover > .myvehicles{
+    animation: fadeIn 1s forwards;
+}
+
+.myvehicles-container:hover > .myvehicles-text{
+    animation: fadeIn 1s forwards;
+}
+
+
+
+
+
+
+
+
+.timer-container {
+    position: absolute;
+    width: 12%;
+    height: 10%;
+    left: 1%; top: 40%;
+    text-align: center;
+    font-family: "Monument Extended Ultrabold";
+    font-size: 1vw;
+    color:white;
+    text-transform: uppercase;
+    border: solid 4px transparent;
+    background-image: linear-gradient(90deg,#10131B,#10131B), linear-gradient(90deg, #0DE6FF 0%, #9900FF 100%);
+    background-origin: padding-box, border-box;
+    background-clip: content-box, border-box;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.timer-container p {
+    position: relative;
+    top: 5%;
+    line-height: 10%;
+    text-shadow: 2px 2px #9900FF;
+}
+
+.timer {
+    position: relative;
+    background-image: linear-gradient(90deg, #0DE6FF 0%, #9900FF 100%);
+    width: fit-content;
+    height: fit-content;
+    padding: 0 5%;
+    text-align: center;
+    color: rgb(243, 243, 243);
+    border-radius: 15px;
+    margin: auto;
+    /* filter: drop-shadow(2px 2px 5px #9900FF); */
+}
+
+.timer p {
+    text-shadow: 5px 2px 5px #ff00f2;
+    top: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-admin-container {
+    position: absolute;
+    width: 25%;
+    height: 40%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    left: 0; right: 0; top: 0; bottom: 0;
+    margin: auto;
+    border: solid 7px transparent;
+    background-image: linear-gradient(#10131B,#262b38), linear-gradient(90deg, #0DE6FF 0%, #9900FF 100%);
+    background-origin: padding-box, border-box;
+    background-clip: content-box, border-box;
+    border-radius: .5rem;
+    max-width: 494px;
+    max-height: 388px;
+    color: rgb(235, 235, 235);
+    font-family: "Monument Extended Ultrabold";
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px #0087bd;
+
+    display: none;
+}
+
+.menu-admin-options-container {
+    position: absolute;
+    left: 0; bottom: 0; right: 0; top: 0;
+    margin: 15% auto 0 auto;
+    height: 70%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-admin-options {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-admin-input {
+    position: relative;
+    outline: none;
+    border: none;
+    color: rgb(235, 235, 235);
+    font-family: "DINPro-Bold";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #9900FF;
+    font-size: .8vw;
+    border-radius: 15px;
+    padding: 0 5%;
+    width: 80%;
+    height: 35%;
+    margin: 2% auto;
+    transition: transform .25s;
+}
+
+.admin-buttons {
+    position: relative;
+    margin: auto;
+    height: 25%;
+    width: 100%;
+    flex-direction: row;
+}
+
+.admin-button {
+    position: relative;
+    outline: none;
+    border: none;
+    color: rgb(235, 235, 235);
+    font-family: "DINPro-Bold";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #31b95e;
+    font-size: .8vw;
+    border-radius: 15px;
+    padding: 2% 0;
+    width: 35%;
+    margin: auto 5%;
+    height: fit-content;
+    transition: transform .25s;
+}
+
+.remove {
+    background-color: #C9353B;
+}
+
+.update {
+    background-color: #0087bd;
+    width: 80%;
+    height: 70%;
+}
+
+.menu-admin-input:hover, .menu-admin-input:focus, .admin-button:hover {
+    transform: scale(1.05);
+}
+
+.admin-button:active {
+    transform: scale(1.1);
+}

@@ -1,0 +1,264 @@
+body{
+    user-select: none;
+}
+
+@font-face{
+    font-family: Roboto-Thin;
+    src: url("font/Roboto-Thin.ttf");
+}
+
+#actionmenu{
+    position: absolute;
+    right: 4vw;
+    top: 5vw;
+    width: 23vw;
+    height: 43vw;
+    border-radius: 1.5vw;
+    overflow: hidden;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.74);
+}
+
+
+
+#btn-menu-itens{
+    position: relative;
+    width: 23vw;
+    height: 7vw;
+}
+
+.text{
+    position: relative;
+    top: 0.4vw;
+    color: white;
+    font-family: Roboto-Thin;
+    font-size: 1.6vw;
+    text-align: center;
+}
+
+.content-itens{
+    position: relative;
+    top: 0.5vw;
+    width: 23vw;
+    height: 4.5vw;
+}
+
+.item{
+    position: relative;
+    display: inline-block;
+    top: 0.5vw;
+    left: 2vw;
+    width: 3.5vw;
+    height: 3.5vw;
+    background-color: rgba(255, 255, 255, 0.733);
+    border-radius: 0.6vw;
+    transition: 0.2s;
+}
+
+.item:hover{
+    transform: scale(1.07);
+}
+
+.item img{
+    position: relative;
+    top: 0.5vw;
+    left: 0.5vw;
+    width: 2.5vw;
+}
+
+#btn-menu-modification{
+    position: relative;
+    width: 23vw;
+    height: 30vw;
+}
+
+#btn-menu-cam{
+    position: relative;
+    width: 23vw;
+    height: 6vw;
+}
+
+.line{
+    position: relative;
+    width: 21vw;
+    left: 1vw;
+    height: 0.2vw;
+    top: 0.8vw;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, white));
+    border: transparent;
+}
+
+.hair{
+    position: relative;
+    top: 5.3vw;
+    display: none;
+}
+
+.moustache{
+    position: relative;
+    top: 4vw;
+    display: none;
+}
+
+.eyebrow{
+    position: relative;
+    top: 9vw;
+    display: none;
+}
+
+.make{
+    position: relative;
+    top: 3vw;
+    display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 22vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.face{
+    position: relative;
+    top: 2.4vw;
+    display: none;
+    height: 22vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.text-modification{
+    position: relative;
+    font-family: Roboto-Thin;
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+    right: 2.5vw;
+
+}
+
+
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 18vw;
+  height: 0.2vw;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(20%, white));
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.9vw;
+    height: 0.9vw;
+    border-radius: 50%; 
+    background: white;
+    cursor: pointer;
+  }
+  
+.cam-itens{
+    position: relative;
+    top: 1vw;
+    left: 4.1vw;
+}
+
+
+
+.item-modification{
+    position: relative;
+    margin-bottom: 3vw;
+    left: 2.5vw;
+}
+
+.item-modification p{
+    color: white;
+    position: absolute;
+}
+
+
+
+::-webkit-scrollbar {
+   display: none;
+}
+
+.introduction{
+    position: relative;
+    top: 3vw;
+}
+
+.title{
+    font-family: Roboto-Thin;
+    color: white;
+    font-size: 1.7vw;
+    text-align: center;
+    position: relative;
+}
+
+.cadeira{
+    position: relative;
+    top: 5vw;
+    width: 3.5vw;
+    height: 3.5vw;   
+    background-color: rgba(255, 255, 255, 0.767);
+    border-radius: 0.7vw;
+    margin-bottom: 0.7vw;
+    left: 9.9vw;
+    transition: 0.2s;
+}
+
+.cadeira:hover{
+    transform: scale(1.05);
+}
+
+.cadeira span{
+    font-family: Roboto-Thin;
+    color: black;
+    font-size: 2vw;
+    position: relative;
+    left: 1.2vw;
+    top: 0.7vw;
+}
+
+
+.price{
+    position: relative;
+    width: 5vw;
+    height: 1.7vw;
+    background-color: rgb(204, 204, 204);
+    color: black;
+    font-size: 1vw;
+    border-radius: 0.2vw;
+    font-family: Roboto-Thin;
+    text-align: center;
+    line-height: 1.8vw; 
+    top: 1vw;   
+    left: 2vw;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.price:hover{
+    transform: scale(1.05);
+}
+
+.confirm{
+    position: relative;
+    width: 5vw;
+    height: 1.7vw;
+    background-color: rgb(119, 255, 192);
+    color: black;
+    font-size: 1vw;
+    border-radius: 0.2vw;
+    font-family: Roboto-Thin;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.8vw;  
+    left: 8vw;  
+    bottom: 0.7vw;
+    transition: 0.2s;
+}
+
+.confirm:hover{
+    transform: scale(1.05);
+}

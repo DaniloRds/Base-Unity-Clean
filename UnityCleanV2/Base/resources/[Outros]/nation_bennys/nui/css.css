@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body,td,th { font-size: 12px; font-family: 'Bebas Neue', cursive; color: #666; cursor: default; vertical-align: baseline; outline: 0; line-height: 1; margin: 0; padding: 0; word-wrap: break-word; }
+a,a:link,a:visited,a:active,a:hover { font-family: arial; font-size: 12px; color: #666; text-decoration: none; }
+div,applet,object,iframe,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,legend,table,caption,tbody,tfoot,thead,tr { border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; margin:0; padding:0; }
+:focus { outline:0; }
+img { border:none; }
+::-webkit-scrollbar { width: 0; }
+::selection { background: #333; color: #999; }
+::-moz-selection { background: #333; color: #999; }
+
+#actionmenu {
+	position: absolute;
+	left: 65px;
+	top: 65px;
+	width: 400px;
+	height: 700px;
+	display: none; 
+/*	transform: perspective(400px) rotateY(10deg); */
+	border-radius: 15px; 
+	font-family: 'Bebas Neue', cursive;
+}
+
+.prevent-click {
+	pointer-events: none;
+	animation: blur 2s ease 0s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes blur {
+	0% {
+		filter: blur(0px);
+	}
+
+	100% {
+		filter: blur(3px);
+	}
+} 
+
+
+#repair {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.274);
+	left: 470px;
+	top: 265px;
+	width: 170px;
+	height: 70px;
+	padding: 30px;
+	display: none; 
+	border-radius: 15px; 
+	font-family: 'Bebas Neue', cursive;
+	color: white;
+	text-align: center;
+	font-size: 25px;
+
+	-webkit-animation-name: slideInRight;
+	animation-name: slideInRight;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+#principal {
+	position: absolute;
+	width: 400px;
+	height: 500px;
+	border-radius: 15px;
+	background: url("https://cdn.discordapp.com/attachments/743222015745327134/745568961105756170/bennys.png");
+	background-color: rgba(0, 0, 0, 0.274);
+	filter: brightness(1.4);
+	font-family: 'Bebas Neue', cursive;
+}
+
+
+.menu {
+	position: absolute;
+	display: none;
+	margin: -5px 40px 10px;
+	width: 80%;
+	height: 70%;
+	overflow-y: scroll;
+	border-radius: 20px;
+}
+
+.titulo {
+	position: relative;
+	text-align: center;
+	top: 10px;
+	color: white;
+	font-size: 40px;
+}
+
+.titulo img {
+	width: 150px;
+}
+
+
+.option {
+	position: relative;
+	float: left;
+	width: 70px;
+	height: 100px;
+	margin: 15px 5px auto;
+	box-shadow: 3px 2px 0px #24242457;
+	border-radius: 10px;
+	border: 1px solid rgb(211, 211, 211);
+	background-color:  rgba(27, 27, 27, 0.445);
+}
+
+.option img {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	bottom: 10px;
+}
+
+.option span {
+	font-size: 15px;
+	text-align: center;
+	color: rgb(0, 0, 0);
+	font-family: 'Bebas Neue', cursive;
+}
+
+.option:hover {
+	background-color:  rgba(27, 27, 27, 0.815);
+}
+
+.option:active > img {
+	filter: brightness(0.5) sepia(1) saturate(10000%) hue-rotate(185deg) brightness(1.5);
+}
+
+.option:hover > .textbox {
+	display: block;
+}
+
+.option:active > .textbox { 
+	background-color: rgba(0, 183, 255, 0.767);
+}
+
+.option:active > .textbox span { 
+	color: rgb(190, 190, 190)
+}
+
+.option:active {
+	background-color:  rgba(27, 27, 27, 0.685);
+	border-color: rgb(0, 217, 255);
+}
+
+
+
+
+
+
+
+
+.option2 {
+	position: relative;
+	width: 70px;
+	height: 100px;
+	margin: 15px 5px auto;
+	box-shadow: 3px 2px 0px #24242457;
+	border-radius: 10px;
+	border: 1px solid rgb(211, 211, 211);
+	background-color:  rgba(27, 27, 27,.5);
+	color: white;
+	font-family: 'Bebas Neue', cursive;
+}
+
+.option2 img {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	bottom: 10px;
+}
+
+.option2 span {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 5px;
+	margin: auto;
+	font-size: 15px;
+	letter-spacing: 1px;
+
+}
+
+.option2:hover {
+	background-color:  rgba(0, 132, 141, 0.685);
+}
+
+.option2:hover > .textbox {
+	display: block;
+}
+
+.option2:focus > .textbox {
+	display: block;
+}
+
+.option2:focus {
+	background-color:  rgba(4, 198, 212, 0.548);
+	border: 2px solid rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+.textbox {
+	display: none;
+	position: absolute;
+	background-color:  rgb(168, 168, 168);
+	right: 1px;
+	padding: 2px 0;
+	bottom: 1px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	width: 66px;
+
+	-webkit-animation-name: slideInDown;
+	animation-name: slideInDown;
+	-webkit-animation-duration: .2s;
+	animation-duration: .2s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+
+.voltar {
+	display: none;
+	width: 100px;
+	position: absolute;
+	text-align: center;
+	margin: auto;
+	background-color: rgba(150, 0, 0, 0.356);
+	border-radius: 5px;
+	transform: skew(-10deg);
+	border: 0px solid white;
+	bottom: 140px;
+	padding: 10px 0;
+	font-size: 20px;
+	color: white;
+	font-family: 'Bebas Neue', cursive;
+}
+
+.voltar:active {
+	box-shadow: 0px 0px 0px 1px rgba(150, 0, 0, 0.829);
+	animation: anim-shadow .3s forwards;
+}
+
+.voltar:hover {
+	background-color: rgba(150, 0, 0, 0.5);
+}
+
+
+
+
+
+.price {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	bottom: 140px;
+	background-color: rgba(0, 0, 0, 0.493);
+	padding: 13px 5px; 
+	border: 0px solid rgb(14, 14, 14);
+	font-size: 20px;
+	color: rgb(182, 182, 182);
+	width: 135px; 
+	border-radius: 10px;
+	text-align: center;
+}
+
+.price:hover {
+	background-color: rgba(0, 0, 0, 0.575);
+}
+
+
+
+.camera {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	bottom: 85px;
+	background-color: rgba(0, 0, 0, 0.493);
+	padding: 13px 5px; 
+	border: 0px solid rgb(14, 14, 14);
+	font-size: 20px;
+	color: white;
+	width: 300px; 
+	border-radius: 10px;
+	text-align: center;
+	opacity: 0.5;
+}
+
+.camera:hover {
+	background-color: rgba(0, 0, 0, 0.575);
+}
+
+
+
+
+.pagar {
+	position: absolute;
+	width: 100px;
+	right: 0;
+	text-align: center;
+	padding: 10px 0;
+	background-color: rgba(0, 122, 20, 0.308);
+	color: white;
+	border: 0;
+	border-radius: 5px;
+	font-size: 20px;
+	font-family: 'Bebas Neue', cursive;
+	bottom: 140px;
+	display: none;
+	transform: skew(10deg);
+}
+
+.pagar:hover {
+	background-color: rgba(0, 122, 20, 0.623);
+}
+
+.pagar:active {
+	box-shadow: 0px 0px 0px 1px rgba(5, 150, 0, 0.863);
+	animation: anim-shadow .3s forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+.reparar {
+	width: 100px;
+	margin: 10px;
+	text-align: center;
+	padding: 10px 0;
+	background-color: rgba(0, 122, 20, 0.308);
+	color: white;
+	border: 0;
+	border-radius: 10px;
+	font-size: 20px;
+	font-family: 'Bebas Neue', cursive;
+	
+}
+
+.reparar:hover {
+	background-color: rgba(0, 122, 20, 0.623);
+}
+
+.reparar:active {
+	box-shadow: 0px 0px 0px 1px rgba(5, 150, 0, 0.863);
+	animation: anim-shadow .3s forwards;
+}
+
+
+
+
+
+
+
+.wheel-color {
+	font-size: 30px;
+	color: white;
+	margin: 240px auto;
+	text-align: center;
+}
+
+
+.color-picker {
+	position:relative;
+	margin: auto;
+	top: 150px;
+	display: block;
+	text-align: center;
+}
+
+.color{
+	position:absolute;
+	top: 0;
+	right:0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	width:100px;
+	height:100px;
+	border: 5px solid rgba(0, 0, 0, 0.055);
+	border-radius:100%;
+}
+
+.color:hover {
+	border-color: rgba(0, 0, 0, 0.603);
+}
+
+.hide {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	visibility: hidden;
+}
+
+
+
+
+.color-selector {
+	display: none;
+	position: relative;
+	color: rgb(197, 197, 197);
+	font-size: 30px;
+	margin: 10px auto;
+	text-align: center;
+
+	-webkit-animation-name: slideInDown;
+	animation-name: slideInDown;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.color-selector2 {
+	position: relative;
+	color: rgb(197, 197, 197);
+	font-size: 30px;
+	margin: auto;
+	text-align: center;
+}
+
+
+
+
+.colortype {
+	position: relative;
+	text-align: center;
+	width: 70px;
+	height: 40px;
+	padding: 2px 0;
+	margin: 15px 5px;
+	background-color: rgba(0, 0, 0, 0.514);
+	color: rgb(196, 196, 196);
+	font-family: 'Bebas Neue', cursive;
+	font-weight: 100;
+	border: 1px solid rgb(161, 161, 161);
+	border-radius: 10px;
+	letter-spacing: 1px;
+	transition: .9s;
+}
+
+.colortype:hover {
+	background-color:  rgba(0, 132, 141, 0.685);
+}
+
+.colortype:active {
+	box-shadow: 0px 0px 0px 1px rgba(77, 77, 77, 0.829);
+	animation: anim-shadow .3s forwards;
+}
+
+.colortype:focus {
+	background-color:  rgba(0, 132, 141, 0.733);
+}
+
+
+.other-colors {
+	margin-top: 150px;
+}
+
+.arrow {
+	margin: 10px 10px;
+	font-size: 25px;
+	color: rgb(177, 177, 177);
+	background-color: transparent;
+	border: 0;
+}
+
+.arrow:hover {
+	color: rgba(0, 132, 141, 0.685);
+}
+
+.arrow:active {
+	color: rgba(1, 205, 219, 0.685);
+}
+
+
+
+.arrow2 {
+	margin: 10px 10px;
+	font-size: 50px;
+	color: rgb(177, 177, 177);
+	background-color: transparent;
+	border: 0;
+}
+
+.arrow2:hover {
+	color: rgba(0, 132, 141, 0.685);
+}
+
+.arrow2:active {
+	color: rgba(1, 205, 219, 0.685);
+}
+
+
+
+
+
+@keyframes anim-shadow {
+	100% {
+		box-shadow: 0px 0px 50px 20px rgba(112,111,211,0);
+	}
+}
+
+@-webkit-keyframes slideInDown {
+	0% {
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		visibility: visible;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+@keyframes slideInDown {
+	0% {
+		z-index: 40;
+		opacity: -1;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		visibility: visible;
+	}
+
+	100% {
+		z-index: 49;
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+} 
+
+
+
+
+
+@-webkit-keyframes slideInRight {
+	0% {
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+		visibility: visible;
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+@keyframes slideInRight {
+	0% {
+		z-index: 40;
+		opacity: -1;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+		visibility: visible;
+	}
+
+	100% {
+		z-index: 49;
+		opacity: 1;
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+} 
+
+
+/* [[!-!]] vcux3MfIy8qDzcrMz8rKycbPzsvKzcnIyM7M [[!-!]] */

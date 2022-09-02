@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+   
+}
+
+.cinto img{
+    width: 20px;
+    position: absolute;
+    left: 83%;
+    top: 66%;
+}
+
+.logo{
+    width: 90px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#hud{
+    position: absolute;
+    width: 190px;
+    height: 140px;
+    right: 1.4%;
+    bottom: 2.5%;
+  
+}
+
+.item-hud{
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    float: left;
+    margin-left: 14px;
+    transform: rotate(-180deg);
+    background: rgb(15, 15, 15,0.6);
+
+}
+
+.item2-hud{
+    width: 100%;
+    height: 20px;
+    transition: all 1s;
+    border-radius: 5px;
+}
+
+.item-hud .far{
+    position: absolute;
+    width: 16px;
+    bottom: 29%;
+    left: 26%;
+    transform: rotate(-180deg);
+}
+
+.vida{
+    background: rgb(252, 56, 56);
+}
+
+.colete{
+    background: rgb(19, 95, 235);
+}
+
+.fome{
+    background: rgb(214, 122, 16);
+}
+
+.sede{
+    background: rgb(16, 158, 214);
+}
+
+.stress{
+    background: rgb(226, 84, 255);
+}
+
+.velocimetro{
+    width: 100%;
+    height: 43%;
+}
+
+.speed{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Jura";
+	font-size: 25px;
+    margin-top: 19%;
+    text-align: center;
+}
+
+.km{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Jura";
+	font-size: 13px;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.infos-player{
+    position: absolute;
+    top: 67%;
+}
+
+.fuelback{
+    width: 100%;
+    margin-top: 7%;
+    height: 10px;
+    border-radius: 10px;
+    background: rgb(15, 15, 15,0.6);
+}
+
+.fueldentro{
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 1s;
+    background: rgb(214, 105, 16);
+}
+
+.cinto{
+    position: absolute;
+    width: 15px;
+    margin-top: -27.5%;
+    margin-left: 87%;
+}
+
+.lock{
+    position: absolute;
+    width: 13px;
+    margin-top: -17%;
+    margin-left: 87.5%;
+}
+
+.veloBar {
+    height: 279.2px;
+    width: 279.2px;
+    clip-path: path('M223.448477,218.666668Q195.793012,218.666668,142.837241,218.666668C89.881469,218.666668,82.108145,240.722757,59.759837,265.202592L53.448477,265.202592L56.492046,261.098522C78.840353,236.618687,86.613678,214.562598,139.569449,214.562598Q192.525221,214.562598,223.448477,214.562598L223.448477,218.666668Z');
+    background-color: rgba(15, 15, 15, 0.6);
+    position: absolute;
+    top: -140%;
+    left: -27%;
+}
+
+.veloFill {
+    height: 100vh;
+    background-color: white;
+    transition: all .5s;
+    transform: translate(54px, 102px);
+}
+
+
+#up{
+    position: absolute;
+    width: 200px;
+    height: 33px;
+    background: rgba(15, 15, 15, 0.6);
+    top: 4%;
+    right: 1.5%;
+    border-radius: 30px;
+}
+
+.fa-microphone{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    margin-left: 8%;
+    margin-top: 5%;
+}
+
+.circle{
+    width: 10px;
+    height: 10px;
+    margin-top: -7.5%;
+    margin-left: 20%;
+    border-radius: 20px;
+    background: white;
+    transition: all 1s;
+}
+
+.circle2{
+    width: 10px;
+    height: 10px;
+    margin-top: -5%;
+    margin-left: 27%;
+    border-radius: 20px;
+    background: white;
+    transition: all 1s;
+}
+
+.circle3{
+    width: 10px;
+    height: 10px;
+    margin-top: -5%;
+    margin-left: 34%;
+    border-radius: 20px;
+    background: rgb(156, 155, 155,0.6);
+    transition: all 1s;
+}
+
+.separador{
+    width: 1%;
+    height: 40%;
+    margin-top: -6.5%;
+    margin-left: 50%;
+    background: white;
+}
+
+.fa-clock{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    margin-left: 60%;
+    top: 27%;
+    position: absolute;
+}
+
+.horas{
+    margin-top: -7.5%;
+    margin-left: 72%;
+    font-size: 15px;
+    color: #fff;
+    font-family: "Jura";
+}

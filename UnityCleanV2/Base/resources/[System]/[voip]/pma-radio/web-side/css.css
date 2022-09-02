@@ -1,0 +1,53 @@
+body,td,th { font-size: 12px; font-family: arial; color: #000; cursor: default; vertical-align: baseline; outline: 0; line-height: 1; margin: 0; padding: 0; word-wrap: break-word; }
+a,a:link,a:visited,a:active,a:hover { font-family: arial; font-size: 12px; color: #000; text-decoration: none; }
+div,span,applet,object,iframe,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr { border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; margin:0; padding:0; }
+:focus { outline:0; }
+img { border:none; }
+::-webkit-scrollbar { width: 0; }
+::selection { background: transparent; }
+::-moz-selection { background: transparent; }
+
+@font-face {
+	font-family: 'DSEG7Classic';
+	src: url('dseg7.ttf');
+}
+
+#actionmenu {
+	background: url("background.png");
+	bottom: 0;
+	right: 50px;
+	width: 253px;
+	height: 534px;
+	display: none;
+	overflow: auto;
+	position: fixed;
+}
+
+.ativar {
+	background: transparent;
+	width: 53px;
+	height: 50px;
+	float: left;
+	margin: 200px 0 0 45px;
+}
+
+.desativar {
+	background: transparent;
+	width: 53px;
+	height: 50px;
+	float: left;
+	margin: 180px 0 0 100px;
+}
+
+.qtd {
+	border: 0;
+	font-family: 'DSEG7Classic';
+	background: transparent;
+	width: 113px;
+	height: 95px;
+	float: left;
+	margin: 135px 70px 0;
+	text-align: center;
+	font-size: 30px;
+	color: #000;
+}
