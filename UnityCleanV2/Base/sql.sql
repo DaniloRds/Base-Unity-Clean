@@ -333,7 +333,7 @@ CREATE TABLE IF NOT EXISTS `vrp_users` (
   `pet` varchar(50) DEFAULT NULL,
   `moedas` int(30) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
 
