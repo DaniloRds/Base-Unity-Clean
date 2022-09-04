@@ -14,8 +14,6 @@
 
 
 -- Copiando estrutura do banco de dados para vrp
-DROP DATABASE IF EXISTS `vrp`;
-CREATE DATABASE IF NOT EXISTS `vrp` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `vrp`;
 
 -- Copiando estrutura para tabela vrp.vrp_estoque
