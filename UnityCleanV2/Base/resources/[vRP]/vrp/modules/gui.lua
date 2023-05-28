@@ -190,12 +190,10 @@ AddEventHandler("vRP:playerLeave",function(user_id,source)
 	end
 end)
 
--- RegisterServerEvent("AC:ac_Armas:ACC")
--- AddEventHandler("AC:ac_Armas:ACC",function()
---     local source = source
---   local user_id = vRP.getUserId(source)
--- 	if user_id ~= nil then
--- 	SendWebhookMessage(webhooklink, "```O [ID: "..user_id.."] Esta Supeito.```")
---     vRP.log("nexus/anticheat.txt","O [ID:"..user_id.."] Esta Suspeito.")
---     end
--- end)
+-----------------------------------------------------------------------------------------------------------------------------------------
+--[ TRYDELETEPED ]-----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+RegisterServerEvent("trydeleteped")
+AddEventHandler("trydeleteped",function(index)
+	TriggerClientEvent("syncdeleteped",-1,index)
+end)
