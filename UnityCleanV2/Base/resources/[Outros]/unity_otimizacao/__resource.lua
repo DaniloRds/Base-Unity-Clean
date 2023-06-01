@@ -15,7 +15,7 @@ client_scripts {
 	-- identidade --
 	"/identidade/client.lua",
 	-- admin --
-	"client.lua",
+	"admin_client.lua",
 }
 
 server_scripts {
@@ -29,5 +29,5 @@ server_scripts {
 	-- identidade --
 	"/identidade/server.lua",
 	-- Admin --
-	"server.lua"
+	"admin_server.lua"
 }
