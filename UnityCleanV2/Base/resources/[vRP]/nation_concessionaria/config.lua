@@ -49,12 +49,12 @@ config.myVehicles_img = "https://www.itl.cat/pngfile/big/50-505834_download-nfs-
 -- CLASSES DOS VEÍCULOS INSERIDAS DENTRO DAS CLASSES QUE APARECEM NA CONCE
 
 config.availableClasses = {
-	["sedans"] = {"sedan"},
-	["suvs"] = {"suv"},
+	["sedans"] = {"sedan","compact","coupé","muscle"},
+	["suvs"] = {"suv","van"},
 	["imports"] = {"classic", "sport", "super"},  
 	["trucks"] = {"industrial", "utility", "commercial"},
 	["motos"] = {"moto", "cycle"},
-	["outros"] = {"compact", "coupé", "muscle", "off-road",  "boat",  "helicopter",  "plane",  "service", "emergency",  "military",  "train", "van"}
+	["outros"] = {"boat",  "helicopter",  "plane",  "service", "emergency",  "military",  "train", "off-road"}
 }
 
 -- ÍCONES DA CONCE
@@ -308,7 +308,6 @@ config.vehList = {
 	{ hash = 699456151, name = 'surfer', price = 55000, banido = false, modelo = 'Surfer', capacidade = 80, tipo = 'carros' },
 	{ hash = 65402552, name = 'youga', price = 260000, banido = false, modelo = 'Youga', capacidade = 120, tipo = 'carros' },
 	{ hash = 1026149675, name = 'youga2', price = 1000, banido = false, modelo = 'Youga2', capacidade = 80, tipo = 'work' },
-	{ hash = -1207771834, name = 'rebel', price = 1000, banido = false, modelo = 'Rebel', capacidade = 80, tipo = 'work' },
 	{ hash = -2076478498, name = 'tractor2', price = 1000, banido = false, modelo = 'Tractor2', capacidade = 80, tipo = 'work' },
 	{ hash = 486987393, name = 'huntley', price = 110000, banido = false, modelo = 'Huntley', capacidade = 60, tipo = 'carros' },
 	{ hash = 1269098716, name = 'landstalker', price = 130000, banido = false, modelo = 'Landstalker', capacidade = 70, tipo = 'carros' },
@@ -704,8 +703,7 @@ vRP._prepare("nation_conce/removeUserVehicle","DELETE FROM vrp_user_vehicles WHE
 
 function getConceList(cb)
 	Citizen.CreateThread(function()
-		local vehicles = vRP.query("nation_conce/getConceVehicles") or {}
-		cb(vehicles)
+		local vehicles = vRP.query("nation_conce/getConceVehicles")
 	end)
 end
 
