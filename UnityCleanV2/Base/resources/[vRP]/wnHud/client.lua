@@ -285,7 +285,7 @@ alertfome = false
 alertsede = false
 
 
- Citizen.CreateThread(function()
+Citizen.CreateThread(function()
     while true do
         Citizen.Wait(2000)
         local ped = GetPlayerPed(-1)
@@ -296,11 +296,15 @@ alertsede = false
             TransitionToBlurred(1000)
             alertmaxfome = true
             SetEntityHealth(ped, newhealth)
+			Citizen.Wait(20000)
+			TriggerEvent("Notify","aviso","Você está com muita SEDE, beba algo!")
         end
         if hunger >= 95 then 
             TransitionToBlurred(1000)
             alertmaxsede = true
             SetEntityHealth(ped, newhealth)
+			Citizen.Wait(20000)
+			TriggerEvent("Notify","aviso","Você está com muita FOME, coma algo!")
         end
             
         if hunger <= 95 and thirst <= 95 and GetEntityHealth(PlayerPedId()) >= 102 then
@@ -311,6 +315,8 @@ alertsede = false
 
     end
 end)
+
+
 AddEventHandler("hud:talkingState", function(number)
     SendNUIMessage({action = "proximity", number = number})
 end)
