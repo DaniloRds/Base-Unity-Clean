@@ -1,7 +1,7 @@
 @echo off
 
 echo ===-------------------------------===
-echo     Base Unity Free V2 (2.1.5)
+echo     Base Unity Free V2 (2.1.6)
 echo     Developed by: Unity
 echo     Discord: discord.gg/kYFy8JwVfd
 echo ===-------------------------------===
