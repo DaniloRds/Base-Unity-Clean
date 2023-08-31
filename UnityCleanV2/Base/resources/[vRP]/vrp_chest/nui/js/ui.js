@@ -139,11 +139,11 @@ var templateTrunkChest = (key, amount, image, name, weight, target) => {
     <div class="amount-option">
       <div class="row">
         <div class="left">
-          <div class="plus"><i class="fas fa-minus"></i></div>
+          <div class="minus"><i class="fas fa-minus"></i></div>
         </div>
         <div class="center"><input type="text" class="amount-value" placeholder="0" style="border: 0px; outline: 0px; width: 100%; height: 100%; text-align: center; padding-left: 5px; padding-right: 5px;" /></div>
         <div class="right">
-          <div class="minus"><i class="fas fa-plus"></i></div>
+          <div class="plus"><i class="fas fa-plus"></i></div>
         </div>
       </div>
       <div class="row">
@@ -157,7 +157,7 @@ var templateTrunkChest = (key, amount, image, name, weight, target) => {
       <span class="amount">${formatarNumero(amount)}</span>
     </div>
     <div class="row">
-    <div class="image" style="background-image: url('http://177.54.148.152:80/dashboard/images/vrp_inventory/${image}.png');"></div>
+    <div class="image" style="background-image: url('http://189.101.240.72:80/cidade/inventory/${image}.png');"></div>
     </div>
     <div class="row">
       <div class="name">${name} <i>(${(weight * amount).toFixed(2)}kg)</i></div>
@@ -178,7 +178,7 @@ const formatarNumero = n => {
 
   return r.split("").reverse().join("");
 };
-
+var modalQt = 1;
 const updateChest = () => {
 
   $.post("http://vrp_chest/requestChest", JSON.stringify({}), data => {
@@ -199,6 +199,22 @@ const updateChest = () => {
     
     $(".bag-workspace .row.objects").html(trunkchest);
     $(".trunk-workspace .row.objects").html(inventory);
+
+    $('.amount-value').val(1);
+      
+    $('.minus').click(() => {
+     
+        if(modalQt >= 1) {
+            modalQt = modalQt - 1;
+            $('.amount-value').val(modalQt);
+        }
+    });
+    $('.plus').click(() => {
+        modalQt = modalQt + 1;
+    
+        $('.amount-value').val(modalQt);
+    });
+
   });
 };
 
