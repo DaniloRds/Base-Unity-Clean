@@ -135,7 +135,7 @@ body {
 }
 
 .objects .cell:hover {
-  background-color: rgb(218, 107, 22);
+  background-color: #db00cd;
 }
 
 .objects .cell .row {
@@ -228,7 +228,7 @@ body {
   width: 100%;
   outline: 0;
   padding: 5px;
-  background: rgb(218, 126, 5);
+  background: #db00cd;
   border: 0px;
   border-radius: 5px;
   color: #FFF;

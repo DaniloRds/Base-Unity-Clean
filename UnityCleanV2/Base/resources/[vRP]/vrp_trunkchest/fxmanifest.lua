@@ -15,6 +15,7 @@ server_scripts {
 
 files {
 	"nui/index.html",
+	"nui/jquery.js",
 	"nui/css/bootstrap.min.css",
 	"nui/css/jquery-ui.css",
 	"nui/css/style.css",

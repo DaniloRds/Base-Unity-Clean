@@ -792,11 +792,11 @@ local homes = {
 		["exit"] = { -1688.87,386.00,78.08 },
 		["vault"] = { -1680.56,387.24,78.09 }
 	},
-	["LX46"] = {
-		["enter"] = { -1804.83,436.42,128.81 },
-		["exit"] = { -1817.51,434.32,112.80 },
-		["vault"] = { -1809.55,437.01,112.80 }
-	},
+	-- ["LX46"] = {
+	-- 	["enter"] = { -1804.83,436.42,128.81 },
+	-- 	["exit"] = { -1817.51,434.32,112.80 },
+	-- 	["vault"] = { -1809.55,437.01,112.80 }
+	-- },
 	["LX47"] = {
 		["enter"] = { -1996.35,591.42,118.09 },
 		["exit"] = { -2005.72,586.68,112.53 },
@@ -2562,7 +2562,7 @@ RegisterCommand("enter",function(source,args)
 	for k,v in pairs(homes) do
 		local _,i = GetGroundZFor_3dCoord(v["enter"][1],v["enter"][2],v["enter"][3])
 		local distance = Vdist(x,y,z,v["enter"][1],v["enter"][2],i)
-		if distance <= 1.5 and houseTimer <= 0 and vSERVER.checkPermissions(k) then
+		if distance <= 2.5 and houseTimer <= 0 and vSERVER.checkPermissions(k) then
 			houseTimer = 3
 			DoScreenFadeOut(1000)
 			TriggerEvent("vrp_sound:source","enterexithouse",0.7)
@@ -2598,6 +2598,34 @@ RegisterCommand("exit",function(source,args)
 		end
 	end
 end)
+--
+Citizen.CreateThread(function()
+	while true do
+        local sleep = 1000
+		local ped = PlayerPedId()
+		local x,y,z = table.unpack(GetEntityCoords(ped))
+		for k,v in pairs(homes) do
+			local _,i = GetGroundZFor_3dCoord(v["exit"][1],v["exit"][2],v["exit"][3])
+			local distance = Vdist(x,y,z,v["exit"][1],v["exit"][2],i)
+			if distance <= 1.5 and houseTimer <= 0 then
+				sleep = 5
+				DrawText3Ds(v["exit"][1],v["exit"][2],v["exit"][3] + 0.2, "[~y~E~w~] Para ~y~Sair~w~")
+				if IsControlJustPressed(0,38) and vSERVER.checkIntPermissions(k) then
+					houseTimer = 3
+					DoScreenFadeOut(1000)
+					TriggerEvent("vrp_sound:source","enterexithouse",0.5)
+					SetTimeout(1300,function()
+						SetEntityCoords(ped,v["enter"][1]+0.0001,v["enter"][2]+0.0001,v["enter"][3]+0.0001-1,1,0,0,1)
+						Citizen.Wait(750)
+						DoScreenFadeIn(1000)
+						houseOpen = ""
+					end)
+				end	
+			end
+		end
+		Citizen.Wait(sleep)
+	end
+end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- VAULT
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -2614,6 +2642,30 @@ RegisterCommand("vault",function(source,args)
 			SendNUIMessage({ action = "showMenu" })
 			houseOpen = tostring(k)
 		end
+	end
+end)
+--
+Citizen.CreateThread(function()
+	while true do
+        local sleep = 1000
+		local ped = PlayerPedId()
+		local x,y,z = table.unpack(GetEntityCoords(ped))
+		for k,v in pairs(homes) do
+			local _,i = GetGroundZFor_3dCoord(v["vault"][1],v["vault"][2],v["vault"][3])
+			local distance = Vdist(x,y,z,v["vault"][1],v["vault"][2],i)
+			if distance <= 2.0 and houseTimer <= 0 then
+				sleep = 5
+				DrawText3Ds(v["vault"][1],v["vault"][2],v["vault"][3] + 0.2, "[~y~E~w~] Para ~y~Acessar o Baú~w~.")
+				if IsControlJustPressed(0,38) and vSERVER.checkIntPermissions(k) then
+					houseTimer = 3
+					TriggerEvent("vrp_sound:source","zipperopen",0.5)
+					SetNuiFocus(true,true)
+					SendNUIMessage({ action = "showMenu" })
+					houseOpen = tostring(k)
+				end
+			end
+		end
+		Citizen.Wait(sleep)
 	end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -2674,4 +2726,22 @@ function src.setBlipsHomes(status)
 			end
 		end)
 	end
+end
+--[FUNCTION DRAW]--
+function DrawText3Ds(x, y, z, text)
+    local onScreen, _x, _y = World3dToScreen2d(x, y, z)
+    
+    if onScreen then
+        SetTextScale(0.35, 0.35)
+        SetTextFont(4)
+        SetTextProportional(1)
+        SetTextColour(255, 255, 255, 235)
+        SetTextEntry('STRING')
+        SetTextCentre(1)
+        AddTextComponentString(text)
+        DrawText(_x, _y)
+        
+        local factor = (string.len(text)) / 370
+        DrawRect(_x, _y + 0.0125, 0.005 + factor, 0.04, 0, 0, 0, 145)
+    end
 end

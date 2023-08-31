@@ -139,11 +139,11 @@ var templateTrunkChest = (key, amount, image, name, weight, target) => {
     <div class="amount-option">
       <div class="row">
         <div class="left">
-          <div class="plus"><i class="fas fa-minus"></i></div>
+          <div class="minus"><i class="fas fa-minus"></i></div>
         </div>
-        <div class="center"><input type="text" class="amount-value" placeholder="0" style="border: 0px; outline: 0px; width: 100%; height: 100%; text-align: center; padding-left: 5px; padding-right: 5px;" /></div>
+        <div class="center"><input type="text" class="amount-value" placeholder="Tudo" style="border: 0px; outline: 0px; width: 100%; height: 100%; text-align: center; padding-left: 5px; padding-right: 5px;" /></div>
         <div class="right">
-          <div class="minus"><i class="fas fa-plus"></i></div>
+          <div class="plus"><i  class="fas fa-plus"></i></div>
         </div>
       </div>
       <div class="row">
@@ -157,7 +157,7 @@ var templateTrunkChest = (key, amount, image, name, weight, target) => {
       <span class="amount">${formatarNumero(amount)}</span>
     </div>
     <div class="row">
-      <div class="image" style="background-image: url('http://localhost:80/cidade/inventory/${image}.png');"></div>
+      <div class="image" style="background-image: url('http://189.101.240.72:80/cidade/inventory/${image}.png');"></div>
     </div>
     <div class="row">
       <div class="name">${name} <i>(${(weight * amount).toFixed(2)}kg)</i></div>
@@ -178,7 +178,7 @@ const formatarNumero = n => {
 
   return r.split("").reverse().join("");
 };
-
+var modalQt = 1;
 const updateMochila = () => {
 
   $.post("http://vrp_trunkchest/requestMochila", JSON.stringify({}), data => {
@@ -199,10 +199,27 @@ const updateMochila = () => {
     
     $(".bag-workspace .row.objects").html(trunkchest);
     $(".trunk-workspace .row.objects").html(inventory);
+
+    $('.amount-value').val(1);
+      
+    $('.minus').click(() => {
+     
+        if(modalQt >= 1) {
+            modalQt = modalQt - 1;
+            $('.amount-value').val(modalQt);
+        }
+    });
+    $('.plus').click(() => {
+        modalQt = modalQt + 1;
+    
+        $('.amount-value').val(modalQt);
+    });
+
   });
 };
 
 $(document).ready(function() {
+
   $(document).on('mousedown', '.objects .cell', function(ev){
     if(ev.which == 3) {
       $('.amount-option').hide();
@@ -236,8 +253,6 @@ $(document).ready(function() {
       );
     }
 
-    console.log('button click');
-
     Option = false;
 
     $('.amount-option').hide();
@@ -263,3 +278,4 @@ $(".amount-option .right").on('click', function() {
   var amountVal = $(this).closest('.cell').find(".amount-option .center input");
   amountVal.val(parseInt(amountVal.val()) + 1);
 });
+
