@@ -4,11 +4,9 @@
 
 }
 
-
-
 body{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     
     color: rgb(255, 255, 255);
@@ -48,7 +46,7 @@ body{
     float: left;
     margin-left: 14px;
     transform: rotate(-180deg);
-    background: rgb(15, 15, 15,0.6);
+    background: #0f0f0f99;
 
 }
 
@@ -57,6 +55,7 @@ body{
     height: 20px;
     transition: all 1s;
     border-radius: 5px;
+
 }
 
 .item-hud .far{
@@ -230,4 +229,134 @@ body{
     font-size: 15px;
     color: #fff;
     font-family: "Jura";
+}
+
+.radio{
+    display: none;
+    position: absolute;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    top: 8.5%;
+    right: 1.5%;
+    padding-top: 5px;
+    width: 100px;
+    height: 25px;
+    background: rgba(15, 15, 15, 0.6);
+    border-radius: 30px;
+}
+
+.radioText{
+    position: absolute;
+    right: 14px;
+}
+
+.fa-rss{
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    right: 34px;
+}
+
+/* CUPOM DE DESCONTO BY UNITY DEV*/
+.cupom {
+  position: absolute;
+  border-radius: 5px;
+  border-style: dashed;
+  border-color: #000000;
+  border-width: 1px;
+  width: 126px;
+  height: 47px;
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  right: 88.5vw;
+  bottom: 25vw;
+}
+.parte-2 {
+  position: absolute;
+  inset: 0;
+}
+.escrita {
+  background: rgba(15, 15, 15, 0.6);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.cupom-title {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-SemiBoldItalic", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: true;
+  position: absolute;
+  text-align: center;
+  background: rgb(0, 0, 0);
+  border-radius: 5px;
+  width: 55px;
+  padding: 2px;
+  left: 35px;
+  top: -10px;
+}
+.cupom-text {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 550;
+  position: absolute;
+  left: 13px;
+  top: 13px;
+}
+.parte-1 {
+  position: absolute;
+  inset: 0;
+}
+.back-1 {
+  background: linear-gradient(180deg,rgba(255, 0, 0),rgba(205, 0, 0),rgba(127, 0, 0));
+  border-radius: 5px;
+  width: 51px;
+  height: 47px;
+  position: absolute;
+  left: -55px;
+  top: 0px;
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.valor {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  position: absolute;
+  left: -56px;
+  top: 5px;
+}
+.porcent {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-BoldItalic", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  font-style: true;
+  position: absolute;
+  left: -20px;
+  top: 10px;
+}
+.off {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-BoldItalic", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  font-style: true;
+  position: absolute;
+  left: -21px;
+  top: 26px;
 }

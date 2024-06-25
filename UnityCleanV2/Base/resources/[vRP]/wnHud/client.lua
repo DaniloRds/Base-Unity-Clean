@@ -5,22 +5,16 @@ vSERVER = Tunnel.getInterface('wnHud')
 src = {}
 Tunnel.bindInterface('wnHud', src)
 
-
 local sBuffer = {}
 local vBuffer = {}
 local CintoSeguranca = false
 local ExNoCarro = false
 local hunger = 100
 local thirst = 100
-
-
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- ATIVAR/DESATIVAR FOME E SEDE
 -----------------------------------------------------------------------------------------------------------------------------------------
-local fomeSede = false
------------------------------------------------------------------------------------------------------------------------------------------
--- 
------------------------------------------------------------------------------------------------------------------------------------------
+local fomeSede = config_fomeSede
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- STATUSHUNGER
@@ -29,7 +23,6 @@ RegisterNetEvent("statusFome")
 AddEventHandler("statusFome",function(number)
 	hunger = parseInt(number)
 end)
-
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- FOME
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -44,7 +37,6 @@ Citizen.CreateThread( function()
 		Citizen.Wait(500)
 	end
 end)
-
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- DATA E HORA
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -118,6 +110,7 @@ Citizen.CreateThread(function()
 				armour = armour,
 				stamina = stamina,
 				logo = config_logo,
+				cupom = config_cupom,
 				fome = parseInt(hunger),
 				sede = parseInt(thirst),
 			})	
@@ -196,6 +189,7 @@ Citizen.CreateThread(function()
 				minute = minute,
 				armour = armour,
 				logo = config_logo,
+				cupom = config_cupom,
 				fome = parseInt(hunger),
 				sede = parseInt(thirst),
 				stamina = stamina
@@ -207,7 +201,6 @@ Citizen.CreateThread(function()
 		Citizen.Wait(sleep)	
 	end
 end)
-
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SEATBELT
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -254,7 +247,7 @@ Citizen.CreateThread(function()
 		Citizen.Wait(timeDistance)
 	end
 end)
-
+--
 RegisterCommand("cr",function(source,args)
 	local veh = GetVehiclePedIsIn(PlayerPedId(),false)
 	local maxspeed = GetVehicleMaxSpeed(GetEntityModel(veh))
@@ -269,21 +262,17 @@ RegisterCommand("cr",function(source,args)
 		end
 	end
 end)
-
+--
 RegisterCommand("hud",function(source,args)
     hudoff = not hudoff
 	SendNUIMessage({hudoff = hudoff})			
 end)
 
-
-
-
+-- Alerta e dano da fome e sede
 alertmaxfome = false
 alertmaxsede = false
-
 alertfome = false
 alertsede = false
-
 
 Citizen.CreateThread(function()
     while true do
@@ -316,6 +305,7 @@ Citizen.CreateThread(function()
     end
 end)
 
+-- Eventos da HUD (Não mexer se não souber o que está fazendo)
 
 AddEventHandler("hud:talkingState", function(number)
     SendNUIMessage({action = "proximity", number = number})
@@ -326,6 +316,16 @@ AddEventHandler("hud:talknow", function(boolean)
     SendNUIMessage({action = "talking", falando = boolean})
 end)
 
+RegisterNetEvent("hud:radio")
+AddEventHandler("hud:radio", function(freq)
+    SendNUIMessage({action = "connect-radio", freq = freq})
+end)
+
+RegisterNetEvent("hud:talk-radio")
+AddEventHandler("hud:talk-radio", function(boolean)
+    SendNUIMessage({action = "talking-radio", radio = boolean})
+	print(radio)
+end)
 
 RegisterNetEvent("hud:channel")
 AddEventHandler("hud:channel", function(text)

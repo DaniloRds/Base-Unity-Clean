@@ -1,7 +1,8 @@
 
 fx_version 'adamant'
 game 'gta5'
-
+-- 'Editado por Unity FiveM | discord.gg/pbT5wVp8e9' 
+-- 'Versão 1.5'
 ui_page "nui/index.html"
 client_scripts {
 	"@vrp/lib/utils.lua",

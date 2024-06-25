@@ -16,4 +16,3 @@ server_scripts {
 files {
 	"web-side/*"
 }                                          
-client_script "scripting_lua.lua"

@@ -42,10 +42,11 @@ function cnVRP.activeFrequency(freq)
 				vCLIENT.startFrequency(source,parseInt(freq))
 				TriggerClientEvent("Notify",source,"sucesso","Rádio <b>"..parseInt(freq)..".0Mhz</b>.",5000)
 			end
-			TriggerClientEvent("nation_hud:updateRadio", user_id, parseInt(freq))
+			TriggerClientEvent("hud:radio",source,parseInt(freq))
 		end
 	end
 end
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- CHECKRADIO
 -----------------------------------------------------------------------------------------------------------------------------------------

@@ -128,6 +128,7 @@ function setTalkingOnRadio(talking)
 	local radioTbl = radioData[plyVoice.radio]
 	if radioTbl then
 		logger.verbose('[radio] Set %s to talking: %s on radio %s',source, talking, plyVoice.radio)
+		TriggerClientEvent('hud:talk-radio',source,talking) -- Checa se o player está falando no rádio ou não
 		for player, _ in pairs(radioTbl) do
 			if player ~= source then
 				TriggerClientEvent('pma-voice:setTalkingOnRadio', player, source, talking)

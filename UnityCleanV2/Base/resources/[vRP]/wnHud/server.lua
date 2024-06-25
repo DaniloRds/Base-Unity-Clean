@@ -18,7 +18,7 @@ local vthirst = 0
 ---------------------------------------------------------
 RegisterCommand("eat",function(source,args,rawCommand)
     local user_id = vRP.getUserId(source)
-    if vRP.hasPermission(user_id,"admin.permissao") then
+    if vRP.hasPermission(user_id,config_permstaff) then
         vRP.varyThirst(user_id, -100)
         vRP.varyHunger(user_id, -100)
     end

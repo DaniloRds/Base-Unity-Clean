@@ -42,6 +42,12 @@ $(function () {
                     $("#coletediv").fadeIn(500);
                     $("#colete").css("height",item.armour +"%");
                 }
+
+                if (item.cupom == true){
+                    $(".cupom").css("display","inherit")
+                }else{
+                    $(".cupom").css("display","none")
+                }
            
                 $("#logo").attr(`src`,item.logo );
 
@@ -65,6 +71,12 @@ $(function () {
                     $("#coletediv").fadeIn(500);
                     $("#colete").css("height",item.armour +"%");
                 }
+
+                if (item.cupom == true){
+                    $(".cupom").css("display","inherit")
+                }else{
+                    $(".cupom").css("display","none")
+                }
               
                 $('.velocimetro2').fadeIn(500)
 
@@ -87,9 +99,6 @@ $(function () {
                     $('#speed').html(item.speed)
                   
                 }
-
-                
-
      
                 break
             case 'proximity':
@@ -112,6 +121,23 @@ $(function () {
                     $('.fa-microphone').css('color', 'rgb(16, 158, 214)')
 
                 } else {
+                    $('.fa-microphone').css('color', '#fff')
+                }
+                break;
+            case 'connect-radio':
+                $('.radio').css('display', 'inherit')
+                if (item.freq) {
+                    $(".radioText").html(item.freq + "Mhz");
+                } else if (item.freq < 1) {
+                     $('.radio').css('display', 'none')
+                }
+                break;
+            case 'talking-radio':
+                if (item.radio) {
+                    $('.fa-microphone').css('color', 'rgb(16, 158, 214)')
+                    $('.fa-rss').css('color', 'rgb(16, 158, 214)')
+                } else {
+                    $('.fa-rss').css('color', '#fff')
                     $('.fa-microphone').css('color', '#fff')
                 }
                 break;

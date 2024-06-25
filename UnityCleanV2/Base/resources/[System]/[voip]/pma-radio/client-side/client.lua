@@ -63,7 +63,6 @@ end)
 RegisterNUICallback("inativeFrequency",function(data)
 	TriggerEvent("radio:outServers")
 	TriggerEvent("Notify","importante","Você saiu de todas as frequências.",8000)
-	TriggerEvent("nation_hud:updateRadio", GetPlayerServerId(PlayerId()))
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- STARTFREQUENCY
@@ -80,6 +79,7 @@ RegisterNetEvent("radio:outServers")
 AddEventHandler("radio:outServers",function()
 	exports["pma-voice"]:removePlayerFromRadio()
 	exports["pma-voice"]:setVoiceProperty('radioEnabled',false)
+	TriggerEvent("hud:radio",parseInt(0))
 end)
 
 RegisterCommand("volume",function(source,args)

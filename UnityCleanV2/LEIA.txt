@@ -1,12 +1,11 @@
-Base CLEAN da Unity FiveM feita por Tio Dan#9894 - Qualquer dúvida pode chamar. (Apenas sobre conteúdos da base)
+Base CLEAN da Unity FiveM feita por danilords - Qualquer dúvida pode chamar. (Apenas sobre conteúdos da base)
 
 Minha loja: discord.gg/pbT5wVp8e9 | Passa lá, estamos crescendo devagarinho!
 
 Esta é uma base "clean" porém deixei alguns scripts de sistemas básicos para quem quer usar só de teste também como
 garagem, barbearia essas coisas, mas a base está bem leve e otimizada para vocês.
 
-Também deixei algumas coisas mais "exclusivas" como a loja vip, os empregos por level e outros sistemas que vocês 
-vão achar na base como o banco diferente e outros.
+Também deixei algumas coisas mais "exclusivas" como a loja vip, banco diferente, lojinhas e outros.
 
 Ela também conta com o oxmysql já configurado!
 A base está bem atualizada, contém as dancinhas do tiktok, poses para foto, animações em dupla e etc...
