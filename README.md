@@ -27,11 +27,7 @@ Após baixar a base e os arquivos acima, relembrando, você precisa baixar os [a
 
 Depois você vai abrir o arquivo <em>SQL</em> com 2 clicks, feito isso vai abrir o aplicativo [HeidiSql](https://www.apachefriends.org/pt_br/index.html) e nele você vai dar início na tabela do banco de dados da base. (Imagens a baixo passo-a-passo)
 
-> Tutorial de como abrir seu SQL. <br/>
-<div align="left">
-<img src="https://media.discordapp.net/attachments/795622143433637889/1015383900773679234/unknown.png?" />
-<img src="https://cdn.discordapp.com/attachments/795622143433637889/1015384376789438474/unknown.png?" />
-</div> <br/>
+<br/>
 
 Feito isso basta iniciar o <em>start.exe</em> e o servidor vai estar online em sua localhost.
 
