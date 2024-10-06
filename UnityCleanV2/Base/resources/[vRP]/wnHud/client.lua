@@ -324,7 +324,7 @@ end)
 RegisterNetEvent("hud:talk-radio")
 AddEventHandler("hud:talk-radio", function(boolean)
     SendNUIMessage({action = "talking-radio", radio = boolean})
-	print(radio)
+	--print(radio)
 end)
 
 RegisterNetEvent("hud:channel")

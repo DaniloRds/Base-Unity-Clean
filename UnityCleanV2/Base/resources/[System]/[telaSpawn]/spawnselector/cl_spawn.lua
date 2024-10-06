@@ -33,6 +33,7 @@ RegisterNUICallback('spawn', function(data, cb)
  
     if SpawnName == "last" then
         local coords = spawnselector.ultimaposicao()
+        print(coords)
         SPAWNS["last"] = vector3(coords.x,coords.y,coords.z) 
     end
     SpawnLocation = SPAWNS[SpawnName]

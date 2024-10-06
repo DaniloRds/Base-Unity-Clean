@@ -375,21 +375,6 @@ function vRPN.useItem(itemName,type,ramount)
 						TriggerClientEvent("itensNotify",source,"negado","Água-oxigenada")
 					end)
 				end
-
-            elseif itemName == "coumadin" then
-                if vRP.tryGetInventoryItem(user_id,"coumadin",1) then
-                	vRPclient._CarregarObjeto(source,"mp_player_intdrink","loop_bottle","ng_proc_drug01a002",49,60309)
-                	TriggerClientEvent('Creative:Update',source,'updateMochila')	
-					TriggerClientEvent('cancelando',source,true)
-                    TriggerClientEvent("progress",source,20500,"coumadin")
-                    SetTimeout(20500,function()
-                        TriggerClientEvent('cancelando',source,false)
-                        TriggerClientEvent("resetBleeding",source)
-                        vRPclient._DeletarObjeto(source)
-                        TriggerClientEvent("Notify",source,"sucesso","Coumadin utilizado com sucesso.",8000)
-						TriggerClientEvent("itensNotify",source,"negado","Coumadin")
-                    end)
-				end
 				
 			elseif itemName == "omeprazol" or itemName == "dipirona" or itemName == "paracetamol" or itemName == "decupramim" or itemName == "buscopan" or itemName == "novalgina" or itemName == "alivium" or itemName == "nokusin" or itemName == "sidelnafila" then
 				if vDIAGNOSTIC.getBleeding(source) >= 1 then
@@ -635,29 +620,6 @@ function vRPN.useItem(itemName,type,ramount)
 					end)
 				end		
 
-			elseif itemName == "rebite" then
-				if vRP.tryGetInventoryItem(user_id,"rebite",1) then
-					actived[user_id] = true
-					TriggerClientEvent('Creative:Update',source,'updateMochila')
-					TriggerClientEvent('cancelando',source,true)
-					vRPclient._CarregarObjeto(source,"amb@world_human_drinking@beer@male@idle_a","idle_a","prop_energy_drink",49,28422)
-					TriggerClientEvent("progress",source,10000,"BEBENDO")
-					SetTimeout(10000,function()
-						actived[user_id] = nil
-						vRPclient.playScreenEffect(source,"RaceTurbo",90)
-						vRPclient.playScreenEffect(source,"DrugsTrevorClownsFight",90)
-						TriggerClientEvent('energeticos',source,true)
-						TriggerClientEvent('cancelando',source,false)
-						vRPclient._DeletarObjeto(source)
-						TriggerClientEvent("Notify",source,"sucesso","Rebite utilizado com sucesso.",8000)
-						TriggerClientEvent("itensNotify",source,"negado","Rebite")
-					end)
-					SetTimeout(90000,function()
-						TriggerClientEvent('energeticos',source,false)
-						TriggerClientEvent("Notify",source,"aviso","O efeito do rebite passou e o coração voltou a bater normalmente.",8000)
-					end)
-				end
-
 			elseif itemName == "capuz" then
 				if vRP.getInventoryItemAmount(user_id,"capuz") >= 1 then
 					local nplayer = vRPclient.getNearestPlayer(source,2)
@@ -690,13 +652,11 @@ function vRPN.useItem(itemName,type,ramount)
 					end)
 				end
 
-			-------------------------------------------------------------------------------------------------------------------------------------------------
-			--[ BEBIDAS ]-------------------------------------------------------------------------------------------------------------------------------------
-			--------------------------------------------------------------------------------------------------------------------------------------------------	
+
+			--[ BEBIDAS ]
 			elseif itemName == "agua" then
 				local src = source
 				if vRP.tryGetInventoryItem(user_id,"agua",1) then
-					--TriggerClientEvent("itensNotify",source,"negado","Água")
 					actived[user_id] = true
 					TriggerClientEvent('Creative:Update',source,'updateMochila')
 					vRPclient._CarregarObjeto(src,"amb@world_human_drinking@beer@male@idle_a","idle_a","ba_prop_club_water_bottle",49,28422)
@@ -709,7 +669,6 @@ function vRPN.useItem(itemName,type,ramount)
 						vRP.varyHunger(user_id,0)
 						vRPclient._DeletarObjeto(src)
 						vRP.giveInventoryItem(user_id,"garrafavazia",1)
-						--TriggerClientEvent("itensNotify",source,"sucesso","Garrafa Vazia")
 						TriggerClientEvent("Notify",source,"sucesso","Você tomou <b>Agua</b>.")	
 					end)
 				end
@@ -755,25 +714,7 @@ function vRPN.useItem(itemName,type,ramount)
 					end)
 
 				end
-			elseif itemName == "algodaodoce" then
-				local src = source
-				if vRP.tryGetInventoryItem(user_id,"algodaodoce",1) then
 
-					actived[user_id] = true
-					TriggerClientEvent('Creative:Update',source,'updateMochila')
-					vRPclient._CarregarObjeto(src,"amb@code_human_wander_eating_donut@male@idle_a","idle_c","prop_food_bag1",49,0)
-					TriggerClientEvent("progress",source,5000,"comendo")
-
-					SetTimeout(5000,function()
-						actived[user_id] = nil
-						vRPclient._stopAnim(source,false)
-						vRP.varyHunger(user_id,-30)
-						vRPclient._DeletarObjeto(src)
-						TriggerClientEvent("Notify",source,"sucesso","Você comeu um <b>Algodão Doce</b>.")
-						TriggerClientEvent("itensNotify",source,"negado","Algodão Doce")
-					end)
-
-				end	
 			elseif itemName == "cafe" then
 				local src = source
 				if vRP.tryGetInventoryItem(user_id,"cafe",1) then
@@ -960,89 +901,7 @@ function vRPN.useItem(itemName,type,ramount)
 
 				end
 
-			elseif itemName == "uva" then
-				local src = source
-				if vRP.tryGetInventoryItem(user_id,"uva",1) then
-
-					actived[user_id] = true
-					TriggerClientEvent('Creative:Update',source,'updateMochila')
-					vRPclient._CarregarObjeto(src,"amb@code_human_wander_eating_donut@male@idle_a","idle_c","prop_food_bag1",49,1)
-					TriggerClientEvent("progress",source,5000,"comendo")
-
-					SetTimeout(5000,function()
-						actived[user_id] = nil
-						vRPclient._stopAnim(source,false)
-						vRP.varyThirst(user_id,-5)
-						vRP.varyHunger(user_id,-5)
-						vRPclient._DeletarObjeto(src)
-						TriggerClientEvent("Notify",source,"sucesso","Você comeu <b>Uva</b>.")
-					end)
-
-				end
-
-			elseif itemName == "vinhobranco" then
-				local src = source
-				if vRP.tryGetInventoryItem(user_id,"vinhobranco",1) then
-
-					actived[user_id] = true
-					TriggerClientEvent('Creative:Update',source,'updateMochila')
-					vRPclient._CarregarObjeto(src,"amb@world_human_drinking@beer@male@idle_a","idle_a","prop_cs_beer_bot_02",49,28422)
-					TriggerClientEvent("progress",source,30000,"bebendo")
-
-					SetTimeout(30000,function()
-						actived[user_id] = nil
-						vRPclient._stopAnim(source,false)
-						vRP.varyThirst(user_id,-100)
-						vRP.varyHunger(user_id,0)
-						vRPclient._DeletarObjeto(src)
-						TriggerClientEvent("Notify",source,"sucesso","Você tomou <b>Vinho Branco</b>.")
-					end)
-
-				end
-
-			elseif itemName == "vinhorose" then
-				local src = source
-				if vRP.tryGetInventoryItem(user_id,"vinhorose",1) then
-
-					actived[user_id] = true
-					TriggerClientEvent('Creative:Update',source,'updateMochila')
-					vRPclient._CarregarObjeto(src,"amb@world_human_drinking@beer@male@idle_a","idle_a","prop_beer_pissh",49,28422)
-					TriggerClientEvent("progress",source,30000,"bebendo")
-
-					SetTimeout(30000,function()
-						actived[user_id] = nil
-						vRPclient._stopAnim(source,false)
-						vRP.varyThirst(user_id,-100)
-						vRP.varyHunger(user_id,0)
-						vRPclient._DeletarObjeto(src)
-						TriggerClientEvent("Notify",source,"sucesso","Você tomou <b>Vinho Rose</b>.")
-					end)
-
-				end
-
-			elseif itemName == "vinhotinto" then
-				local src = source
-				if vRP.tryGetInventoryItem(user_id,"vinhotinto",1) then
-
-					actived[user_id] = true
-					TriggerClientEvent('Creative:Update',source,'updateMochila')
-					vRPclient._CarregarObjeto(src,"amb@world_human_drinking@beer@male@idle_a","idle_a","prop_beer_stz",49,28422)
-					TriggerClientEvent("progress",source,30000,"bebendo")
-
-					SetTimeout(30000,function()
-						actived[user_id] = nil
-						vRPclient._stopAnim(source,false)
-						vRP.varyThirst(user_id,-100)
-						vRP.varyHunger(user_id,0)
-						vRPclient._DeletarObjeto(src)
-						TriggerClientEvent("Notify",source,"sucesso","Você tomou <b>Vinho Tinto</b>.")
-					end)
-
-				end
-
-				--------------------------------------------------------------------------------------------------------------------------------------------------
-			--[ COMIDAS ]-------------------------------------------------------------------------------------------------------------------------------------
-			--------------------------------------------------------------------------------------------------------------------------------------------------	
+			--[ COMIDAS ]
 			elseif itemName == "sanduiche" then
 				local src = source
 				if vRP.tryGetInventoryItem(user_id,"sanduiche",1) then
@@ -1263,26 +1122,28 @@ function vRPN.useItem(itemName,type,ramount)
 					end)
 
 				end
-			elseif itemName == "yakisoba" then
+
+			elseif itemName == "taco" then
 				local src = source
-				if vRP.tryGetInventoryItem(user_id,"yakisoba",1) then
+				if vRP.tryGetInventoryItem(user_id,"taco",1) then
 
 					actived[user_id] = true
 					TriggerClientEvent('Creative:Update',source,'updateMochila')
-					vRPclient._CarregarObjeto(src,"amb@code_human_wander_eating_donut@male@idle_a","idle_c","prop_cs_plate_01",49,28422)
+					vRPclient._CarregarObjeto(src,"amb@code_human_wander_eating_donut@male@idle_a","idle_c","prop_taco_01",49,28422)
 					TriggerClientEvent("progress",source,8000,"comendo")
 
 					SetTimeout(8000,function()
 						actived[user_id] = nil
 						vRPclient._stopAnim(source,false)
 						vRP.varyThirst(user_id,0)
-						vRP.varyHunger(user_id,-30)
+						vRP.varyHunger(user_id,-40)
 						vRPclient._DeletarObjeto(src)
-						TriggerClientEvent("Notify",source,"sucesso","Você comeu um <b>Yakisoba</b>.")
-						TriggerClientEvent("itensNotify",source,"negado","Yakisoba")
+						TriggerClientEvent("Notify",source,"sucesso","Você comeu um <b>Taco</b>.")
+						TriggerClientEvent("itensNotify",source,"negado","Taco")
 					end)
 
 				end
+
 
 			elseif itemName == "lockpick" then
 				local vehicle,vnetid,placa,vname,lock,banned,trunk,model,street = vRPclient.vehList(source,7)
@@ -1568,15 +1429,17 @@ function vRPN.useItem(itemName,type,ramount)
 			if vRP.tryGetInventoryItem(user_id,itemName,1) then
 				local weapons = {}
 				local identity = vRP.getUserIdentity(user_id)
-				weapons[string.gsub(itemName,"wbody|","")] = { ammo = 0 }
+				weapons[string.gsub(itemName,"wbody","")] = { ammo = 0 }
 				vRPclient._giveWeapons(source,weapons)
+
 				SendWebhookMessage(webhookequipar,"```prolog\n[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[EQUIPOU]: "..vRP.itemNameList(itemName).." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
 				TriggerClientEvent('Creative:Update',source,'updateMochila')
 			end
+
 		elseif type == "recarregar" then
 			local uweapons = vRPclient.getWeapons(source)
-      		local weaponuse = string.gsub(itemName,"wammo|","")
-      		local weaponusename = "wammo|"..weaponuse
+      		local weaponuse = string.gsub(itemName,"wammo","")
+      		local weaponusename = "wammo"..weaponuse
 			local identity = vRP.getUserIdentity(user_id)
       		if uweapons[weaponuse] then
         		local itemAmount = 0
@@ -1594,6 +1457,7 @@ function vRPN.useItem(itemName,type,ramount)
 							weapons[weaponuse] = { ammo = v.amount }
 							itemAmount = v.amount
 							vRPclient._giveWeapons(source,weapons,false)
+							
 							SendWebhookMessage(webhookequipar,"```prolog\n[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[RECARREGOU]: "..vRP.itemNameList(itemName).." \n[MUNICAO]: "..parseInt(v.amount).." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
 							TriggerClientEvent('Creative:Update',source,'updateMochila')
             			end

@@ -38,7 +38,7 @@ CreateThread(function()
                     if IsControlJustPressed(0, 38) then
                         SendNUIMessage({['action'] = "show"})
                         TriggerServerEvent("vrp_bank:checkWallet")
-                        print(json.encode(LocalPlayer))
+                        --print(json.encode(LocalPlayer))
                         SetNuiFocus(true, true)
                     end
                 elseif (#(v.Location - pos) < 4.5) then

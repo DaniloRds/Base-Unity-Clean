@@ -4,7 +4,7 @@ cfg.default_customization = {
 	model = "mp_m_freemode_01"
 }
 
-for i=0,19 do
+for i = 0,10 do
 	cfg.default_customization[i] = { 1,0 }
 end
 

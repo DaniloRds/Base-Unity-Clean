@@ -1242,7 +1242,7 @@ RegisterCommand("checkhash",function(source,args)
     local ped = PlayerPedId()
     if ped then
         local xesquedele = GetHashKey("mp_m_freemode_01") 
-        print(xesquedele)
+        --print(xesquedele)
     end
 end)
 

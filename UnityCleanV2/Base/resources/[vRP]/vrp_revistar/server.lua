@@ -50,10 +50,10 @@ function vRPN.Mochila()
 			end
 			for k,v in pairs(weapons) do
 				if v.ammo < 1 then
-					table.insert(inventario2,{ amount = 1, name = vRP.itemNameList("wbody|"..k), index = vRP.itemIndexList("wbody|"..k), key = k, type = vRP.itemTypeList("wbody|"..k), peso = vRP.getItemWeight("wbody|"..k) })
+					table.insert(inventario2,{ amount = 1, name = vRP.itemNameList("wbody"..k), index = vRP.itemIndexList("wbody"..k), key = k, type = vRP.itemTypeList("wbody"..k), peso = vRP.getItemWeight("wbody"..k) })
 				else
-					table.insert(inventario2,{ amount = 1, name = vRP.itemNameList("wbody|"..k), index = vRP.itemIndexList("wbody|"..k), key = k, type = vRP.itemTypeList("wbody|"..k), peso = vRP.getItemWeight("wbody|"..k) })
-					table.insert(inventario2,{ amount = v.ammo, name = vRP.itemNameList("wammo|"..k), index = vRP.itemIndexList("wammo|"..k), key = k, type = vRP.itemTypeList("wammo|"..k), peso = vRP.getItemWeight("wammo|"..k) })
+					table.insert(inventario2,{ amount = 1, name = vRP.itemNameList("wbody"..k), index = vRP.itemIndexList("wbody"..k), key = k, type = vRP.itemTypeList("wbody"..k), peso = vRP.getItemWeight("wbody"..k) })
+					table.insert(inventario2,{ amount = v.ammo, name = vRP.itemNameList("wammo"..k), index = vRP.itemIndexList("wammo"..k), key = k, type = vRP.itemTypeList("wammo"..k), peso = vRP.getItemWeight("wammo"..k) })
 				end
 			end
 			return inventario,inventario2,vRP.getInventoryWeight(nuser_id),vRP.getInventoryMaxWeight(nuser_id)

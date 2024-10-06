@@ -95,9 +95,13 @@ function getCustomization()
     local ped = PlayerPedId()
     local custom = {}
     custom.modelhash = GetEntityModel(ped)
-    for i = 0, 20 do
-        custom[i] = {GetPedDrawableVariation(ped, i), GetPedTextureVariation(ped, i), GetPedPaletteVariation(ped, i)}
+    for i = 0,11 do
+        --print("Passou 2", i)
+        --if i ~= 2 then 
+            custom[i] = { GetPedDrawableVariation(ped,i),GetPedTextureVariation(ped,i),GetPedPaletteVariation(ped,i) }
+       -- end
     end
+ 
     for i = 0, 10 do
         custom["p" .. i] = {GetPedPropIndex(ped, i), math.max(GetPedPropTextureIndex(ped, i), 0)}
     end

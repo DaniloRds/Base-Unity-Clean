@@ -37,30 +37,30 @@ cfg.shops ={
                     ["sinalizador"] = {
                         name = "Sinalizador",
                         price = 100,
-                        itemname = "'wbody|WEAPON_FLARE",
+                        itemname = "'wbodyWEAPON_FLARE",
                     },
                     ["m-sinalizador"] = {
                         name = "m-sinalizador",
                         price = 200,
                        -- image = "https://www.iconpacks.net/icons/2/free-gun-icon-1971-thumb.png",
-                        itemname = "wammo|WEAPON_FLARE",
+                        itemname = "wammoWEAPON_FLARE",
                     },
                     ["beisebol"] = {
                         name = "Taco de Beisebol",
                         price = 100,
-                        itemname = "'wbody|WEAPON_BAT",
+                        itemname = "'wbodyWEAPON_BAT",
                     },
                     ["paraquedas"] = {
                         name = "Paraquedas",
                         price = 200,
                        -- image = "https://www.iconpacks.net/icons/2/free-gun-icon-1971-thumb.png",
-                        itemname = "wbody|GADGET_PARACHUTE",
+                        itemname = "wbodyGADGET_PARACHUTE",
                     },
                     ["m-paraquedas"] = {
                         name = "m-Paraquedas",
                         price = 200,
                        -- image = "https://www.iconpacks.net/icons/2/free-gun-icon-1971-thumb.png",
-                        itemname = "wammo|GADGET_PARACHUTE",
+                        itemname = "wammoGADGET_PARACHUTE",
                     }
                 }
             },
@@ -71,36 +71,36 @@ cfg.shops ={
                         name = "Faca",
                         price = 700,
                       --  image = "",
-                        itemname = "wbody|WEAPON_KNIFE",
+                        itemname = "wbodyWEAPON_KNIFE",
                     },
                     ["adaga"] ={
                         name = "Adaga",
                         price = 700,
                       --  image = "",
-                        itemname = "wbody|WEAPON_DAGGER",
+                        itemname = "wbodyWEAPON_DAGGER",
                     },
                     ["machado"] ={
                         name = "Machado",
                         price = 700,
                       --  image = "",
-                        itemname = "wbody|WEAPON_HATCHET",
+                        itemname = "wbodyWEAPON_HATCHET",
                     },
                     ["socoingles"] ={
                         name = "Soco Ingles",
                         price = 700,
                       --  image = "",
-                        itemname = "wbody|WEAPON_KNUCKLE",
+                        itemname = "wbodyWEAPON_KNUCKLE",
                     },
                     ["machete"] ={
                         name = "Machete",
                         price = 700,
                       --  image = "",
-                        itemname = "wbody|WEAPON_MACHETE",
+                        itemname = "wbodyWEAPON_MACHETE",
                     },
                     ["canivete"] = {
                         name = "Canivete",
                         price = 500,
-                        itemname = "wbody|WEAPON_SWITCHBLADE",
+                        itemname = "wbodyWEAPON_SWITCHBLADE",
                     },
                 }
             }

@@ -27,6 +27,7 @@ function vRP.removeCloak(player)
 		if data then
 			if data.cloakroom_idle ~= nil then
 				vRPclient._setCustomization(player,data.cloakroom_idle)
+				TriggerEvent('dpn_tattoo:setPedServer',source) -- Não perder tatuagens
 				data.cloakroom_idle = nil
 			end
 		end

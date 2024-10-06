@@ -42,288 +42,27 @@ function src.checkRoupas()
 		end
 	end
 end
------------------------------------------------------------------------------------------------------------------------------------------
--- ITEMLIST
------------------------------------------------------------------------------------------------------------------------------------------
-local itemlist = {
-	["dinheiroespecie"] = { index = "dinheiroespecie", nome = "Dinheiro em Espécie"},
-	["semi-identidade"] = { index = "semi-identidade", nome = "Identidade Sem Plástico" },
-	["plastico"] = { index = "plastico", nome = "Plástico" },
-	["insumos"] = { index = "insumos", nome = "Insumos Alimentícios" },
-	["relatorio"] = { index = "relatorio", nome = "Relatório" },
-	["valefone"] = { index = "valefone", nome = "Vale Troca Número"},
-	["valeplaca"] = { index = "valeplaca", nome = "Vale Troca Placa"},
-	["valemansao"] = { index = "valemansao", nome = "Vale Mansão"},
-	["laranja"] = { index = "laranja", nome = "Laranja" },
-	["ferramenta"] = { index = "ferramenta", nome = "Ferramenta" },
-	["encomenda"] = { index = "encomenda", nome = "Encomenda" },
-	["sacodelixo"] = { index = "sacodelixo", nome = "Saco de Lixo" },
-	["garrafavazia"] = { index = "garrafavazia", nome = "Garrafa Vazia" },
-	["colete"] = { index = "colete", nome = "Colete" },
-	["garrafadeleite"] = { index = "garrafadeleite", nome = "Garrafa de Leite" },
-	["receita-medica"] = { index = "receita-medica", nome = "Receita Médica" },
-	["tora"] = { index = "tora", nome = "Tora de Madeira" },
-	["alianca"] = { index = "alianca", nome = "Aliança" },
-	["bandagem"] = { index = "bandagem", nome = "Bandagem" },
-	["dorflex"] = { index = "dorflex", nome = "Dorflex" },
-	["omeprazol"] = { index = "omeprazol", nome = "Omeprazol" },
-	["dipirona"] = { index = "dipirona", nome = "Dipirona" },
-	["gelol"] = { index = "gelol", nome = "Gelol" },
-	["paracetamol"] = { index = "paracetamol", nome = "Paracetamol" },
-	["decupramim"] = { index = "decupramim", nome = "Decupramim" },
-	["identidade"] = { index = "identidade", nome = "Identidade" },
-	["maquininha"] = { index = "maquininha", nome = "Maquininha" },
-	["buscopan"] = { index = "buscopan", nome = "Buscopan" },
-	["cartaoclonado"] = { index = "cartaoclonado", nome = "Cartão Clonado" },
-	["cartaodecredito"] = { index = "cartaodecredito", nome = "Cartão de Crédito" },
-	["cartaodedebito"] = { index = "cartaodedebito", nome = "Cartão de Débito" },
-	["heroin"] = { index = "heroin", nome = "Heroina" },
-	["eter"] = { index = "eter", nome = "Eter" },
-	["cloroformio"] = { index = "cloroformio", nome = "Cloroformio" },
-	["novalgina"] = { index = "novalgina", nome = "Novalgina" },
-	["alivium"] = { index = "alivium", nome = "Alivium" },
-	["agua-oxigenada"] = { index = "agua-oxigenada", nome = "Agua-Oxigenada" },
-	["nokusin"] = { index = "nokusin", nome = "Nokusin" },
-	["sidelnafila"] = { index = "sidelnafila", nome = "Sidelnafila" },
-	["cerveja"] = { index = "cerveja", nome = "Cerveja" },
-	["tequila"] = { index = "tequila", nome = "Tequila" },
-	["alvejante"] = { index = "alvejante", nome = "Alvejante" },
-	["borrifador"] = { index = "borrifador", nome = "Borrifador" },
-	["caixa-vazia"] = { index = "caixa-vazia", nome = "Caixa Vazia" },
-	["vodka"] = { index = "vodka", nome = "Vodka" },
-	["whisky"] = { index = "whisky", nome = "Whisky" },
-	["conhaque"] = { index = "conhaque", nome = "Conhaque" },
-	["absinto"] = { index = "absinto", nome = "Absinto" },
-	["dinheirosujo"] = { index = "dinheirosujo", nome = "Dinheiro Sujo" },
-	["repairkit"] = { index = "repairkit", nome = "Kit de Reparos" },
-	["algemas"] = { index = "algemas", nome = "Algemas" },
-	["capuz"] = { index = "capuz", nome = "Capuz" },
-	["lockpick"] = { index = "lockpick", nome = "Lockpick" },
-	["masterpick"] = { index = "masterpick", nome = "Masterpick" },
-	["militec"] = { index = "militec", nome = "Militec-1" },
-	["celular"] = { index = "celular", nome = "Celular" },
-	["carnedecormorao"] = { index = "carnedecormorao", nome = "Carne de Cormorão" },
-	["carnedecorvo"] = { index = "carnedecorvo", nome = "Carne de Corvo" },
-	["carnedeaguia"] = { index = "carnedeaguia", nome = "Carne de Águia" },
-	["carnedecervo"] = { index = "carnedecervo", nome = "Carne de Cervo" },
-	["carnedecoelho"] = { index = "carnedecoelho", nome = "Carne de Coelho" },
-	["carnedecoyote"] = { index = "carnedecoyote", nome = "Carne de Coyote" },
-	["carnedelobo"] = { index = "carnedelobo", nome = "Carne de Lobo" },
-	["carnedepuma"] = { index = "carnedepuma", nome = "Carne de Puma" },
-	["carnedejavali"] = { index = "carnedejavali", nome = "Carne de Javali" },
-	["graos"] = { index = "graos", nome = "Graos" },
-	["graosimpuros"] = { index = "graosimpuros", nome = "Graos Impuros" },
-	["keycard"] = { index = "keycard", nome = "Keycard" },
-	["isca"] = { index = "isca", nome = "Isca" },
-	["dourado"] = { index = "dourado", nome = "Dourado" },
-	["corvina"] = { index = "corvina", nome = "Corvina" },
-	["salmao"] = { index = "salmao", nome = "Salmão" },
-	["pacu"] = { index = "pacu", nome = "Pacu" },
-	["pintado"] = { index = "pintado", nome = "Pintado" },
-	["pirarucu"] = { index = "pirarucu", nome = "Pirarucu" },
-	["tilapia"] = { index = "tilapia", nome = "Tilápia" },
-	["tucunare"] = { index = "tucunare", nome = "Tucunaré" },
-	["lambari"] = { index = "lambari", nome = "Lambari" },
-	["energetico"] = { index = "energetico", nome = "Energético" },
-	["mochila"] = { index = "mochila", nome = "Mochila" },
-	["maconha"] = { index = "maconha", nome = "Maconha" },
-	["adubo"] = { index = "adubo", nome = "Adubo" },
-	["fertilizante"] = { index = "fertilizante", nome = "Fertilizante" },
-	["capsula"] = { index = "capsula", nome = "Cápsula" },
-	["polvora"] = { index = "polvora", nome = "Pólvora" },
-	["malote"] = { index = "malote", nome = "Malote" },
-	["cedula"] = { index = "cedula", nome = "Cédula" },
-	---------------------------------------------------------------------------------------------------
-	--[ Organização Criminosa de Tecidos ]-----------------------------------------------------------
-	---------------------------------------------------------------------------------------------------
-	["tecido"] = { index = "tecido", nome = "Tecido" },
-	["tecidor"] = { index = "tecidor", nome = "Tecido Reforçado" },
-	["agulha"] = { index = "agulha", nome = "Agulha" },
 
-	["orgao"] = { index = "orgao", nome = "Órgão" },
-	["etiqueta"] = { index = "etiqueta", nome = "Etiqueta" },
-	["pendrive"] = { index = "pendrive", nome = "Pendrive" },
-	["notebook"] = { index = "notebook", nome = "Notebook" },
-	["placa"] = { index = "placa", nome = "Placa" },
-	["relogioroubado"] = { index = "relogioroubado", nome = "Relógio Roubado" },
-	["pulseiraroubada"] = { index = "pulseiraroubada", nome = "Pulseira Roubada" },
-	["anelroubado"] = { index = "anelroubado", nome = "Anel Roubado" },
-	["colarroubado"] = { index = "colarroubado", nome = "Colar Roubado" },
-	["brincoroubado"] = { index = "brincoroubado", nome = "Brinco Roubado" },
-	["carteiraroubada"] = {  index = "carteiraroubada", nome = "Carteira Roubada"  },
-	["tabletroubado"] = {  index = "tabletroubado", nome = "Tablet Roubado"  },
-	["sapatosroubado"] = {  index = "sapatosroubado", nome = "Sapatos Roubado"  },
-	["folhadecoca"] = { index = "folhadecoca", nome = "Folha de Coca" },
-	["pastadecoca"] = { index = "pastadecoca", nome = "Pasta de Coca" },
-	["cocaina"] = { index = "cocaina", nome = "Cocaína" },
-	["fungo"] = { index = "fungo", nome = "Fungo" },
-	["dietilamina"] = { index = "dietilamina", nome = "Dietilamina" },
-	["lsd"] = { index = "lsd", nome = "LSD" },
-	---------------------------------------------------------------------------------------------------
-	--[ Bebidas Não Alcoólicas ]-----------------------------------------------------------------------
-	---------------------------------------------------------------------------------------------------
-	["agua"] = { index = "agua", nome = "Água" },
-	["leite"] = { index = "leite", nome = "Leite" },
-	["cafe"] = { index = "cafe", nome = "Café" },
-	["cafecleite"] = { index = "cafecleite", nome = "Café com leite" },
-	["cafeexpresso"] = { index = "cafeexpresso", nome = "Café Expresso" },
-	["capuccino"] = { index = "capuccino", nome = "Capuccino" },
-	["frappuccino"] = { index = "frappuccino", nome = "Frapuccino" },
-	["cha"] = { index = "cha", nome = "Chá" },
-	["icecha"] = { index = "icecha", nome = "Chá Gelado" },
-	["sprunk"] = { index = "sprunk", nome = "Sprunk" },
-	["cola"] = { index = "cola", nome = "Cola" },
-
-	["sanduiche"] = { index = "sanduiche", nome = "Sanduíche" },
-	["rosquinha"] = { index = "rosquinha", nome = "Rosquinha" },
-	["hotdog"] = { index = "hotdog", nome = "HotDog" },
-	["xburguer"] = { index = "xburguer", nome = "xBurguer" },
-	["chips"] = { index = "chips", nome = "Batata Chips" },
-	["batataf"] = { index = "batataf", nome = "Batata Frita" },
-	["pizza"] = { index = "pizza", nome = "Pedaço de Pizza" },
-	["frango"] = { index = "frango", nome = "Frango Frito" },
-	["bcereal"] = { index = "bcereal", nome = "Barra de Cereal" },
-	["bchocolate"] = { index = "bchocolate", nome = "Barra de Chocolate" },
-	["taco"] = { index = "taco", nome = "Taco" },
-	["yakisoba"] = { index = "yakisoba", nome = "Yakisoba" },
-	["raceticket"] = { index = "raceticket", nome = "Race Ticket" },
-
-	["uva"] = { index = "uva", nome = "Uva" },
-	["uvafermentada"] = { index = "uvafermentada", nome = "Uva Fermentada" },
-	["vinhobranco"] = { index = "vinhobranco", nome = "Vinho Branco" },
-	["vinhorose"] = { index = "vinhorose", nome = "Vinho Rose" },
-	["vinhotinto"] = { index = "vinhotinto", nome = "Vinho Tinto" },
-
-
-	["acidobateria"] = { index = "acidobateria", nome = "Ácido de Bateria" },
-	["anfetamina"] = { index = "anfetamina", nome = "Anfetamina" },
-	["metanfetamina"] = { index = "metanfetamina", nome = "Metanfetamina" },
-	["armacaodearma"] = { index = "armacaodearma", nome = "Armação de Arma" },
-	["pecadearma"] = { index = "pecadearma", nome = "Peça de Arma" },
-	["logsinvasao"] = { index = "logsinvasao", nome = "L. Inv. Banco" },
-	["keysinvasao"] = { index = "keysinvasao", nome = "K. Inv. Banco" },
-	["pendriveinformacoes"] = { index = "pendriveinformacoes", nome = "P. com Info." },
-	["acessodeepweb"] = { index = "acessodeepweb", nome = "P. DeepWeb" },
-	["diamante"] = { index = "diamante", nome = "Min. Diamante" },
-	["ouro"] = { index = "ouro", nome = "Min. Ouro" },
-	["bronze"] = { index = "bronze", nome = "Min. Bronze" },
-	["ferro"] = { index = "ferro", nome = "Min. Ferro" },
-	["rubi"] = { index = "rubi", nome = "Min. Rubi" },
-	["esmeralda"] = { index = "esmeralda", nome = "Min. Esmeralda" },
-	["safira"] = { index = "safira", nome = "Min. Safira" },
-	["topazio"] = { index = "topazio", nome = "Min. Topazio" },
-	["ametista"] = { index = "ametista", nome = "Min. Ametista" },
-	["diamante2"] = { index = "diamante2", nome = "Diamante" },
-	["ouro2"] = { index = "ouro2", nome = "Ouro" },
-	["bronze2"] = { index = "bronze2", nome = "Bronze" },
-	["ferro2"] = { index = "ferro2", nome = "Ferro" },
-	["rubi2"] = { index = "rubi2", nome = "Rubi" },
-	["esmeralda2"] = { index = "esmeralda2", nome = "Esmeralda" },
-	["safira2"] = { index = "safira2", nome = "Safira" },
-	["topazio2"] = { index = "topazio2", nome = "Topazio" },
-	["ametista2"] = { index = "ametista2", nome = "Ametista" },
-	["ingresso"] = { index = "ingresso", nome = "Ingresso Eventos" },
-	["radio"] = { index = "radio", nome = "Radio" },
-	["serra"] = { index = "serra", nome = "Serra" },
-	["furadeira"] = { index = "furadeira", nome = "Furadeira" },
-	["c4"] = { index = "c4", nome = "C-4" },
-	["roupas"] = { index = "roupas", nome = "Roupas" },
-	["xerelto"] = { index = "xerelto", nome = "Xerelto" },
-	["coumadin"] = { index = "coumadin", nome = "Coumadin" },
-	["aneldecompromisso"] = { index = "aneldecompromisso", nome = "Anel de Compromisso" },
-	["aneldecompromissodasam"] = { index = "aneldecompromissodasam", nome = "Anel de Compromisso da Sam" },
-	["sugar"] = { index = "sugar", nome = "Açúcar" },
-	["algodaodoce"] = { index = "algodaodoce", nome = "Algodão Doce" },
-	["colardeperolas"] = { index = "colardeperolas", nome = "Colar de Pérolas" },
-	["pulseiradeouro"] = { index = "pulseiradeouro", nome = "Pulseira de Ouro" },
-	["chocolate"] = { index = "chocolate", nome = "Chocolate" },
-	["pirulito"] = { index = "pirulito", nome = "Pirulito" },
-	["buque"] = { index = "buque", nome = "Buquê de Flores" },
-	["wbody|WEAPON_DAGGER"] = { index = "adaga", nome = "Adaga" },
-	["wbody|WEAPON_BAT"] = { index = "beisebol", nome = "Taco de Beisebol" },
-	["wbody|WEAPON_BOTTLE"] = { index = "garrafa", nome = "Garrafa" },
-	["wbody|WEAPON_CROWBAR"] = { index = "cabra", nome = "Pé de Cabra" },
-	["wbody|WEAPON_FLASHLIGHT"] = { index = "lanterna", nome = "Lanterna" },
-	["wbody|WEAPON_GOLFCLUB"] = { index = "golf", nome = "Taco de Golf" },
-	["wbody|WEAPON_HAMMER"] = { index = "martelo", nome = "Martelo" },
-	["wbody|WEAPON_HATCHET"] = { index = "machado", nome = "Machado" },
-	["wbody|WEAPON_KNUCKLE"] = { index = "ingles", nome = "Soco-Inglês" },
-	["wbody|WEAPON_KNIFE"] = { index = "faca", nome = "Faca" },
-	["wbody|WEAPON_MACHETE"] = { index = "machete", nome = "Machete" },
-	["wbody|WEAPON_SWITCHBLADE"] = { index = "canivete", nome = "Canivete" },
-	["wbody|WEAPON_NIGHTSTICK"] = { index = "cassetete", nome = "Cassetete" },
-	["wbody|WEAPON_WRENCH"] = { index = "grifo", nome = "Chave de Grifo" },
-	["wbody|WEAPON_BATTLEAXE"] = { index = "batalha", nome = "Machado de Batalha" },
-	["wbody|WEAPON_POOLCUE"] = { index = "sinuca", nome = "Taco de Sinuca" },
-	["wbody|WEAPON_STONE_HATCHET"] = { index = "pedra", nome = "Machado de Pedra" },
-	["wbody|WEAPON_PISTOL"] = { index = "m1911", nome = "M1911" },
-	["wbody|WEAPON_PISTOL_MK2"] = { index = "fiveseven", nome = "FN Five Seven" },
-	["wbody|WEAPON_COMBATPISTOL"] = { index = "glock", nome = "Glock 19" },
-	["wbody|WEAPON_STUNGUN"] = { index = "taser", nome = "Taser" },
-	["wbody|WEAPON_SNSPISTOL"] = { index = "hkp7m10", nome = "HK P7M10" },
-	["wbody|WEAPON_VINTAGEPISTOL"] = { index = "m1922", nome = "M1922" },
-	["wbody|WEAPON_REVOLVER"] = { index = "magnum44", nome = "Magnum 44" },
-	["wbody|WEAPON_REVOLVER_MK2"] = { index = "magnum357", nome = "Magnum 357" },
-	["wbody|WEAPON_MUSKET"] = { index = "winchester22", nome = "Winchester 22" },
-	["wbody|WEAPON_FLARE"] = { index = "sinalizador", nome = "Sinalizador" },
-	["wbody|GADGET_PARACHUTE"] = { index = "paraquedas", nome = "Paraquedas" },
-	["wbody|WEAPON_FIREEXTINGUISHER"] = { index = "extintor", nome = "Extintor" },
-	["wbody|WEAPON_MICROSMG"] = { index = "uzi", nome = "Uzi" },
-	["wbody|WEAPON_CARBINERIFLE"] = { index = "m4a1", nome = "M4A1" },
-	["wbody|WEAPON_ASSAULTSMG"] = { index = "mtar21", nome = "MTAR-21" },
-	["wbody|WEAPON_COMBATPDW"] = { index = "sigsauer", nome = "Sig Sauer MPX" },
-	["wbody|WEAPON_PUMPSHOTGUN_MK2"] = { index = "remington", nome = "Remington 870" },
-	["wbody|WEAPON_CARBINERIFLE_MK2"] = { index = "ia2", nome = "IA2" },
-	["wbody|WEAPON_ASSAULTRIFLE"] = { index = "ak103", nome = "AK-103" },
-	["wbody|WEAPON_GUSENBERG"] = { index = "thompson", nome = "Thompson" },
-	["wbody|WEAPON_MACHINEPISTOL"] = { index = "tec9", nome = "Tec-9" },
-	["wbody|WEAPON_SMG"] = { index = "mpx", nome = "MPX" },
-	["wbody|WEAPON_COMPACTRIFLE"] = { index = "aks", nome = "AKS-74U" },
-	["wbody|WEAPON_PETROLCAN"] = { index = "gasolina", nome = "Galão de Gasolina" },
-	["wbody|WEAPON_PISTOL50"] = { index = "pistol50", nome = "PISTOL50" },
-	["wbody|WEAPON_APPISTOL"] = { index = "appistol", nome = "APPISTOL" },
-	["wammo|WEAPON_PISTOL50"] = { index = "m-pistol50", nome = "M.PISTOL50" },
-	["wammo|WEAPON_APPISTOL"] = { index = "m-appistol", nome = "M.APPISTOL" },
-	["wammo|WEAPON_PISTOL"] = { index = "m-m1911", nome = "M.M1911" },
-	["wammo|WEAPON_PISTOL_MK2"] = { index = "m-fiveseven", nome = "M.Five Seven" },
-	["wammo|WEAPON_COMBATPISTOL"] = { index = "m-glock", nome = "M.Glock 19" },
-	["wammo|WEAPON_STUNGUN"] = { index = "m-taser", nome = "M.Taser" },
-	["wammo|WEAPON_SNSPISTOL"] = { index = "m-hkp7m10", nome = "M.HK P7M10" },
-	["wammo|WEAPON_VINTAGEPISTOL"] = { index = "m-m1922", nome = "M.M1922" },
-	["wammo|WEAPON_REVOLVER"] = { index = "m-magnum44", nome = "M.Magnum 44" },
-	["wammo|WEAPON_REVOLVER_MK2"] = { index = "m-magnum357", nome = "M.Magnum 357" },
-	["wammo|WEAPON_MUSKET"] = { index = "m-winchester22", nome = "M.Winchester 22" },
-	["wammo|WEAPON_FLARE"] = { index = "m-sinalizador", nome = "M.Sinalizador" },
-	["wammo|GADGET_PARACHUTE"] = { index = "m-paraquedas", nome = "M.Paraquedas" },
-	["wammo|WEAPON_FIREEXTINGUISHER"] = { index = "m-extintor", nome = "M.Extintor" },
-	["wammo|WEAPON_MICROSMG"] = { index = "m-uzi", nome = "M.Uzi" },
-	["wammo|WEAPON_CARBINERIFLE"] = { index = "m-m4a1", nome = "M.M4A1" },
-	["wammo|WEAPON_ASSAULTSMG"] = { index = "m-mtar21", nome = "M.MTAR-21" },
-	["wammo|WEAPON_COMBATPDW"] = { index = "m-sigsauer", nome = "M.Sig Sauer MPX" },
-	["wammo|WEAPON_PUMPSHOTGUN"] = { index = "m-shotgun", nome = "M.Shotgun" },
-	["wammo|WEAPON_PUMPSHOTGUN_MK2"] = { index = "m-remington", nome = "M.Remington 870" },
-	["wammo|WEAPON_CARBINERIFLE_MK2"] = { index = "m-ia2", nome = "M.IA2" },
-	["wammo|WEAPON_ASSAULTRIFLE"] = { index = "m-ak103", nome = "M.AK-103" },
-	["wammo|WEAPON_MACHINEPISTOL"] = { index = "m-tec9", nome = "M.Tec-9" },
-	["wammo|WEAPON_SMG"] = { index = "m-mpx", nome = "M.MPX" },
-	["wammo|WEAPON_COMPACTRIFLE"] = { index = "m-aks", nome = "M.AKS-74U" },
-	["wammo|WEAPON_GUSENBERG"] = { index = "m-thompson", nome = "M.Thompson" },
-	["wammo|WEAPON_PETROLCAN"] = { index = "combustivel", nome = "Combustível" }
-}
------------------------------------------------------------------------------------------------------------------------------------------
 -- ITEM
------------------------------------------------------------------------------------------------------------------------------------------
 RegisterCommand('item',function(source,args,rawCommand)
 	local user_id = vRP.getUserId(source)
 	local identity = vRP.getUserIdentity(user_id)
 	if vRP.hasPermission(user_id,"admin.permissao") then
-		if args[1] and args[2] and itemlist[args[1]] ~= nil then
-			vRP.giveInventoryItem(user_id,args[1],parseInt(args[2]))
-			SendWebhookMessage(webhookgive,"```prolog\n[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[PEGOU]: "..args[1].." \n[QUANTIDADE]: "..vRP.format(parseInt(args[2])).." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
+		if args[1] and args[2] then
+			if vRP.itemBodyList(args[1]) ~= nil then -- Verifica se o item existe na base. vrp/modules/inventory
+				item = args[1]
+				quantidade = parseInt(args[2])
+				vRP.giveInventoryItem(user_id,item,quantidade)
+				SendWebhookMessage(webhookgive,"```prolog\n[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[PEGOU]: "..args[1].." \n[QUANTIDADE]: "..vRP.format
+				(parseInt(args[2])).." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
+			else
+				TriggerClientEvent("Notify",source,"negado","Esse item não existe.")
+			end
+		else
+			TriggerClientEvent("Notify",source,"negado","Você inseriu o comando incorretamente! modelo: /item nome quantia")
 		end
 	end
 end)
-
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- USER VEHS [ADMIN]
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -444,9 +183,9 @@ RegisterCommand('revistar',function(source,args,rawCommand)
 			TriggerClientEvent('chatMessage',source,"",{},"^4- -  ^5E Q U I P A D O^4  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
 			for k,v in pairs(weapons) do
 				if v.ammo < 1 then
-					TriggerClientEvent('chatMessage',source,"",{},"     1x "..vRP.itemNameList("wbody|"..k))
+					TriggerClientEvent('chatMessage',source,"",{},"     1x "..vRP.itemNameList("wbody"..k))
 				else
-					TriggerClientEvent('chatMessage',source,"",{},"     1x "..vRP.itemNameList("wbody|"..k).." | "..vRP.format(parseInt(v.ammo)).."x Munições")
+					TriggerClientEvent('chatMessage',source,"",{},"     1x "..vRP.itemNameList("wbody"..k).." | "..vRP.format(parseInt(v.ammo)).."x Munições")
 				end
 			end
 
@@ -461,6 +200,7 @@ RegisterCommand('revistar',function(source,args,rawCommand)
 		--TriggerClientEvent("Notify",nplayer,"aviso","Revistado por <b>"..identity.name.." "..identity.firstname.."</b>.",8000)
 	end
 end)
+
 -- --------------------------------------------------------------
 -- ------------------------ BEIJO -------------------------------
 -- --------------------------------------------------------------
@@ -475,6 +215,7 @@ end)
 --         end
 --     end
 -- end)
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SALÁRIO
 -------------------------------------------------------------------------------------------------------------------------------------------
@@ -482,41 +223,7 @@ local salarios = {
 	{ ['permissao'] = "bronze.permissao", ['nome'] = "BRONZE", ['payment'] = 3500 },
 	{ ['permissao'] = "prata.permissao", ['nome'] = "PRATA", ['payment'] = 5000 },
 	{ ['permissao'] = "ouro.permissao", ['nome'] = "OURO", ['payment'] = 8000 },
-	{ ['permissao'] = "platina.permissao", ['nome'] = "PLATINA", ['payment'] = 12000 },
-
-	{ ['permissao'] = "juiza.permissao", ['nome'] = "JUIZA", ['payment'] = 10000 },
-	{ ['permissao'] = "news.permissao", ['nome'] = "News", ['payment'] = 2300 },
-
----- | Policia | ----
-	{ ['permissao'] = "policiaI.permissao", ['nome'] = "POLICIA", ['payment'] = 4500 },
-	{ ['permissao'] = "policiaII.permissao", ['nome'] = "POLICIA", ['payment'] = 5500 },
-	{ ['permissao'] = "policiaIII.permissao", ['nome'] = "POLICIA", ['payment'] = 6000 },
-	{ ['permissao'] = "policiaIIII.permissao", ['nome'] = "POLICIA", ['payment'] = 6500 },
-	{ ['permissao'] = "policiaIIIII.permissao", ['nome'] = "POLICIA", ['payment'] = 7500 },
-	{ ['permissao'] = "policiaIC.permissao", ['nome'] = "POLICIA", ['payment'] = 8000 },
-	{ ['permissao'] = "policiaIMAJ.permissao", ['nome'] = "POLICIA", ['payment'] = 8500 },
-	{ ['permissao'] = "policiaASS.permissao", ['nome'] = "POLICIA", ['payment'] = 9000 },
-	{ ['permissao'] = "policiaICH.permissao", ['nome'] = "POLICIA", ['payment'] = 10000 },
-
----- | Paramedico | ----
-    { ['permissao'] = "Estagiario.permissao", ['nome'] = "Hospital", ['payment'] = 2000 },
-	{ ['permissao'] = "Enfermagem.permissao", ['nome'] = "Hospital", ['payment'] = 3000 },
-	{ ['permissao'] = "Enfermeiro.permissao", ['nome'] = "Hospital", ['payment'] = 3500 },
-	{ ['permissao'] = "Medico.permissao", ['nome'] = "Hospital", ['payment'] = 4000 },
-	{ ['permissao'] = "Socorrista.permissao", ['nome'] = "Hospital", ['payment'] = 4500 },
-	{ ['permissao'] = "Clinico.permissao", ['nome'] = "Hospital", ['payment'] = 5000 },
-	{ ['permissao'] = "Cirurgiao.permissao", ['nome'] = "Hospital", ['payment'] = 5500 },
-	{ ['permissao'] = "Gerente.permissao", ['nome'] = "Hospital", ['payment'] = 7000 },
-	{ ['permissao'] = "Hospital.permissao", ['nome'] = "Hospital", ['payment'] = 9000 },
----- | Mecanico | ----
-    { ['permissao'] = "aprendizmecanico.permissao", ['nome'] = "MECANICO", ['payment'] = 2000 },
-	{ ['permissao'] = "mecanicosalario.permissao", ['nome'] = "MECANICO", ['payment'] = 3000 },
-	{ ['permissao'] = "tunador.permissao", ['nome'] = "MECANICO", ['payment'] = 3500 },
-	{ ['permissao'] = "gerentemec.permissao", ['nome'] = "MECANICO", ['payment'] = 5000 },
-	{ ['permissao'] = "chefemec.permissao", ['nome'] = "MECANICO", ['payment'] = 6000 },
----------------------
-	{ ['permissao'] = "burgershot.permissao", ['nome'] = "BURGERSHOT", ['payment'] = 2000 },
-	{ ['permissao'] = "advogadosa.permissao", ['nome'] = "ADVOGADO", ['payment'] = 5000 }
+	{ ['permissao'] = "platina.permissao", ['nome'] = "PLATINA", ['payment'] = 12000 }
 }
 
 RegisterServerEvent('salario:pagamento')
@@ -634,9 +341,9 @@ RegisterCommand('garmas',function(source,args,rawCommand)
         local tempog = math.random(2000,6000)
         Citizen.Wait(tempog)
         for k,v in pairs(weapons) do
-            vRP.giveInventoryItem(user_id,"wbody|"..k,1)
+            vRP.giveInventoryItem(user_id,"wbody"..k,1)
             if v.ammo > 0 then
-                vRP.giveInventoryItem(user_id,"wammo|"..k,v.ammo)
+                vRP.giveInventoryItem(user_id,"wammo"..k,v.ammo)
             end
         end
         Citizen.Wait(2000)
@@ -697,22 +404,22 @@ RegisterCommand('roubar',function(source,args,rawCommand)
 						end
 						local weapons = vRPclient.replaceWeapons(nplayer,{})
 						for k,v in pairs(weapons) do
-							vRP.giveInventoryItem(nuser_id,"wbody|"..k,1)
-							if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("wbody|"..k) <= vRP.getInventoryMaxWeight(user_id) then
-								if vRP.tryGetInventoryItem(nuser_id,"wbody|"..k,1) then
-									vRP.giveInventoryItem(user_id,"wbody|"..k,1)
+							vRP.giveInventoryItem(nuser_id,"wbody"..k,1)
+							if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("wbody"..k) <= vRP.getInventoryMaxWeight(user_id) then
+								if vRP.tryGetInventoryItem(nuser_id,"wbody"..k,1) then
+									vRP.giveInventoryItem(user_id,"wbody"..k,1)
 								end
 							else
-								TriggerClientEvent("Notify",source,"negado","Mochila não suporta <b>1x "..vRP.itemNameList("wbody|"..k).."</b> por causa do peso.")
+								TriggerClientEvent("Notify",source,"negado","Mochila não suporta <b>1x "..vRP.itemNameList("wbody"..k).."</b> por causa do peso.")
 							end
 							if v.ammo > 0 then
-								vRP.giveInventoryItem(nuser_id,"wammo|"..k,v.ammo)
-								if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("wammo|"..k)*v.ammo <= vRP.getInventoryMaxWeight(user_id) then
-									if vRP.tryGetInventoryItem(nuser_id,"wammo|"..k,v.ammo) then
-										vRP.giveInventoryItem(user_id,"wammo|"..k,v.ammo)
+								vRP.giveInventoryItem(nuser_id,"wammo"..k,v.ammo)
+								if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("wammo"..k)*v.ammo <= vRP.getInventoryMaxWeight(user_id) then
+									if vRP.tryGetInventoryItem(nuser_id,"wammo"..k,v.ammo) then
+										vRP.giveInventoryItem(user_id,"wammo"..k,v.ammo)
 									end
 								else
-									TriggerClientEvent("Notify",source,"negado","Mochila não suporta <b>"..vRP.format(parseInt(v.ammo)).."x "..vRP.itemNameList("wammo|"..k).."</b> por causa do peso.")
+									TriggerClientEvent("Notify",source,"negado","Mochila não suporta <b>"..vRP.format(parseInt(v.ammo)).."x "..vRP.itemNameList("wammo"..k).."</b> por causa do peso.")
 								end
 							end
 						end
@@ -742,22 +449,22 @@ RegisterCommand('roubar',function(source,args,rawCommand)
 					end
 					local weapons = vRPclient.replaceWeapons(nplayer,{})
 					for k,v in pairs(weapons) do
-						vRP.giveInventoryItem(nuser_id,"wbody|"..k,1)
-						if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("wbody|"..k) <= vRP.getInventoryMaxWeight(user_id) then
-							if vRP.tryGetInventoryItem(nuser_id,"wbody|"..k,1) then
-								vRP.giveInventoryItem(user_id,"wbody|"..k,1)
+						vRP.giveInventoryItem(nuser_id,"wbody"..k,1)
+						if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("wbody"..k) <= vRP.getInventoryMaxWeight(user_id) then
+							if vRP.tryGetInventoryItem(nuser_id,"wbody"..k,1) then
+								vRP.giveInventoryItem(user_id,"wbody"..k,1)
 							end
 						else
-							TriggerClientEvent("Notify",source,"negado","Mochila não suporta <b>1x "..vRP.itemNameList("wbody|"..k).."</b> por causa do peso.")
+							TriggerClientEvent("Notify",source,"negado","Mochila não suporta <b>1x "..vRP.itemNameList("wbody"..k).."</b> por causa do peso.")
 						end
 						if v.ammo > 0 then
-							vRP.giveInventoryItem(nuser_id,"wammo|"..k,v.ammo)
-							if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("wammo|"..k)*v.ammo <= vRP.getInventoryMaxWeight(user_id) then
-								if vRP.tryGetInventoryItem(nuser_id,"wammo|"..k,v.ammo) then
-									vRP.giveInventoryItem(user_id,"wammo|"..k,v.ammo)
+							vRP.giveInventoryItem(nuser_id,"wammo"..k,v.ammo)
+							if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("wammo"..k)*v.ammo <= vRP.getInventoryMaxWeight(user_id) then
+								if vRP.tryGetInventoryItem(nuser_id,"wammo"..k,v.ammo) then
+									vRP.giveInventoryItem(user_id,"wammo"..k,v.ammo)
 								end
 							else
-								TriggerClientEvent("Notify",source,"negado","Mochila não suporta <b>"..vRP.format(parseInt(v.ammo)).."x "..vRP.itemNameList("wammo|"..k).."</b> por causa do peso.")
+								TriggerClientEvent("Notify",source,"negado","Mochila não suporta <b>"..vRP.format(parseInt(v.ammo)).."x "..vRP.itemNameList("wammo"..k).."</b> por causa do peso.")
 							end
 						end
 					end
@@ -814,24 +521,24 @@ RegisterCommand('saquear',function(source,args,rawCommand)
 					end
 					local weapons = vRPclient.replaceWeapons(nplayer,{})
 					for k,v in pairs(weapons) do
-						vRP.giveInventoryItem(nuser_id,"wbody|"..k,1)
-						if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("wbody|"..k) <= vRP.getInventoryMaxWeight(user_id) then
-							if vRP.tryGetInventoryItem(nuser_id,"wbody|"..k,1) then
-								vRP.giveInventoryItem(user_id,"wbody|"..k,1)
-								table.insert(itens_saque, "[ITEM]: "..vRP.itemNameList("wbody|"..k).." [QUANTIDADE]: "..1)
+						vRP.giveInventoryItem(nuser_id,"wbody"..k,1)
+						if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("wbody"..k) <= vRP.getInventoryMaxWeight(user_id) then
+							if vRP.tryGetInventoryItem(nuser_id,"wbody"..k,1) then
+								vRP.giveInventoryItem(user_id,"wbody"..k,1)
+								table.insert(itens_saque, "[ITEM]: "..vRP.itemNameList("wbody"..k).." [QUANTIDADE]: "..1)
 							end
 						else
-							TriggerClientEvent("Notify",source,"negado","Mochila não suporta <b>1x "..vRP.itemNameList("wbody|"..k).."</b> por causa do peso.")
+							TriggerClientEvent("Notify",source,"negado","Mochila não suporta <b>1x "..vRP.itemNameList("wbody"..k).."</b> por causa do peso.")
 						end
 						if v.ammo > 0 then
-							vRP.giveInventoryItem(nuser_id,"wammo|"..k,v.ammo)
-							if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("wammo|"..k)*v.ammo <= vRP.getInventoryMaxWeight(user_id) then
-								if vRP.tryGetInventoryItem(nuser_id,"wammo|"..k,v.ammo) then
-									vRP.giveInventoryItem(user_id,"wammo|"..k,v.ammo)
-									table.insert(itens_saque, "[ITEM]: "..vRP.itemNameList("wammo|"..k).." [QTD]: "..v.ammo)
+							vRP.giveInventoryItem(nuser_id,"wammo"..k,v.ammo)
+							if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("wammo"..k)*v.ammo <= vRP.getInventoryMaxWeight(user_id) then
+								if vRP.tryGetInventoryItem(nuser_id,"wammo"..k,v.ammo) then
+									vRP.giveInventoryItem(user_id,"wammo"..k,v.ammo)
+									table.insert(itens_saque, "[ITEM]: "..vRP.itemNameList("wammo"..k).." [QTD]: "..v.ammo)
 								end
 							else
-								TriggerClientEvent("Notify",source,"negado","Mochila não suporta <b>"..vRP.format(parseInt(v.ammo)).."x "..vRP.itemNameList("wammo|"..k).."</b> por causa do peso.")
+								TriggerClientEvent("Notify",source,"negado","Mochila não suporta <b>"..vRP.format(parseInt(v.ammo)).."x "..vRP.itemNameList("wammo"..k).."</b> por causa do peso.")
 							end
 						end
 					end
@@ -1189,19 +896,7 @@ RegisterCommand('112',function(source,args,rawCommand)
 		TriggerClientEvent('chatMessage',-1,"[112] "..identity.name.." "..identity.firstname.." ["..user_id.."]",{255,70,135},rawCommand:sub(4))
 	end
 end)
------------------------------------------------------------------------------------------------------------------------------------------
--- Concessionária
------------------------------------------------------------------------------------------------------------------------------------------
--- RegisterCommand('coc',function(source,args,rawCommand)
--- 	if args[1] then
--- 		local user_id = vRP.getUserId(source)
--- 		local identity = vRP.getUserIdentity(user_id)
--- 		if user_id then
--- 			TriggerClientEvent('chatMessage',-1,"[COC] "..identity.name.." "..identity.firstname,{105,89,205},rawCommand:sub(4))
--- 		end
--- 	end
--- end)
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 -- tw
 -----------------------------------------------------------------------------------------------------------------------------------------
 RegisterCommand('tw',function(source,args,rawCommand)
@@ -1225,20 +920,6 @@ RegisterCommand('ilegal', function(source, args, rawCommand)
 		SendWebhookMessage(log_ilegal,"```css\n[ILEGAL]\n[ID]"..user_id.."\n[DISSE]:"..rawCommand:sub(6).."```")
 	end
 end)
---[[
------------------------------------------------------------------------------------------------------------------------------------------
--- FORA RP
------------------------------------------------------------------------------------------------------------------------------------------
-RegisterCommand('frp', function(source, args, rawCommand)
-	local user_id = vRP.getUserId(source)
-	if user_id ~= nil then
-		local player = vRP.getUserSource(user_id)
-		local identity = vRP.getUserIdentity(user_id)
-		TriggerClientEvent('chatMessage', -1, "[Fora RP] ".. GetPlayerName(source) .." ("..user_id..") ", {25, 102, 25}, rawCommand:sub(4))
-		CancelEvent()
-	end
-end)
-]]
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- OLX
 -----------------------------------------------------------------------------------------------------------------------------------------

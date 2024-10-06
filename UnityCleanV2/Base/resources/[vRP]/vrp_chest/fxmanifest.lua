@@ -1,8 +1,6 @@
 fx_version 'bodacious'
 game 'gta5'
 
--- Teste
-
 ui_page "nui/index.html"
 ui_page_preload 'yes'
 

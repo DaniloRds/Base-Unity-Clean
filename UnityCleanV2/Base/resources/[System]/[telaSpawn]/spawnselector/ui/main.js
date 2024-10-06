@@ -6,7 +6,6 @@ $(document).ready(()=>{
         $(".spawnBtn").data("spawn-name",$(this).data("location"))
         let imagem = $(this).attr("data-location");
         $("#imagem").html("<img src='imagens/"+imagem+".png'>")
-        console.log(imagem);
         $(".spawn-box").fadeIn(100);
     })
     $.post("http://spawnselector/time")

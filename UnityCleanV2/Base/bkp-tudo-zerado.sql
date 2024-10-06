@@ -1,13 +1,15 @@
 -- --------------------------------------------------------
 -- Servidor:                     127.0.0.1
--- Versão do servidor:           10.4.24-MariaDB - mariadb.org binary distribution
+-- Versão do servidor:           10.4.27-MariaDB - mariadb.org binary distribution
 -- OS do Servidor:               Win64
--- HeidiSQL Versão:              11.2.0.6213
+-- HeidiSQL Versão:              12.3.0.6589
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
@@ -15,66 +17,21 @@
 
 -- Copiando estrutura do banco de dados para vrp
 DROP DATABASE IF EXISTS `vrp`;
-CREATE DATABASE IF NOT EXISTS `vrp` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE IF NOT EXISTS `vrp` /*!40100 DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci */;
 USE `vrp`;
 
--- Copiando estrutura para tabela vrp.empregos
-DROP TABLE IF EXISTS `empregos`;
-CREATE TABLE IF NOT EXISTS `empregos` (
-  `user_id` int(11) NOT NULL,
-  `rc` int(11) DEFAULT NULL,
-  `level` int(11) DEFAULT NULL,
-  `exp` int(11) DEFAULT NULL,
-  PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- Exportação de dados foi desmarcado.
-
--- Copiando estrutura para tabela vrp.empregos_florestal
-DROP TABLE IF EXISTS `empregos_florestal`;
-CREATE TABLE IF NOT EXISTS `empregos_florestal` (
-  `user_id` int(11) NOT NULL,
-  `rc` int(11) DEFAULT NULL,
-  `level` int(11) DEFAULT NULL,
-  `exp` int(11) DEFAULT NULL,
-  PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- Exportação de dados foi desmarcado.
-
--- Copiando estrutura para tabela vrp.empregos_graos
-DROP TABLE IF EXISTS `empregos_graos`;
-CREATE TABLE IF NOT EXISTS `empregos_graos` (
-  `user_id` int(11) NOT NULL,
-  `rc` int(11) DEFAULT NULL,
-  `level` int(11) DEFAULT NULL,
-  `exp` int(11) DEFAULT NULL,
-  PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- Exportação de dados foi desmarcado.
-
--- Copiando estrutura para tabela vrp.empregos_jardineiro
-DROP TABLE IF EXISTS `empregos_jardineiro`;
-CREATE TABLE IF NOT EXISTS `empregos_jardineiro` (
-  `user_id` int(11) NOT NULL,
-  `rc` int(11) DEFAULT NULL,
-  `level` int(11) DEFAULT NULL,
-  `exp` int(11) DEFAULT NULL,
-  PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- Exportação de dados foi desmarcado.
-
--- Copiando estrutura para tabela vrp.empregos_lixeiro
-DROP TABLE IF EXISTS `empregos_lixeiro`;
-CREATE TABLE IF NOT EXISTS `empregos_lixeiro` (
-  `user_id` int(11) NOT NULL,
-  `rc` int(11) DEFAULT NULL,
-  `level` int(11) DEFAULT NULL,
-  `exp` int(11) DEFAULT NULL,
-  PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- Copiando estrutura para tabela vrp.gal_orgs
+DROP TABLE IF EXISTS `gal_orgs`;
+CREATE TABLE IF NOT EXISTS `gal_orgs` (
+  `org` varchar(50) NOT NULL,
+  `membros` text NOT NULL DEFAULT '{}',
+  `banco` int(11) NOT NULL DEFAULT 0,
+  `maxMembros` int(11) NOT NULL DEFAULT 0,
+  `bancoHistorico` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT '{}',
+  `rewards` longtext DEFAULT '{"goals":{},"players":{},"infoGoals":{}}',
+  `groupsOffice` longtext DEFAULT '{}',
+  PRIMARY KEY (`org`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -84,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `nation_concessionaria` (
   `vehicle` text NOT NULL,
   `estoque` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`vehicle`(765))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -94,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `nation_race` (
   `user_id` int(11) NOT NULL DEFAULT 0,
   `nickname` text NOT NULL DEFAULT '',
   `races` text NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -106,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `phone_app_chat` (
   `message` varchar(255) NOT NULL,
   `time` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -120,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `phone_calls` (
   `time` timestamp NOT NULL DEFAULT current_timestamp(),
   `accepts` int(11) NOT NULL COMMENT 'Appels accepter ou pas',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -135,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `phone_messages` (
   `isRead` int(11) NOT NULL DEFAULT 0,
   `owner` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -143,11 +100,11 @@ CREATE TABLE IF NOT EXISTS `phone_messages` (
 DROP TABLE IF EXISTS `phone_users_contacts`;
 CREATE TABLE IF NOT EXISTS `phone_users_contacts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `identifier` varchar(60) CHARACTER SET utf8mb4 DEFAULT NULL,
-  `number` varchar(10) CHARACTER SET utf8mb4 DEFAULT NULL,
-  `display` varchar(64) CHARACTER SET utf8mb4 NOT NULL DEFAULT '-1',
+  `identifier` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `number` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `display` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '-1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -157,9 +114,9 @@ CREATE TABLE IF NOT EXISTS `policia` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `police_id` int(11) NOT NULL,
-  `dkey` varchar(45) COLLATE utf8_bin NOT NULL,
-  `dvalue` text COLLATE utf8_bin DEFAULT NULL,
-  `img` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `dkey` varchar(45) NOT NULL,
+  `dvalue` text DEFAULT NULL,
+  `img` varchar(150) DEFAULT NULL,
   `valor` decimal(10,2) DEFAULT NULL,
   `datahora` datetime DEFAULT NULL,
   `id_pai` int(11) DEFAULT 0,
@@ -172,9 +129,9 @@ CREATE TABLE IF NOT EXISTS `policia` (
 DROP TABLE IF EXISTS `twitter_accounts`;
 CREATE TABLE IF NOT EXISTS `twitter_accounts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) CHARACTER SET utf8 NOT NULL DEFAULT '0',
-  `password` varchar(50) COLLATE utf8mb4_bin NOT NULL DEFAULT '0',
-  `avatar_url` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '0',
+  `password` varchar(50) NOT NULL DEFAULT '0',
+  `avatar_url` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
@@ -201,8 +158,8 @@ DROP TABLE IF EXISTS `twitter_tweets`;
 CREATE TABLE IF NOT EXISTS `twitter_tweets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `authorId` int(11) NOT NULL,
-  `realUser` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `message` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `realUser` varchar(50) DEFAULT NULL,
+  `message` varchar(256) NOT NULL,
   `time` timestamp NOT NULL DEFAULT current_timestamp(),
   `likes` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
@@ -220,7 +177,24 @@ CREATE TABLE IF NOT EXISTS `vrp_banco` (
   `extrato` varchar(255) DEFAULT NULL,
   `data` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- Exportação de dados foi desmarcado.
+
+-- Copiando estrutura para tabela vrp.vrp_burguershot
+DROP TABLE IF EXISTS `vrp_burguershot`;
+CREATE TABLE IF NOT EXISTS `vrp_burguershot` (
+  `hamburguer` int(100) NOT NULL DEFAULT 0,
+  `pizza` int(100) NOT NULL DEFAULT 0,
+  `hotdog` int(100) NOT NULL DEFAULT 0,
+  `frango` int(100) NOT NULL DEFAULT 0,
+  `bebidas` int(100) NOT NULL DEFAULT 0,
+  `ingredientes` int(255) NOT NULL DEFAULT 0,
+  `dinheiro` int(255) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+INSERT INTO `vrp_burguershot` (`hamburguer`, `pizza`, `hotdog`, `frango`, `bebidas`, `ingredientes`, `dinheiro`) VALUES
+	(1, 1, 1, 1, 1, 1, 0);
 
 -- Exportação de dados foi desmarcado.
 
@@ -233,7 +207,7 @@ CREATE TABLE IF NOT EXISTS `vrp_business` (
   `reset_timestamp` int(11) DEFAULT NULL,
   PRIMARY KEY (`user_id`),
   CONSTRAINT `fk_business_users` FOREIGN KEY (`user_id`) REFERENCES `vrp_users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -243,7 +217,7 @@ CREATE TABLE IF NOT EXISTS `vrp_estoque` (
   `vehicle` varchar(100) NOT NULL,
   `quantidade` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -254,7 +228,7 @@ CREATE TABLE IF NOT EXISTS `vrp_helpdesk_respostas` (
   `message` text NOT NULL,
   `case_id` int(11) NOT NULL,
   `createdAt` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -270,7 +244,7 @@ CREATE TABLE IF NOT EXISTS `vrp_helpdesk_ticket` (
   `case_id` int(11) NOT NULL,
   PRIMARY KEY (`user_id`,`id`),
   KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -282,7 +256,7 @@ CREATE TABLE IF NOT EXISTS `vrp_homes_permissions` (
   `garage` int(11) NOT NULL,
   `home` varchar(100) NOT NULL DEFAULT '',
   `tax` varchar(24) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -299,7 +273,7 @@ CREATE TABLE IF NOT EXISTS `vrp_mercadolivre` (
   KEY `id` (`id`),
   KEY `user_id` (`user_id`),
   KEY `item_id` (`item_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -308,7 +282,7 @@ DROP TABLE IF EXISTS `vrp_priority`;
 CREATE TABLE IF NOT EXISTS `vrp_priority` (
   `steam` int(11) unsigned NOT NULL,
   `priority` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -318,7 +292,7 @@ CREATE TABLE IF NOT EXISTS `vrp_srv_data` (
   `dkey` varchar(100) NOT NULL,
   `dvalue` text DEFAULT NULL,
   PRIMARY KEY (`dkey`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -333,7 +307,7 @@ CREATE TABLE IF NOT EXISTS `vrp_users` (
   `pet` varchar(50) DEFAULT NULL,
   `moedas` int(30) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -345,7 +319,7 @@ CREATE TABLE IF NOT EXISTS `vrp_user_data` (
   `dvalue` text DEFAULT NULL,
   PRIMARY KEY (`user_id`,`dkey`),
   CONSTRAINT `fk_user_data_users` FOREIGN KEY (`user_id`) REFERENCES `vrp_users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -357,7 +331,7 @@ CREATE TABLE IF NOT EXISTS `vrp_user_homes` (
   `number` int(11) DEFAULT NULL,
   PRIMARY KEY (`user_id`,`home`),
   CONSTRAINT `fk_user_homes_users` FOREIGN KEY (`user_id`) REFERENCES `vrp_users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -376,7 +350,7 @@ CREATE TABLE IF NOT EXISTS `vrp_user_identities` (
   KEY `registration` (`registration`),
   KEY `phone` (`phone`),
   CONSTRAINT `fk_user_identities_users` FOREIGN KEY (`user_id`) REFERENCES `vrp_users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -388,7 +362,7 @@ CREATE TABLE IF NOT EXISTS `vrp_user_ids` (
   PRIMARY KEY (`identifier`),
   KEY `fk_user_ids_users` (`user_id`),
   CONSTRAINT `fk_user_ids_users` FOREIGN KEY (`user_id`) REFERENCES `vrp_users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -401,7 +375,7 @@ CREATE TABLE IF NOT EXISTS `vrp_user_moneys` (
   `coin` int(11) DEFAULT NULL,
   PRIMARY KEY (`user_id`),
   CONSTRAINT `fk_user_moneys_users` FOREIGN KEY (`user_id`) REFERENCES `vrp_users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -420,7 +394,7 @@ CREATE TABLE IF NOT EXISTS `vrp_user_vehicles` (
   `data_alugado` text DEFAULT NULL,
   PRIMARY KEY (`user_id`,`vehicle`),
   CONSTRAINT `fk_user_vehicles_users` FOREIGN KEY (`user_id`) REFERENCES `vrp_users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -433,10 +407,10 @@ CREATE TABLE IF NOT EXISTS `vrp_vips` (
   PRIMARY KEY (`user_id`),
   KEY `vipName` (`vipName`),
   KEY `data_contrat` (`data_contrat`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
--- Exportação de dados foi desmarcado.
 
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

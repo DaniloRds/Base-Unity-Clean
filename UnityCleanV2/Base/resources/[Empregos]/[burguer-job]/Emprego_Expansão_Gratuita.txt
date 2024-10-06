@@ -1,0 +1,16 @@
+Olá a todos, a equipe Unity agradece o download da base.
+Entre em nosso discord e fique por dentro das novidades!
+
+https://discord.gg/pbT5wVp8e9
+https://discord.gg/pbT5wVp8e9
+https://discord.gg/pbT5wVp8e9
+
+Para adicionar a expansão do emprego gratuito basta acessar os links:
+Script https://github.com/DaniloRds/burguershot_job_vrpex/tree/main
+Add-ons (mapas, veículos e roupas) https://drive.google.com/drive/folders/1CUdOwMVM_SiRJM8oxWi-DnSQKZYV9ArQ?usp=drive_link
+
+Você vai fazer o download desses arquivos e colocar todos aqui dentro da pasta [burguer-job], 
+os arquivos devem estar dessa maneira: https://cdn.discordapp.com/attachments/994263910926528532/1292548292676423720/image.png?ex=670422e7&is=6702d167&hm=1066c3dfb4ed86994a4e530eba3467943e63b0731cd3e70b8b591d8ad78aad29&
+
+Após isso já estará tudo funcionando perfeitamente, só restartar sua base :)
+

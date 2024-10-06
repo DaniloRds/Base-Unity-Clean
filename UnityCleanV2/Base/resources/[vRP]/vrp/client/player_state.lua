@@ -16,7 +16,7 @@ end)
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(10000)
+		Citizen.Wait(2000)
 		if IsPlayerPlaying(PlayerId()) and state_ready then
 			local x,y,z = table.unpack(GetEntityCoords(PlayerPedId(),true))
 			vRPserver._updatePos(x,y,z)
@@ -224,9 +224,11 @@ function tvRP.getCustomization()
 	local custom = {}
 	custom.modelhash = GetEntityModel(ped)
 
-	for i = 0,20 do
-		custom[i] = { GetPedDrawableVariation(ped,i),GetPedTextureVariation(ped,i),GetPedPaletteVariation(ped,i) }
-	end
+	for i = 0,11 do
+        if i ~= 2 then 
+            custom[i] = { GetPedDrawableVariation(ped,i),GetPedTextureVariation(ped,i),GetPedPaletteVariation(ped,i) }
+        end
+    end
 
 	for i = 0,10 do
 		custom["p"..i] = { GetPedPropIndex(ped,i),math.max(GetPedPropTextureIndex(ped,i),0) }
@@ -274,6 +276,7 @@ function tvRP.setCustomization(custom)
 			for k,v in pairs(custom) do
 				if k ~= "model" and k ~= "modelhash" then
 					local isprop, index = parse_part(k)
+					--print("index", index)
 					if isprop then
 						if v[1] < 0 then
 							ClearPedProp(ped,index)
@@ -291,6 +294,7 @@ function tvRP.setCustomization(custom)
 	end)
 	return r:wait()
 end
+
 
 function tvRP.blockAcao()
 	acao = true

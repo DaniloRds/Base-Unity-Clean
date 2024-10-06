@@ -1,6 +1,8 @@
 local cfg = {}
 
 cfg.groups = {
+
+	-- [ADMINISTRAÇÃO ] --
 	["owner"] = {
 		_config = {
 			title = "Owner",
@@ -17,14 +19,14 @@ cfg.groups = {
 		"reviver.permissao",
 		"suporte.permissao"
 	},
-	["PaisanaOwner"] = {
+	["paisana_owner"] = {
 		_config = {
 			title = "PaisanaOwner",
 			gtype = "owner"
 		},
 		"paisanaowner.permissao",
 	},
-	["Admin"] = {
+	["admin"] = {
 		_config = {
 			title = "Admin",
 			gtype = "admin"
@@ -40,14 +42,14 @@ cfg.groups = {
 		"ticket.permissao",
 		"mod.permissao"
 	},
-	["PaisanaAdmin"] = {
+	["paisana_admin"] = {
 		_config = {
 			title = "PaisanaAdmin",
 			gtype = "admin"
 		},
 		"paisanadmin.permissao",
 	},
-	["Mod"] = {
+	["mod"] = {
 		_config = {
 			title = "Mod",
 			gtype = "mod"
@@ -61,14 +63,14 @@ cfg.groups = {
 		"ticket.permissao",
 		"reviver.permissao"
 	},
-	["PaisanaMod"] = {
+	["paisana_mod"] = {
 		_config = {
 			title = "PaisanaMod",
 			gtype = "mod"
 		},
 		"paisanamod.permissao",
 	},
-	["Suporte"] = {
+	["suporte"] = {
 		_config = {
 			title = "Suporte",
 			gtype = "suporte"
@@ -80,7 +82,7 @@ cfg.groups = {
 		"reviver.permissao",
 		"ticket.permissao"
 	},
-	["PaisanaSuporte"] = {
+	["paisana_suporte"] = {
 		_config = {
 			title = "PaisanaSuporte",
 			gtype = "suporte"
@@ -88,13 +90,47 @@ cfg.groups = {
 		"paisanasuporte.permissao",
 	},
 	
-	["Blips"] = {
+	["blips"] = {
 		"blips.permissao"
 	},
+
+	-- [EMPREGOS] --
+	["burguer1"] = {
+		_config = {
+			title = "Dono do Burguershot",
+			gtype = "job"
+		},
+		"dono.burguershot",
+		"burguershot.permissao"
+	},
+	["burguer"] = {
+		_config = {
+			title = "Funcionário Burguershot",
+			gtype = "job"
+		},
+		"burguershot.permissao",
+		"servico.burguershot"
+	},
+	["burguer1-off"] = {
+		_config = {
+			title = "Burguershot: Fora de Serviço",
+			gtype = "job"
+		},
+		"burguershotdono.foradeservico"
+	},
+	["burguer-off"] = {
+		_config = {
+			title = "Burguershot: Fora de Serviço",
+			gtype = "job"
+		},
+		"burguershot.foradeservico"
+	},
+
+	--
 		
 }
 
-cfg.users = {
+cfg.users = { -- MUDE CASO NÃO QUEIRA QUE O CARGO OWNER SEJA SETADO AUTOMATICAMENTE ATÉ O ID 3
 	[1] = { "owner" },
 	[2] = { "owner" },
 	[3] = { "owner" }
