@@ -301,7 +301,7 @@ INSERT INTO `vrp_estoque` (`vehicle`, `estoque`, `user_id`) VALUES
 
 -- Exportação de dados foi desmarcado.
 
--- Copiando estrutura para tabela vrp.vrp_estoque_vip
+-- Copiando estrutura para tabela vrp.vrp_lojavip
 DROP TABLE IF EXISTS `vrp_estoque_vip`;
 CREATE TABLE IF NOT EXISTS `vrp_estoque_vip` (
   `vehicle` varchar(100) NOT NULL,
