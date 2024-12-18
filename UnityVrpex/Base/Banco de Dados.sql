@@ -354,7 +354,7 @@ CREATE TABLE IF NOT EXISTS `vrp_users` (
   `moedas` int(30) NOT NULL DEFAULT 0,
   `garagem` int(30) NOT NULL DEFAULT 2,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Exportação de dados foi desmarcado.
 
