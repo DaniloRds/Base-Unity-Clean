@@ -24,7 +24,7 @@ Para desativar os NPCS na base você precisa abrir o arquivo `start.exe` com um 
 
 ### 📷Imagens dos Itens <br>
 Aqui está o link de download das imagens, após fazer o download acesse o diretório `C:\xampp\htdocs` e extraia elas lá.<br>
-[Download Imagens](https://drive.google.com/file/d/14KDx7OAcECGqpS8IIPV8QYSUfvJv3uiM/view?usp=sharing)
+[Download Imagens](https://drive.google.com/file/d/1AOrzhV2ytcg-tNu8QsdwRL7fPTKnK_AT/view?usp=sharing)
 
 ## 🤝 Colaboradores
 
