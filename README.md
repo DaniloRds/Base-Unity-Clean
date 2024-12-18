@@ -19,7 +19,7 @@
 [Steam-Key](https://steamcommunity.com/dev/apikey) ➡ Você vai precisar gerar sua WebApiKey. <br>
 
 ### 💠Como desativo os NPCs? <br>
-Para desativar os NPCS na base você precisa abrir o arquivo `start.exe` com um bloco ne notas e adicionar a opção `onesync_population false` na frende do número 2612.
+Para desativar os NPCS na base você precisa abrir o arquivo `start.exe` com um bloco ne notas e adicionar a opção `+set onesync_population false` na frente de +set sv_enforceGameBuild 2612.
 
 
 ### 📷Imagens dos Itens <br>
