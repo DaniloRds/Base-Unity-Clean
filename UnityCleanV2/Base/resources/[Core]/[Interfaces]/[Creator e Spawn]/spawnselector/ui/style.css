@@ -1,0 +1,205 @@
+*{
+    font-family:  sans-serif;
+    /* text-transform: uppercase; */
+}
+
+.spawn-wrapper{
+    width:1280px;
+    height:720px;
+    background: rgb(39 41 72);
+    display: none;
+    position:absolute;
+    border-radius: 10px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    
+    box-shadow: 1px 0px 0px #000000FF, -1px 0px 0px #000000FF, 0px -1px 0px #000000FF, 0px 1px 0px #000000FF, 0px 1px 5px #000000FF;
+    border:2px solid grey;
+    transition:.5s ease;
+    border-radius: 10px;
+}
+
+.map-wrapper{
+    top:5%;
+    left:0%;
+    position: relative;
+    width: 100%;
+    height:90%;
+    background:url(./bg.png);
+    background-size:cover;
+    border-radius: 7px;
+}
+.spawn-markers{
+    width:100%;
+    height: 100%;
+    position: relative;
+}
+.markerBtn{
+    transition:.3s ease;
+    color:orange;
+    font-size:25px;
+    text-shadow: 1px 0px 0px #000000FF, -1px 0px 0px #000000FF, 0px -1px 0px #000000FF, 0px 1px 0px #000000FF, 0px 1px 5px #000000FF;
+}
+.markerBtn.mrpd{
+    position: absolute;
+    font-size:30px;
+    top:43.9%;
+    left:74.8%;
+}
+
+.markerBtn.hospital{
+    position: absolute;
+    font-size:30px;
+    top:47.5%;
+    left:72.7%;
+}
+.markerBtn.motel{
+    position: absolute;
+    font-size:30px;
+    top:50.5%;
+    left:72.8%;
+}
+.markerBtn.airport{
+    font-size:30px;
+    position: absolute;
+    top:60.5%;
+    left:89.1%;
+}
+.markerBtn.beach{
+    position: absolute;
+    font-size:30px;
+    top:67.2%;
+    left:75%;
+}
+.markerBtn.sandy{
+    font-size:30px;
+    position: absolute;
+    top:26.6%;
+    left:39%;
+}
+.markerBtn.paleto{
+    position: absolute;
+    font-size:30px;
+    top:51.2%;
+    left:18.5%;
+}
+.markerBtn.mirror{
+    position: absolute;
+    font-size:30px;
+    top:37%;
+    left:73%;
+}
+.markerBtn.taco{
+    position: absolute;
+    font-size:30px;
+    top:49%;
+    left:80%;
+}
+.markerBtn.cream{
+    position: absolute;
+    font-size:30px;
+    top:55%;
+    left:66%;
+}
+.spawn-box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:fit-content;
+    padding-right:5px;
+    padding-left:5px;
+    height:300px;
+    border-radius: 4px;
+    background:rgba(0, 0, 0, 0.8);
+    text-align:center;
+    display:none;
+    box-shadow: 0 0 10px 2px black;
+
+}
+.box-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.spawn-wrapper.disabled{
+    pointer-events: none;
+    filter:sepia(70%);
+}
+.spawn-box span{
+    font-size:30px;
+    color:white;
+
+}
+.spawn-box img{
+    margin-top:10px;
+    width:60%;
+    height:60%;
+    border-radius: 4px;
+}
+a{
+    color:white;
+    font-size:20px;
+    background-color:#228B22	;
+    padding:5px;
+    position: relative;
+    text-shadow: 1px 0px 0px #000000FF, -1px 0px 0px #000000FF, 0px -1px 0px #000000FF, 0px 1px 0px #000000FF;
+    opacity: 0.8;
+}
+a,button i{
+    padding-right:5px;
+}
+.markerBtn:hover{
+    cursor: pointer;
+    transform:scale(1.4);
+    color:yellowgreen;
+}
+
+.lastLocation{
+    background:rgba(0, 0, 0, 0.8);
+    border:none;
+    color:lightblue;
+    padding:7px;
+    border-radius: 5px;
+    font-size:25px;
+    text-shadow: 1px 0px 0px #000000FF, -1px 0px 0px #000000FF, 0px -1px 0px #000000FF, 0px 1px 0px #000000FF;
+    position: absolute;
+    left:50%;
+    transform:translate(-50%,-50%);
+    outline:none;
+    transition:.3s ease;
+}
+.lastLocation:hover{
+    cursor: pointer;
+    /* transform:scale(1.2); */
+    color:yellowgreen;
+}
+.spawn-btn{
+    background:green;
+    border:none;
+    color:white;
+    font-family: Calibri;
+    font-weight: 900;
+    padding:8px;
+}
+.spawn-buttons{
+    padding-right:10px;
+    margin-top:10px;
+    display:flex;
+    flex-direction: row;
+}
+.spawn-buttons button{
+    outline:none;
+    margin-left:10px;
+    transition:.3s ease;
+}
+.spawn-buttons button.red{
+    background:red !important;
+}
+.spawn-buttons button:hover{
+    cursor: pointer;
+    transform:scale(1.1);
+}
+

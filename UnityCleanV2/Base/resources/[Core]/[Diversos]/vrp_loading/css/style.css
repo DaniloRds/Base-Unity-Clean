@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body,td,th 
+{
+  background: #161922;
+  /* background-image: url("background.png"); */
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  /* background-position: center; */
+  font-size: 11px;
+  font-family: arial;
+  color: #666;
+  vertical-align: baseline;
+  outline: 0;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+}
+
+/* Configurar o vídeo para ocupar toda a tela */
+#background-video {
+  position: fixed; /* Fixa o vídeo no background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que o vídeo cubra toda a área */
+  z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+}
+
+
+a,a:link,a:visited,a:active,a:hover 
+{
+  font-family: arial;
+  font-size: 11px;
+  color: #666;
+  text-decoration: none;
+}
+
+div,span,applet,object,iframe,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr 
+{  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+#align {
+	width: 530px;
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	transform: translate(-50%,-50%);
+}
+
+.loader {
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Oswald', sans-serif;
+  text-shadow: -1px 2px 8px #000000;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #730f8c;
+  letter-spacing: 0.2em;
+}
+.loader1 {
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: absolute;
+  top: 95%;
+  
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  font-family: 'Oswald', sans-serif;
+  text-shadow: -1px 2px 8px rgba(87, 28, 164, 0.58);
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #ffff00;
+  letter-spacing: 0.2em;
+}
+.loader::before, .loader::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  position: absolute;
+  animation: load .9s infinite alternate ease-in-out;
+}
+.loader::before {
+  top: 0;
+}
+.loader::after {
+  bottom: 0;
+}
+
+
+@keyframes load {
+  0% {
+    left: 0;
+    height: 30px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 40px;
+  }
+  100% {
+    left: 500px;
+    height: 30px;
+    width: 15px;
+  }
+}
+
+/* Painel de Controle  */
+.background {
+  width: 350px;
+  height: 150px;
+  top: 25px;
+  left: 75%;
+  position: relative;
+}
+.fundo {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.titulo {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-MediumItalic", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: true;
+  position: absolute;
+  left: 82px;
+  top: 4px;
+}
+.sub-titulo {
+  color: #dbdbdb;
+  text-align: left;
+  font-family: "Inter-MediumItalic", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: true;
+  position: absolute;
+  left: 50px;
+  top: 30px;
+}
+.g-mais {
+  position: absolute;
+  inset: 0;
+}
+
+.g-menos {
+  position: absolute;
+  inset: 0;
+}
+
+.g-play {
+  position: absolute;
+  inset: 0;
+}
+
+.mais {
+  border-radius: 10px;
+  width: 50px;
+  height: 35px;
+  position: absolute;
+  left: 158px;
+  top: 97px;
+}
+.mais img{
+  width: 50px;
+}
+
+.menos {
+  border-radius: 10px;
+  width: 50px;
+  height: 35px;
+  position: absolute;
+  left: 200px;
+  top: 97px;
+}
+.menos img{
+  width: 50px;
+}
+
+.pause {
+  /* background: #2d2d2d; */
+  border-radius: 10px;
+  position: absolute;
+  left: 200px;
+  top: 54px;
+}
+
+.pause img{
+  width: 50px;
+}
+
+.t-p {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-MediumItalic", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: true;
+  position: absolute;
+  left: 228px;
+  top: 64px;
+  width: 20px;
+  height: 20px;
+}
+.playpause {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-MediumItalic", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: true;
+  position: absolute;
+  left: 73px;
+  top: 65px;
+  width: 126px;
+  height: 20px;
+}
+.volume {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-MediumItalic", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: true;
+  position: absolute;
+  left: 73px;
+  top: 107px;
+  width: 126px;
+  height: 20px;
+}
+.linha {
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 1px 0 0 0;
+  width: 350px;
+  height: 0px;
+  position: absolute;
+  left: 0px;
+  top: 52px;
+}
+
+
+

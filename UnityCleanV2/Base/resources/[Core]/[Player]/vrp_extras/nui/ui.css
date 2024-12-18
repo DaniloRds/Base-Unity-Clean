@@ -1,0 +1,37 @@
+div { border: 0; outline: 0; vertical-align: baseline; background: transparent; margin: 0; padding: 0; }
+:focus { outline: 0; }
+::selection { background: transparent; }
+
+#actionmenu {
+	top: 50%;
+	right: 10%;
+	display: none;
+	position: fixed;
+	transform: translate(-50%,-50%);
+}
+
+#actionmenu button {
+	width: 250px;
+	height: 40px;
+	color: #fff;
+	display: block;
+	font-weight: 700;
+	margin-top: 5px;
+	text-align: center;
+	border-radius: 10px;
+	letter-spacing: 0.5px;
+	text-shadow: 1px 1px #000;
+	padding: 0 20px;
+	border-left: 3px solid rgba(0, 0, 0, 0.9);
+	background: rgba(15, 15, 15, 0.8);
+}
+
+#actionmenu button:hover {
+	cursor: pointer;
+	border-left: 3px solid #00ad53;
+	transform: scale(1.05);
+}
+
+#actionmenu .fechar{
+	border-left: 3px solid rgba(255, 0, 0, 0.9);
+}

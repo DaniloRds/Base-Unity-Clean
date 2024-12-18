@@ -1,12 +1,13 @@
 @echo off
 
-echo ===-------------------------------===
-echo     Base Unity Free V2 (2.2.1)
-echo     Developed by: Unity Dev
+echo ===---------[BASE UNITY]---------===
+echo     Base Vrpex (final version)
+echo     Bugs Fixed Version: 1.0.0
+echo     Developed by: Unity Dev 
 echo     Discord: discord.gg/kYFy8JwVfd
-echo ===-------------------------------===
+echo ===---------------------------------===
 
 pause
-start ..\artifacts\FXServer.exe +exec config/config.cfg +set onesync_enableInfinity 0 +set onesync_population false +set onesync on +set sv_enforceGameBuild 2612
+start ..\artifacts\FXServer.exe +exec config/config.cfg +set onesync_enableInfinity 0 +set onesync on +set sv_enforceGameBuild 2612
 exit
 

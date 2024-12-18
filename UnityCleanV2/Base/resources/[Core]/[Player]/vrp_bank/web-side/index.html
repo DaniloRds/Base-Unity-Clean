@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="bootstrap.css">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="bank.js"></script>
+        <script type="text/javascript" src="all.min.js"></script>
+    </head>
+    <body style="background-color: rgba(0,0,0,0); -webkit-user-select: none; display: none;">
+        <div class="main">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <img class="navbar-brand" href="#" src="https://gtalogo.com/img/min/9512.webp"></img>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active" id="home">
+                            <a class="nav-link" href="#">Principal</a>
+                        </li>
+                        <li class="nav-item" id="deposit">
+                            <a class="nav-link" href="#">Depositar</a>
+                        </li>
+
+                        <li class="nav-item" id="withdraw">
+                            <a class="nav-link" href="#">Sacar</a>
+                        </li>
+                        <li class="nav-item" id="withdrawATM" style="display: none;">
+                            <a class="nav-link" href="#">Sacar</a>
+                        </li>
+						<!--	<li class="nav-item" id="transfer">
+                            <a class="nav-link" href="#">Transferir</a>
+                        </li>
+						<li class="nav-item" id="fines">
+                            <a class="nav-link" href="#">Multas</a>
+                        </li> -->
+                    </ul>
+                </div>
+                <h1 style="font-size: 17px; margin-right: 10px; margin-bottom: -1px;">Bem-vindo(a) de volta, <span style="font-weight: bold;" id="player-name">Player name</span></h1>
+                <button type="text" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" id="log-out"><i class="fas fa-sign-out-alt"></i> Sair</button>
+            </nav>
+            <h1 style="padding: 10px; font-size: 20px; font-weight: 600; text-align: center;">Conta</h1>
+            <div class="col-12 content"><p style="font-size: 12px; font-weight: 600; color: #999999; text-align: center;">Seja bem-vindo(a) de volta! Nesta janela, você pode depositar e gerenciar sua conta bancária.</p></div>
+            <hr style="background: #222; width: 30%;">
+            <div class="row" style="display: flex; justify-content: center;">
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2" style="background:rgba(0, 0, 0, 0.7); color: white;">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Saldo bancário</div>
+                                    <div class="h5 mb-0 text-white" id="bank-balance">$ 0</div>
+                                    <p class="card-text" style="font-size: 14px; color: #888;">Saldo bancário atual.</p>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-university fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2" style="background:rgba(0, 0, 0, 0.7); color: white;">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Saldo da carteira</div>
+                                    <div class="h5 mb-0 text-white" id="cash-amount">$ 0</div>
+                                    <p class="card-text" style="font-size: 14px; color: #888;">Saldo atual de sua carteira.</p>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-university fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Windows client-->
+            <div class="window" id="home">
+                <div>
+                    <h1 style="padding: 10px; font-size: 20px; font-weight: 600; text-align: center;">Saques Rápidos</h1>
+                    <div class="col-12 content"><p style="font-size: 12px; font-weight: 600; color: #999999; text-align: center;">Nesta janela, você pode sacar e depositar seu dinheiro. Tudo, com apenas um toque!</p></div>
+                    <hr style="background: #222; width: 20%;">
+                    <div class="row" style="display: flex; justify-content: center;">
+                        <div class="col-6" style="max-width: 37%;">
+                            <div class="card mb-3" style="background:rgba(0, 0, 0, 0.7); color: white; border-left: .25rem solid #4e73df!important">
+                                <div class="card-body">
+                                    <button type="text" style="width: 130px;" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" data-action="deposit" data-amount="100"><i class="fas fa-sign-in-alt"></i> Dep. $100</button>
+                                    <button type="text" style="width: 140px;" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" data-action="deposit" data-amount="1000"><i class="fas fa-sign-in-alt"></i> Dep. $1,000</button>
+                                    <button type="text" style="width: 145px;" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" data-action="deposit" data-amount="10000"><i class="fas fa-sign-in-alt"></i> Dep. $10,000</button>
+                                    <br/><br/>
+                                    <button type="text" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-action="withdraw" data-amount="100"><i class="fas fa-sign-out-alt"></i> Sacar $100</button>
+                                    <button type="text" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-action="withdraw" data-amount="1000"><i class="fas fa-sign-out-alt"></i> Sacar $1,000</button>
+                                    <button type="text" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-action="withdraw" data-amount="10000"><i class="fas fa-sign-out-alt"></i> Sacar $10,000</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer style="padding: 7px; color: #999999; font-size: 15px;">
+                    <p style="text-align: center;">Todos os direitos reservados ©Fleeca Bank</p>
+                </footer>
+            </div>
+            <div class="window" id="deposit">
+                <div class="row mt-2" style="display: flex; justify-content: center;">
+                    <h1 style="padding: 10px; font-size: 20px; font-weight: 600; text-align: center;">Ações de Depósitos</h1>
+                    <div class="col-12 content"><p style="font-size: 12px; font-weight: 600; color: #999999; text-align: center;">Nesta janela, você pode depositar o seu dinheiro de forma segura.</p></div>
+                    <div class="row" id="depositError" style="display:none;">
+                        <div class="col-12">
+                            <div class="alert alert-danger" role="alert" id="depositErrorMsg"></div>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <input type="number" placeholder="$" class="form-control" id="depositAmount" name="depositAmount">
+                    </div>
+                </div>
+                <div class="row" style="position: relative; top: 20px;">
+                    <div class="col-12 text-center">
+                        <button class="btn" style="background-color: #4e73df; color: white" id="initiateDeposit">Confirmar Depósito</button>
+                    </div>
+                </div>
+                <footer style="padding: 50px; color: #999999; font-size: 15px;">
+                    <p style="text-align: center;">Todos os direitos reservados ©Fleeca Bank</p>
+                </footer>
+            </div>
+            <div class="window" id="withdraw">
+                <div class="row mt-2" style="display: flex; justify-content: center;">
+                    <h1 style="padding: 10px; font-size: 20px; font-weight: 600; text-align: center;">Ações de Saques</h1>
+                    <div class="col-12 content"><p style="font-size: 12px; font-weight: 600; color: #999999; text-align: center;">Nesta janela, você pode sacar o seu dinheiro de forma segura!</p></div>
+                    <div class="row" id="withdrawError" style="display:none;">
+                        <div class="col-12">
+                            <div class="alert alert-danger" role="alert" id="withdrawErrorMsg"></div>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <input type="number" placeholder="$" class="form-control" id="withdrawAmount" name="withdrawAmount">
+                    </div>
+                </div>
+                <div class="row" style="position: relative; top: 20px;">
+                    <div class="col-12 text-center">
+                        <button class="btn" style="background-color: #4e73df; color: white" id="initiateWithdraw">Confirmar Saque</button>
+                    </div>
+                </div>
+                <footer style="padding: 50px; color: #999999; font-size: 15px;">
+                    <p style="text-align: center;">Todos os direitos reservados ©Fleeca Bank</p>
+                </footer>
+            </div>
+			
+            <div class="window" id="fines">
+                <div class="row mt-2" style="display: flex; justify-content: center;">
+                    <h1 style="padding: 10px; font-size: 20px; font-weight: 600; text-align: center;">Pagar Multas</h1>
+                    <div class="col-12 content"><p style="font-size: 12px; font-weight: 600; color: #999999; text-align: center;">Nesta janela, você pode pagar suas multas pendentes!</p></div>
+                    <div class="row" id="withdrawError" style="display:none;">
+                        <div class="col-12">
+                            <div class="alert alert-danger" role="alert" id="withdrawErrorMsg"></div>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <input type="number" placeholder="$" class="form-control" id="finesAmount" name="finesAmount">
+                    </div>
+                </div>
+                <div class="row" style="position: relative; top: 20px;">
+                    <div class="col-12 text-center">
+                        <button class="btn" style="background-color: #4e73df; color: white" id="initiateFines">Confirmar Pagamento</button>
+                    </div>
+                </div>
+                <footer style="padding: 50px; color: #999999; font-size: 15px;">
+                    <p style="text-align: center;">Todos os direitos reservados ©Fleeca Bank</p>
+                </footer>
+            </div>
+			
+			<div class="window" id="transfer">
+                <div class="row mt-2" style="display: flex; justify-content: center;">
+                    <h1 style="padding: 10px; font-size: 20px; font-weight: 600; text-align: center;">Ações de Transferência</h1>
+                    <div class="col-12 content"><p style="font-size: 12px; font-weight: 600; color: #999999; text-align: center;">Nesta janela, você pode transferir o seu dinheiro de forma segura!</p></div>
+                    <div class="row" id="withdrawError" style="display:none;">
+                        <div class="col-12">
+                            <div class="alert alert-danger" role="alert" id="withdrawErrorMsg"></div>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <input type="number" placeholder="$" class="form-control" id="transferAmount" name="transferAmount">
+                    </div>
+                </div>
+                <div class="row" style="position: relative; top: 20px;">
+                    <div class="col-12 text-center">
+                        <button class="btn" style="background-color: #4e73df; color: white" id="initiateTransfer">Confirmar Transferência</button>
+                    </div>
+                </div>
+                <footer style="padding: 50px; color: #999999; font-size: 15px;">
+                    <p style="text-align: center;">Todos os direitos reservados ©Fleeca Bank</p>
+                </footer>
+            </div>
+			
+            <div class="window" id="withdrawATM" style="display: none;">
+                <div class="row mt-2" style="display: flex; justify-content: center;">
+                    <h1 style="padding: 10px; font-size: 20px; font-weight: 600; text-align: center;">Ações de Saques de Caixa Eletrônico</h1>
+                    <div class="col-12 content"><p style="font-size: 12px; font-weight: 600; color: #999999; text-align: center;">Nesta janela, você pode sacar o seu dinheiro de forma segura e rápida!</p></div>
+                    <div class="row" id="withdrawErrorATM" style="display:none;">
+                        <div class="col-12">
+                            <div class="alert alert-danger" role="alert" id="withdrawErrorMsgATM"></div>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <input type="number" placeholder="$" class="form-control" id="withdrawAmountATM" name="withdrawAmountATM">
+                    </div>
+                </div>
+                <div class="row" style="position: relative; top: 20px;">
+                    <div class="col-12 text-center">
+                        <button class="btn" style="background-color: #4e73df; color: white" id="initiateWithdrawATM">Confirmar Saque</button>
+                    </div>
+                </div>
+                <footer style="padding: 50px; color: #999999; font-size: 15px;">
+                    <p style="text-align: center;">Todos os direitos reservados ©Fleeca Bank</p>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

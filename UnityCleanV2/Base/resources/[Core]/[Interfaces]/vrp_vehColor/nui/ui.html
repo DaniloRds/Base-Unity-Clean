@@ -1,0 +1,147 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="ui.css"></link>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" id="lscustom">
+        <div class="contentCustom">
+            <div class="line"></div>
+            <div class="lineBottom"></div>
+
+            <!-- MAIN PAGE -->
+            <div class="menu-option" id="home">
+                <div class="customContainer">
+                    <div class="customItem sectionItem cores" onclick="selectHome(this)" href="Cores" data-haveItem="true">
+                        <div class="line"></div>
+                        <div class="lineBottom"></div>
+                        <div class="imgItem">
+                            <img src="assets/color.png">
+                        </div>
+                         <div class="label">Cores</div>
+                        <div class="overlayOpacity"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secondary Page -->
+            <div class="menu-option" id="Cores" >
+                <div class="customContainer textcenter">
+                    <p>Cores Comuns</p>
+                    <div class="colorPickers">
+                        <div class="cPicker">
+                            <p>Cor Primaria</p>
+                            <div id="colorPicker"></div>
+                        </div>
+                        <div class="cPicker">
+                            <p>Cor Secundária</p>
+                            <div id="ScolorPicker"></div>
+                        </div>
+                    </div>
+                    <p>Cor Primária Personalizada</p>
+                    <div class="customColors">
+                        <div> 
+                            <p>Metalico</p>
+                            <span class='cArrows' onclick="selectColor('metalic', '-', 'primary')"><</span>
+                            <img src="assets/color.png">
+                            <span class='cArrows' onclick="selectColor('metalic', '+', 'primary')">></span>
+                            </br><span id='metalicColorname'>Nenhum</span>
+                        </div>
+                        <div>
+                            <p>Fosco</p>
+                            <span class='cArrows' onclick="selectColor('matte', '-', 'primary')"><</span>
+                            <img src="assets/color.png">
+                            <span class='cArrows' onclick="selectColor('matte', '+', 'primary')">></span>
+                            </br><span id='matteColorname'>Nenhum</span>
+                        </div>
+                        <div>
+                            <p>Metais</p>
+                            <span class='cArrows' onclick="selectColor('metal', '-', 'primary')"><</span>
+                            <img src="assets/color.png">
+                            <span class='cArrows' onclick="selectColor('metal', '+', 'primary')">></span>
+                            </br><span id='metalColorname'>Nenhum</span>
+                        </div>                       
+                    </div>
+                    <p>Cor Secundaria Personalizada</p>
+                    <div class="customColors">
+                        <div> 
+                            <p>Metalico</p>
+                            <span class='cArrows' onclick="selectColor('smetalic', '-', 'secundary')"><</span>
+                            <img src="assets/color.png">
+                            <span class='cArrows' onclick="selectColor('smetalic', '+', 'secundary')">></span>
+                            </br><span id='smetalicColorname'>Nenhum</span>
+                        </div>
+                        <div>
+                            <p>Fosco</p>
+                            <span class='cArrows' onclick="selectColor('smatte', '-', 'secundary')"><</span>
+                            <img src="assets/color.png">
+                            <span class='cArrows' onclick="selectColor('smatte', '+', 'secundary')">></span>
+                            </br><span id='smatteColorname'>Nenhum</span>
+                        </div>
+                        <div>
+                            <p>Metais</p>
+                            <span class='cArrows' onclick="selectColor('smetal', '-', 'secundary')"><</span>
+                            <img src="assets/color.png">
+                            <span class='cArrows' onclick="selectColor('smetal', '+', 'secundary')">></span>
+                            </br><span id='smetalColorname'>Nenhum</span>
+                        </div>                       
+                    </div>                   
+                    
+                    <p>Cores Customizadas</p>
+                    <div class="customColors">
+                        <div>
+                            <p>Perolado</p>
+                            <span class='cArrows' onclick="selectColor('pearlescent', '-', 'extra1')"><</span>
+                            <img src="assets/color.png">
+                            <span class='cArrows' onclick="selectColor('pearlescent', '+', 'extra1')">></span>
+                            </br><span id="pearlescentColorname">Nenhum</span>
+                        </div>
+                        <div>
+                            <p>Rodas</p>
+                            <span class='cArrows' onclick="selectColor('wheel', '-', 'extra2')"><</span>
+                            <img src="assets/color.png">
+                            <span class='cArrows' onclick="selectColor('wheel', '+', 'extra2')">></span>
+                            </br><span id="wheelColorname">Nenhum</span>
+                        </div>
+                        <!-- <div>
+                            <p>Xenon</p>
+                            <span class='cArrows' onclick="setXenonLights('-')"><</span>
+                            <img src="assets/color.png">
+                            <span class='cArrows' onclick="setXenonLights('+')">></span>
+                            </br><span id="farolColorname">Nenhum</span>
+                        </div> -->
+                    </div>
+                    <!-- <p>Outras</p>
+                    <div class="colorPickers">
+                        <div class="cPicker">
+                            <p>Fumaça dos Pneus</p>
+                            <div id="smokePicker"></div>
+                        </div>
+                        <div class="cPicker">
+                            <p>Cor do Neon</p>
+                            <div id="neonPicker"></div>
+                        </div>
+                    </div>   -->
+                </div>
+            </div>
+
+            <!-- <span id="textPrice">0,00</span> -->
+            
+        </div>
+    </div>
+
+    <div id="warning">
+        <span>Voce deseja aplicar a tintura? (valor: $2000)</span>
+        <div id="modbuttons">
+            <div id="modyes" onclick="acceptMod()" >Sim</div>
+            <div id="modno" onclick="declinetMod()">Não</div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro/dist/iro.min.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>

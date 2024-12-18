@@ -10,6 +10,8 @@ tvRP = {}
 Tunnel.bindInterface("vRP",tvRP)
 vRPclient = Tunnel.getInterface("vRP")
 
+-- garages = Tunnel.getInterface('vrp_garages')
+
 vRP.users = {}
 vRP.rusers = {}
 vRP.user_tables = {}
@@ -104,8 +106,12 @@ vRP.prepare("vRP/get_usersBenefitsId","SELECT * FROM vrp_benefits WHERE user_id 
 vRP.prepare("vRP/identifier_byuserid", "SELECT * FROM vrp_user_ids WHERE user_id = @user_id")
 vRP.prepare("vRP/set_userdata","REPLACE INTO vrp_user_data(user_id,dkey,dvalue) VALUES(@user_id,@key,@value)")
 vRP.prepare("vRP/get_userdata","SELECT dvalue FROM vrp_user_data WHERE user_id = @user_id AND dkey = @key")
+
 vRP.prepare("vRP/set_srvdata","REPLACE INTO vrp_srv_data(dkey,dvalue) VALUES(@key,@value)")
+vRP.prepare("vRP/del_srvdata","DELETE FROM vrp_srv_data WHERE dkey = @key")
 vRP.prepare("vRP/get_srvdata","SELECT dvalue FROM vrp_srv_data WHERE dkey = @key")
+vRP.prepare("vRP/set2_srvdata","REPLACE INTO vrp_srv_data(dkey) VALUES(@key)")
+
 vRP.prepare("vRP/get_banned","SELECT banned FROM vrp_users WHERE id = @user_id")
 vRP.prepare("vRP/set_banned","UPDATE vrp_users SET banned = @banned WHERE id = @user_id")
 vRP.prepare("vRP/set_bannedGlobal", "UPDATE vrp_benefits SET global_ban = @banned WHERE user_id = @user_id")
@@ -186,6 +192,14 @@ function vRP.setSData(key,value)
 	vRP.execute("vRP/set_srvdata",{ key = key, value = value })
 end
 
+function vRP.setSData2(key,value)
+	vRP.execute("vRP/set2_srvdata",{ key = key })
+end
+
+function vRP.delSData(key)
+	vRP.execute("vRP/del_srvdata",{key = key})
+end
+
 function vRP.getSData(key, cbr)
 	local rows = vRP.query("vRP/get_srvdata",{ key = key })
 	if #rows > 0 then
@@ -234,6 +248,8 @@ function vRP.dropPlayer(source)
 	local user_id = vRP.getUserId(source)
 	vRPclient._removePlayer(-1,source)
 	if user_id then
+		vRP.execute("garagem/reset_player_inroad",{user_id = user_id, in_road = 0})
+		print("[QUITOU] Jogador [ ",parseInt(user_id)," ] seus veículos foram definidos como in_road = 0.")
 		if user_id and source then
 			TriggerEvent("vRP:playerLeave",user_id,source)
 		end
@@ -275,6 +291,12 @@ AddEventHandler("queue:playerConnecting",function(source,ids,name,setKickReason,
 						deferrals.update("Carregando banco de dados.")
 						local sdata = vRP.getUData(user_id,"vRP:datatable")
 
+						local plySource = vRP.user_sources[user_id]
+						if plySource then
+							DropPlayer(plySource, "Alguem se conectou em sua conta.")
+							print("[AVISO] ID: ["..user_id.. "] duas pessoas estão tentando conectar na mesma conta.")
+						end
+
 						vRP.users[ids[1]] = user_id
 						vRP.rusers[user_id] = ids[1]
 						vRP.user_tables[user_id] = {}
@@ -289,6 +311,8 @@ AddEventHandler("queue:playerConnecting",function(source,ids,name,setKickReason,
 
 						TriggerEvent("vRP:playerJoin",user_id,source,name)
 						SendWebhookMessage(webhookjoins,"```prolog\n[ID]: "..user_id.." \n[IP]: "..GetPlayerEndpoint(source).." \n[ENTROU NO SERVIDOR]: "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
+
+						print("[ENTRANDO] Jogador [",user_id,"]"..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S"))
 						deferrals.done()
 					else
 						local tmpdata = vRP.getUserTmpTable(user_id)

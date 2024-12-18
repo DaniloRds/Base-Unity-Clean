@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+   
+}
+
+.cinto img{
+    width: 20px;
+    position: absolute;
+    left: 83%;
+    top: 66%;
+}
+
+.logo{
+    width: 60px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#hud{
+    position: absolute;
+    width: 210px;
+    height: 140px;
+    right: 1.4%;
+    bottom: 2.5%;
+}
+
+.item-hud{
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    float: left;
+    margin-left: 12px;
+    transform: rotate(-180deg);
+    background: #0f0f0f99;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.item2-hud{
+    width: 100%;
+    height: 20px;
+    transition: all 1s;
+    border-radius: 5px;
+}
+
+.item-hud .far{
+    position: absolute;
+    width: 16px;
+    bottom: 29%;
+    left: 27%;
+    transform: rotate(-180deg);
+}
+
+.vida{
+    background: rgb(252, 56, 56);
+}
+
+.colete{
+    background: rgb(19, 95, 235);
+}
+
+.fome{
+    background: rgb(214, 122, 16);
+}
+
+.sede{
+    background: rgb(16, 158, 214);
+}
+
+.stress{
+    background: rgb(226, 84, 255);
+}
+
+.velocimetro{
+    width: 100%;
+    height: 43%;
+    margin-top: -20px;
+}
+
+.speed{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Jura";
+	font-size: 25px;
+    margin-top: 25%;
+    text-align: center;
+}
+
+.km{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Jura";
+	font-size: 13px;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.infos-player{
+    position: absolute;
+    top: 67%;
+}
+
+.fuelback{
+    width: 100%;
+    margin-top: 7%;
+    height: 10px;
+    border-radius: 10px;
+    background: rgb(15, 15, 15,0.6);
+}
+
+.fueldentro{
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 1s;
+    background: rgb(214, 105, 16);
+}
+
+.cinto{
+    position: absolute;
+    width: 15px;
+    margin-top: -27.5%;
+    margin-left: 87%;
+}
+
+.lock{
+    position: absolute;
+    width: 13px;
+    margin-top: -17%;
+    margin-left: 87.5%;
+}
+
+.veloBar {
+    height: 279.2px;
+    width: 279.2px;
+    clip-path: path('M223.448477,218.666668Q195.793012,218.666668,142.837241,218.666668C89.881469,218.666668,82.108145,240.722757,59.759837,265.202592L53.448477,265.202592L56.492046,261.098522C78.840353,236.618687,86.613678,214.562598,139.569449,214.562598Q192.525221,214.562598,223.448477,214.562598L223.448477,218.666668Z');
+    background-color: rgba(15, 15, 15, 0.6);
+    position: absolute;
+    top: -140%;
+    left: -27%;
+}
+
+.veloFill {
+    height: 100vh;
+    background-color: white;
+    transition: all .5s;
+    transform: translate(54px, 102px);
+}
+
+
+#up{
+    position: absolute;
+    width: 200px;
+    height: 33px;
+    background: rgba(15, 15, 15, 0.6);
+    top: 4%;
+    right: 1.5%;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.fa-microphone{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    margin-left: 8%;
+    margin-top: 5%;
+}
+
+.circle{
+    width: 10px;
+    height: 10px;
+    margin-top: -7.5%;
+    margin-left: 20%;
+    border-radius: 20px;
+    background: white;
+    transition: all 1s;
+}
+
+.circle2{
+    width: 10px;
+    height: 10px;
+    margin-top: -5%;
+    margin-left: 27%;
+    border-radius: 20px;
+    background: white;
+    transition: all 1s;
+}
+
+.circle3{
+    width: 10px;
+    height: 10px;
+    margin-top: -5%;
+    margin-left: 34%;
+    border-radius: 20px;
+    background: rgb(156, 155, 155,0.6);
+    transition: all 1s;
+}
+
+.separador{
+    width: 1%;
+    height: 40%;
+    margin-top: -6.5%;
+    margin-left: 50%;
+    background: white;
+}
+
+.fa-clock{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    margin-left: 60%;
+    top: 27%;
+    position: absolute;
+}
+
+.horas{
+    margin-top: -7.5%;
+    margin-left: 72%;
+    font-size: 15px;
+    color: #fff;
+    font-family: "Jura";
+}
+
+.radio{
+    display: none;
+    position: absolute;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    top: 8.5%;
+    right: 1.5%;
+    padding-top: 5px;
+    width: 100px;
+    height: 25px;
+    background: rgba(15, 15, 15, 0.6);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+
+.radioText{
+    position: absolute;
+    right: 14px;
+}
+
+.fa-rss{
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    right: 34px;
+}
+
+/* CUPOM DE DESCONTO BY UNITY DEV*/
+.cupom {
+  position: absolute;
+  border-radius: 5px;
+  border-style: dashed;
+  border-color: #000000;
+  border-width: 1px;
+  width: 126px;
+  height: 47px;
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  left: 60px;
+  bottom: 18vw;
+}
+.parte-2 {
+  position: absolute;
+  inset: 0;
+}
+.escrita {
+  background: rgba(15, 15, 15, 0.6);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.cupom-title {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-SemiBoldItalic", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: true;
+  position: absolute;
+  text-align: center;
+  background: rgb(0, 0, 0);
+  border-radius: 5px;
+  width: 55px;
+  padding: 2px;
+  left: 35px;
+  top: -10px;
+}
+.cupom-text {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 550;
+  position: absolute;
+  left: 13px;
+  top: 13px;
+}
+.parte-1 {
+  position: absolute;
+  inset: 0;
+}
+.back-1 {
+  background: linear-gradient(180deg,rgba(255, 0, 0),rgba(205, 0, 0),rgba(127, 0, 0));
+  border-radius: 5px;
+  width: 51px;
+  height: 47px;
+  position: absolute;
+  left: -55px;
+  top: 0px;
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.valor {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  position: absolute;
+  left: -56px;
+  top: 5px;
+}
+.porcent {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-BoldItalic", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  font-style: true;
+  position: absolute;
+  left: -20px;
+  top: 10px;
+}
+.off {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-BoldItalic", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  font-style: true;
+  position: absolute;
+  left: -21px;
+  top: 26px;
+}
+
+/* Progress Bar */
+.progressBar {
+    display: none;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+#background {
+    background: linear-gradient(180deg, rgba(18,18,18,0.8211659663865546) 23%, rgba(18,18,18,0.7175245098039216) 51%, rgba(18,18,18,0.5298494397759104) 87%);
+    bottom: 100px;
+    right: -80px;
+    width: 190px;
+    height: 35px;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    border-bottom: 2px solid rgb(255, 72, 72);
+}
+
+.progressBar #barra {
+    position: relative;
+    top: 50%;
+    left: 56%;
+    width: 85%;
+    height: 15px;
+    transform: translate(-50%,-50%);
+    background-color: #2a2a2ae3;
+    border-radius: 10px;
+}
+
+.progressBar #barra #pbar_innerdiv {
+    background-color: rgb(255, 72, 72);
+    height: 100%;
+    width: 20%;
+    border-radius: 10px;
+}
+
+.progressBar #tempoback{
+    top: 9px;
+    left: 5px;
+    color: rgb(255, 255, 255,0.8);
+    font-size: 17px;
+    position: absolute;
+    font-family: arial;
+    text-shadow: 1px 1px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}

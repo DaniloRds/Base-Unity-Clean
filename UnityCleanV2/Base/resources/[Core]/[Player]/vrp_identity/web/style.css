@@ -1,0 +1,311 @@
+*,
+h3,
+p {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(27, 27, 27, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 26, 75, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(9, 12, 28);
+}
+
+#action-menu {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: relative;
+  justify-content: flex-end;
+  align-items: flex-end;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  overflow: hidden;
+}
+
+.body-main {
+  width: 470px;
+  height: 280px;
+  border-radius: 14px;
+  background-image: linear-gradient(
+    to top right,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgb(46, 29, 6)
+  );
+  overflow: hidden;
+  margin: 20px;
+  margin-bottom: 18vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 16px 20px;
+  padding-bottom: 4px;
+  height: 20%;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  margin-inline: auto;
+}
+
+.mainInfo > p {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+}
+
+.mainArea {
+  display: flex;
+  height: 80%;
+  padding: 0 20px;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  gap: 5px;
+  font-family: "Petemoss", cursive;
+  font-size: 26px;
+  width: 30%;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 5px;
+  padding: 0 20px;
+  padding-top: 10px;
+  transition: ease 0.5s ease;
+  margin-top: 15px;
+}
+
+.final-side {
+  width: 20%;
+  display: flex;
+  padding-top: 13%;
+  justify-content: center;
+}
+
+.material-icons-outlined.md-flip {
+  position: absolute;
+  align-self: flex-end;
+  padding: 10px;
+  margin: 0 0 0 400px;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+  font-size: 30px;
+}
+
+.material-icons-outlined.md-edit {
+  position: absolute;
+  margin: 172px -12px 0 0;
+  align-self: flex-end;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.material-icons-outlined.md-image {
+  position: absolute;
+  margin: 128px 0 0 0;
+  align-self: flex-end;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(32, 32, 32, 0.8);
+  padding: 5px;
+  border-radius: 150px;
+  transition: all 0.2s ease;
+}
+
+.material-icons-outlined.md-edit:hover,
+.material-icons-outlined.md-flip:hover,
+.material-icons-outlined.md-image:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.user-image {
+  height: 160px;
+  width: 140px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #0000004b;
+}
+
+.user-image > img {
+  position: relative;
+  left: -25px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  color: #ffffffea;
+  width: 146px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.material-icons-outlined.md-code {
+  font-size: 40px;
+  color: #ffffffea;
+  position: absolute;
+}
+
+.material-icons-outlined.md-type {
+  font-size: 85px;
+  margin-top: -10px;
+}
+
+.type-color {
+  color: #ffffffea;
+}
+
+.item > p {
+  font-weight: normal;
+  color: rgb(255, 255, 255) !important;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.allInfos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 0 0 20px;
+  padding-top: 10px;
+  /* background-color: rebeccapurple; */
+}
+
+.allInfos2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 0 0 0;
+  padding-top: 10px;
+  /* background-color: rebeccapurple; */
+}
+
+.rotate {
+  transition: all 0.5s ease;
+  transform: translate(0, 0) rotate3d(0, 0, 0, 360deg);
+}
+
+.item > b {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+.submit {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 4px 14px;
+  border-radius: 5px;
+  font-size: 12px;
+  transition: all ease 0.2;
+}
+
+.submit:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+  gap: 10px;
+}
+
+.search-input {
+  background-color: transparent;
+  font-size: 0.8rem;
+  padding: 7px 0px;
+  border: 1px solid transparent;
+  transition: ease 0.2s;
+  width: 230px;
+  color: rgb(202, 202, 202);
+  font-family: "Petemoss", cursive;
+  font-size: 38px;
+  text-align: center;
+}
+
+::placeholder {
+  color: rgba(202, 202, 202, 0.185);
+  text-align: center;
+}
+
+.search-input:focus {
+  outline: 0;
+  color: rgb(255, 255, 255);
+  font-family: "Petemoss", cursive;
+  font-size: 38px;
+  text-align: center;
+}
+
+.loader {
+  align-self: center;
+  justify-self: center;
+  border-top: 4px solid transparent;
+  border-right: 4px solid #fff;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #fff;
+
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+.mainInfo > h4 > div {
+  font-size: 50px;
+  font-family: "Petemoss", cursive;
+  color: rgb(220, 220, 220);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

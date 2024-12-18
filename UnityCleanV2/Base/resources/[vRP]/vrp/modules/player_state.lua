@@ -106,6 +106,16 @@ function tvRP.updateHealth(health)
 		end
 	end
 end
+
+
+function vRP.modelPlayer(source)
+	local ped = GetPlayerPed(source)
+	if GetEntityModel(ped) == GetHashKey("mp_m_freemode_01") then
+		return "mp_m_freemode_01"
+	elseif GetEntityModel(ped) == GetHashKey("mp_f_freemode_01") then
+		return "mp_f_freemode_01"
+	end
+end
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- MALA
 -----------------------------------------------------------------------------------------------------------------------------------------

@@ -21639,8 +21639,9 @@ init_config();
 var logStorage = {};
 var logQuery = (invokingResource, query, executionTime, parameters) => {
   if (executionTime >= mysql_slow_query_warning || mysql_debug)
-    console.log(`^3[${mysql_debug ? "DEBUG" : "WARNING"}] ${invokingResource} took ${executionTime}ms to execute a query!
-    ${query} ${JSON.stringify(parameters)}^0`);
+    // CONSOLE LOG DO OXMYSQL CASO QUEIRA REATIVER DEBUG
+    // console.log(`^3[${mysql_debug ? "DEBUG" : "WARNING"}] ${invokingResource} took ${executionTime}ms to execute a query!
+    // ${query} ${JSON.stringify(parameters)}^0`);
   if (!mysql_ui)
     return;
   if (logStorage[invokingResource] === void 0)

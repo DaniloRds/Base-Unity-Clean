@@ -28,8 +28,9 @@ end
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(1)
+		local wait = 1000
 		if menu_celular then
+			wait = 2
 			BlockWeaponWheelThisFrame()
 			DisableControlAction(0,16,true)
 			DisableControlAction(0,17,true)
@@ -54,6 +55,7 @@ Citizen.CreateThread(function()
 			DisableControlAction(0,289,true)
 			DisableControlAction(0,344,true)			
 		end
+		Citizen.Wait(wait)
 	end
 end)
 
@@ -220,27 +222,6 @@ Citizen.CreateThread(function()
         	end
 		end
 
-		-- AJOELHAR (F5)
-		--[[if IsControlJustPressed(0,166) then
-			if not IsPedInAnyVehicle(ped) and GetEntityHealth(ped) > 101 and not menu_state.opened and not menu_celular then
-				if IsEntityPlayingAnim(ped,"random@arrests@busted","idle_a",3) then
-					tvRP.DeletarObjeto()
-				else
-					tvRP.DeletarObjeto()
-					tvRP.CarregarAnim("random@arrests")
-					tvRP.CarregarAnim("random@arrests@busted")
-					TaskPlayAnim(ped,"random@arrests","idle_2_hands_up",8.0,1.0,-1,2,0,0,0,0)
-					Citizen.Wait(4000)
-					TaskPlayAnim(ped,"random@arrests","kneeling_arrest_idle",8.0,1.0,-1,2,0,0,0,0)
-					Citizen.Wait(500)
-					TaskPlayAnim(ped,"random@arrests@busted","enter",8.0,1.0,-1,2,0,0,0,0)
-					Citizen.Wait(1000)
-					TaskPlayAnim(ped,"random@arrests@busted","idle_a",8.0,1.0,-1,9,0,0,0,0)
-					Citizen.Wait(100)
-				end
-        	end
-		end]]
-
 		-- PUTO (F5)
 		if IsControlJustPressed(0,166) then
 			if not IsPedInAnyVehicle(ped) and GetEntityHealth(ped) > 101 and not menu_state.opened and not menu_celular then
@@ -395,9 +376,10 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(1)
+		local wait = 1000
 		local ped = PlayerPedId()
 		if apontar then
+			wait = 3
 			local camPitch = GetGameplayCamRelativePitch()
 			if camPitch < -70.0 then
 				camPitch = -70.0
@@ -427,6 +409,7 @@ Citizen.CreateThread(function()
 			Citizen.InvokeNative(0xB0A6CFD2C69C1088,ped,"isBlocked",blocked)
 			Citizen.InvokeNative(0xB0A6CFD2C69C1088,ped,"isFirstPerson",Citizen.InvokeNative(0xEE778F8C7E1142E2,Citizen.InvokeNative(0x19CAFA3C87F7C2FF))==4)
 		end
+		Citizen.Wait(wait)
 	end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------

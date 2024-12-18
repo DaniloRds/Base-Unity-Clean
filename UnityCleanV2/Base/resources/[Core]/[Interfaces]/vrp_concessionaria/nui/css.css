@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    display: none;
+}
+
+body::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0.1825105042016807) 0%, rgba(35, 38, 53, 0.8) 100%);
+} 
+
+/* #E4ECE4 */
+
+.container{
+    width: 1100px;
+    height: 650px;
+    background: #ECE4EC;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 20px;
+    border: 8px solid black;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.cima-conce{
+    width: 100%;
+    height: 13%;
+    border-radius: 20px 20px 0px 0px;
+    background: white;
+}
+
+.titloConce{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000;
+    font-weight: bold;
+    width: 20%;
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 86px;
+    margin-left: 5%;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.titloConce:hover{
+    color: #1d66ee;
+}
+
+.locais-categorias{
+    height: 50px;
+    width: 50%;
+    margin-top: -6.2%;
+    margin-left: 45%;
+}
+
+.botao-categoria{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #161616;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 50px;
+    font-weight: bold;
+    width: 80px;
+    text-align: center;
+    transition: all .5s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.botao-categoria:hover{
+    color: #fff;
+    background: #161616;
+}
+
+.imagem-personagem{
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    max-height: 60px;
+    margin-top: -10.5%;
+    object-fit: cover;
+    border: 2px solid #000;
+    margin-left: 95%;
+    border-radius: 15px;
+}
+
+.baixo-overflow{
+    width: 100%;
+    height: 87%;
+    border-radius: 0px 0px 10px 10px;
+    overflow: auto;
+}
+
+
+.imagem-centro{
+    width: 100%;
+    height: 55%;
+}
+
+.cubririmagem{
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 15, 0.8);
+    margin-top: -30%;
+}
+
+.block{
+    background-image:
+    linear-gradient(to bottom, rgba(15, 15, 15, 0.4), rgba(15, 15, 15, 0.8)),url('./images/ss.png');
+    width: 100%;
+    height: 105%;
+    background-size: cover;
+}
+
+.imagem-centro2{
+    width: 100%;
+    height: 30%;
+}
+
+.block2{
+    background-image:
+    linear-gradient(to bottom, rgba(15, 15, 15, 0.4), rgba(15, 15, 15, 0.8)),url('https://media.discordapp.net/attachments/976730448967389184/1092040347774898287/car-dark-grand-theft-auto-fivem-white-hd-wallpaper-preview.png');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.titloPropraganda{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    top: 30%;
+    left: 5%;
+    width: 45%;
+}
+
+.titloPropraganda2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    top: 30%;
+    text-align: center;
+}
+
+.descPropraganda2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ccc;
+    font-size: 16px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+
+.descPropraganda{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ccc;
+    margin-left: 5%;
+    font-size: 16px;
+    margin-top: 10%;
+    width: 50%;
+}
+
+.descPropraganda ss{
+    padding: 1px;
+    /* background: #ECE4EC; */
+    border-radius: 5px;
+    font-weight: bold;
+    color: #ffff;
+    text-shadow: 1px 1px 10px #1d66ee;
+    font-size: 1.2rem;
+}
+
+.IconPropraganda{
+    color: #fff;
+    font-size: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.botaoDesc{
+    background: #ECE4EC;
+    color: #000;
+    width: 150px;
+    height: 40px;
+    margin-left: 5%;
+    margin-top: 1%;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 1s;
+}
+
+.botaoDesc:hover{
+    background: #aaaaaa;
+}
+
+.IconPropraganda2{
+    margin-left: 8px;
+}
+
+.titloKdsadkas{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    margin-top: 4%;
+}
+
+.desckdsajdsjada{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 30%;
+    margin-left: 35%;
+    font-size: 14px;
+    text-align: center;
+    color: #585858;
+    border-radius: 5px;
+}
+
+.box-qualidades{
+    width: 100%;
+    height: 60%;
+
+}
+
+.item-qualidades{
+    width: 30%;
+    height: 70%;
+    margin-left: 2.3%;  
+    display: inline-table;
+}
+
+.item-qualidades img{
+    min-width: 150px;
+    max-width: 150px;
+    margin-top: 5%;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleQualidade{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 2%;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.descQualidade{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 2%;
+    color: #585858;
+    height: 100%;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 18px;
+    position: relative;
+}
+
+.descQualidade ss{
+    color: #1d66ee;
+    text-shadow: 1px 1px 3px #1d66ee6e;
+    font-weight: bold;
+}
+
+.cautelar {
+    color: #128f31;
+    text-shadow: 1px 1px 3px #1dee51;
+    font-weight: bold;
+}
+
+.TitlePesquisa{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 5%;
+    margin-top: 3%;
+    font-size: 26px;
+    color: #000;
+    font-weight: bold;
+}
+
+.Iconksdadkas{
+    color: #1d66ee;
+    text-shadow: 1px 1px 3px #1d66ee6e;
+    margin-right: 10px;
+    font-size: 23px;
+}
+
+.inputSearch{
+    width: 200px;
+    height: 40px;
+    margin-top: -3.1%;
+    margin-left: 76.75%;
+    background: white;
+    border-radius: 30px;
+}
+
+.baratata{
+    height: 32px;
+    width: 32px;
+    position: relative;
+    top: 10%;
+    left: 2%;
+    text-align: center;
+    line-height: 35px;
+    background: #1d66ee;
+    color: white;
+    border-radius: 50%;
+}
+
+.kdsakdksa{
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    border-radius: 30px;
+    outline: 0;
+    margin-top: -15.8%;
+    margin-left: 20%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.overflow-cars{
+    width: 90%;
+    margin-top: 2%;
+    margin-left: 5%;
+    height: 80%;
+    overflow: auto;
+}
+
+.item-cars{
+    width: 49.5%;
+    display: inline-block;
+    height: 25%;
+    background: #fff;
+    margin-top: 0.5%;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.item-cars:hover{
+    background: rgba(15, 15, 15, 0.1);
+}
+
+.item-cars:nth-child(even){
+    margin-left: 0%;
+}
+
+.imagem-carro{
+    margin-top: 3.5%;
+    min-width: 130px;
+    min-height: 80px;
+    max-width: 130px;
+    max-height: 80px;
+    margin-left: 2%;
+}
+
+.nome-carro{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size: 18px;
+    margin-top: -13%;
+    margin-left: 30%;
+}
+
+.preço-carro{
+    margin-left: 30%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #1d66ee; 
+    font-size: 18px;
+    margin-top: 3%;
+}
+
+.kg-carro{
+    margin-left: 30%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #000; 
+    font-size: 18px;
+    margin-top: -4.5%;
+    margin-left: 80%;
+}
+
+
+.iconPreco{
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.iconPreco2{
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.nome-carro ss{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background: #1d66ee;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#sedan{
+    background: #ee1dd2;
+}
+
+.Iocndjsajdasdas{
+    font-size: 14px;
+    line-height: 32px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  transition: all 1s;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+.overflow-cars::-webkit-scrollbar{
+    display: block;
+    width: 5px;
+    height: 1px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.2);
+}
+.overflow-cars::-webkit-scrollbar-thumb{
+    background: rgba(16, 16, 16, 0.4);
+  border-radius: 3px;
+  transition: all 1s;
+}
+.overflow-cars::-webkit-scrollbar-thumb:hover{
+    background: rgba(16, 16, 16, 0.6);
+}
+.overflow-cars::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+.meusveiculos-button{
+    width: 80%;
+    height: 40%;
+    margin-left: 10%;
+    border-radius: 10px;
+    margin-top: 2%;
+    background-size: cover;
+    background-image:
+    linear-gradient(to bottom, rgba(15, 15, 15, 0.4), rgba(15, 15, 15, 0.8)),url('./images/dd.jpeg'); /*  https://i.imgur.com/8dPAmCa.jpeg */
+}
+
+.text-meuscarros{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 42px;
+    line-height: 530%;
+    background: rgba(15, 15, 15, 0.6);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.text-meuscarros:hover{
+    opacity: 1;
+}
+
+.espacamentodsa{
+    width: 100%;
+    height: 6%;
+}
+
+.imagem-centro3{
+    width: 100%;
+    height: 50%;
+}
+
+.block3{
+    background-image:
+    linear-gradient(to bottom, rgba(15, 15, 15, 0.4), rgba(15, 15, 15, 0.8)),url('https://media.discordapp.net/attachments/976730448967389184/1092911595279102021/EfAujneUwAA0ktW.png');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.disposi-carro{
+    min-width: 360px;
+    min-height: 220px;
+    max-width: 220px;
+    max-height: 360px;
+    margin-top: 2.5%;
+    margin-left: 15%;
+}
+
+.nome-carrodispi{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size: 32px; 
+    margin-left: 5%;
+    margin-top: 1%; 
+}
+
+
+.nome-carrodispi ss{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background: #1d66ee;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.novo2023{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #00000075;
+    font-size: 22px;
+    margin-top: 2%;
+    margin-left: 5%; 
+}
+
+
+.localidade-carro{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    width: 50%;
+    height: 50px;
+    margin-top: 2%;
+    border-radius: 5px;
+    margin-left: 5%;
+    background: white;
+    color: #000;
+    line-height: 50px;
+}
+
+
+.localidade-carro ss{
+    margin-left: 5%;
+}
+
+.iconLoca{
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.item-boxinfos{
+    width: 50%;
+    height: 10%;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.item-infos{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    width: 45%;
+    color: rgb(0, 0, 0,0.6);
+    display: inline-block;
+    margin-top: 1%;
+}
+
+.item-infos ss{
+    color: #000000;
+}
+
+.iconView{
+    color: #000;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+#color1 {
+    -webkit-appearance: none;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+#color1::-webkit-color-swatch {
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+  }
+#color1::-webkit-color-swatch-wrapper {
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+}
+
+
+
+
+.outras-informacoes-b{
+    width: 30%;
+    height: 50%;
+    background: white;
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    border-radius: 5px;
+}
+
+.Kdsakdsk{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    color: #000;
+    margin-left: 5%;
+    margin-top: 4%;
+}
+
+.Kdsads{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #1d66ee;
+    margin-left: 5%;
+}
+
+
+.botao-info{
+    width: 90%;
+    height: 40px;
+    margin-left: 5%;
+    background: #262627;
+    border-radius: 5px;
+    margin-top: 5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    transition: all .5s;
+    line-height: 40px;
+}
+
+.botao-info:hover{
+    
+    background: #111111;
+    cursor: pointer;
+}
+
+.botao-info ss{
+    margin-left: 20px;
+}
+
+.IconBotao{
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.seguro{
+    background: #ECE4EC;
+    width: 90%;
+    height: 20%;
+    margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 5px;
+    border: 1px solid #128f31;
+}
+
+
+.imagem-seguro{
+    width: 42px;
+    margin-top: 3.8%;
+    margin-left: 5%;
+}
+
+.carroverificadose{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size: 18px;
+    margin-top: -10%;
+    margin-left: 22%;
+}
+
+.carroverificadose2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #1d66ee;
+    font-size: 16px;
+    margin-left: 22%;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    }
+    @keyframes pulse {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+}
+

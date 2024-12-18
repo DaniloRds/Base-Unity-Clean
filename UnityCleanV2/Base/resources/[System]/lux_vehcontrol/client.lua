@@ -282,10 +282,11 @@ end)
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(1)
+		local wait = 1000
 		CleanupSounds()
 		local playerped = PlayerPedId()		
 		if IsPedInAnyVehicle(playerped) then
+			wait = 1
 			local veh = GetVehiclePedIsUsing(playerped)
 			if GetPedInVehicleSeat(veh,-1) == playerped then
 				DisableControlAction(0,84,true)
@@ -513,5 +514,6 @@ Citizen.CreateThread(function()
 				end
 			end
 		end
+		Citizen.Wait(wait)
 	end
 end)

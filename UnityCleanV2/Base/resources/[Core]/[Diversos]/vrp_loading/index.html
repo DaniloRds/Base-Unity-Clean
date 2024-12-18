@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+
+<head>
+  	<meta charset="UTF-8">
+  	<title>Unity Dev</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<video autoplay muted loop id="background-video">
+        <source src="https://unitydev.discloud.app/nuvem/loadscreen.webm" type="video/mp4">
+    </video>
+
+	<audio id="loading-music" autoplay>
+		<source src="./music.MP3" type="audio/mp3">
+	</audio>
+
+	<div class="background">
+		<div class="fundo"></div>
+		<div class="titulo">Painel de Controle</div>
+		<div class="sub-titulo">Utilize as teclas para controlar a música</div>
+		<div class="mais"><img src="./css/mais.png" alt=""></div>
+		<div class="menos"><img src="./css/menos.png" alt=""></div>
+		<div class="pause"><img src="./css/pause.png" alt=""></div>
+		<div class="playpause">Play/Pause</div>
+		<div class="volume">Volume</div>
+		<div class="linha"></div>
+		<br />
+	</div>
+	
+	<div class="loader"><font color="#fff">Carregando...</div>
+
+	<script src="index.js"></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js'></script>
+
+	<script type="text/javascript">
+		var music = document.getElementById("loading-music");
+		music.volume = 0.1;
+		document.addEventListener('keypress', (event) => {
+			if(event.key == "p") {
+				if(music.paused) {
+					music.play();
+				}else{
+					music.pause();
+				}
+			}else if(event.key == "-") {
+				music.volume = music.volume-0.05;
+			}else if(event.key == "+") {
+				music.volume = music.volume+0.05;
+			}else if(event.key == "7") {
+				music.src = "doremi.ogg"
+			}else if(event.key == "8") {
+				music.src = "parado.ogg"
+			}
+		});
+				
+	</script>
+	</div>
+</body>
+</html>

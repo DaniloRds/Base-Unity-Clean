@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Russo+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bibs/loading-bar.css" />
+    <script type="text/javascript" src="bibs/loading-bar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">    
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+<body>
+        <img id="logo" src="" class="logo">
+    
+        <div id="up">
+            <i class="fas fa-microphone"></i>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="separador"></div>
+            <i class="fas fa-clock"></i>
+            <div class="horas">13:00</div>
+        </div>
+
+        <div class="radio">
+            <div class="radioText">123Mhz</div>
+            <i class="fas fa-rss"></i>
+        </div>
+
+        <div class="cupom">
+            <div class="escrita"></div>
+            <div class="cupom-title">CUPOM</div>
+            <div class="cupom-text">SARABIM12</div>
+            <div class="back-1"></div>
+            <div class="valor">15</div>
+            <div class="porcent">%</div>
+            <div class="off">OFF</div>
+        </div>              
+        
+        <div id="hud">
+            <div class="velocimetro">
+                <div class="velocimetro2" style="display: none;">
+                    <div class="veloBar" clipPathUnits="objectBoundingBox">
+                        <div class='veloFill'></div>
+                    </div>
+                    <div class="speed"><ss id="speed"></ss> <ss style="font-size: 10px;">km/h</ss></div>
+                    <div class="fuelback">
+                        <div class="fueldentro" id="fuel"></div>
+                    </div>
+                    <img class="cinto" src="" alt="">
+                    <img class="lock" src="" alt="">
+                </div>
+            </div>
+
+            <div class="infos-player">
+                <div class="item-hud" id="vidadiv">
+                    <i class="far fa-heart"></i>
+                    <div class="item2-hud vida" id="vida"></div>
+                </div>
+                <div class="item-hud" id="coletediv">
+                    <i class="far fa-shield"></i>
+                    <div class="item2-hud colete" id="colete"></div>
+                </div>
+                <div class="item-hud">
+                    <i class="far fa-cheeseburger"></i>
+                    <div class="item2-hud fome" id="fome"></div>
+                </div>
+                <div class="item-hud">
+                    <i class="far fa-dewpoint"></i>
+                    <div class="item2-hud sede" id="sede"></div>
+                </div>
+            </div>      
+        </div>
+
+        <div class="progressBar" id="background">
+            <div id="tempoback"><i class="far fa-clock"></i></div>
+            <div id="barra">
+                <div id="pbar_innerdiv"></div>
+            </div>
+        </div>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

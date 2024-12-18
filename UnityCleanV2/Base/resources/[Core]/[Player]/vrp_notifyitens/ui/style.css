@@ -1,0 +1,100 @@
+html {
+	overflow-x: hidden !important;
+	overflow-y: hidden !important;
+	background-color: transparent !important;
+}
+
+body {
+  background: transparent !important;
+}
+
+#notifyitens {
+	bottom: 28px;
+	right: 240px;
+  position: absolute !important;
+  zoom: 1.1;
+}
+
+.fundo{
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.329));
+  color: rgb(255, 208, 0);
+  border-radius: 10px;
+  width: 60px;
+  transition: all 0.5s ease 0s;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  bottom: 0px;
+  height: 55px;
+  margin-top: 5px;
+  margin-right: 5px;
+  animation: subindo 0.5s linear 1;
+}
+
+.fundofalso{
+  width: 40px;
+  height: 20px;
+  /* float: left; */
+}
+.fundoimg{
+  width: 20px;
+  position: absolute  ;
+  left: 0;
+  height: 50px;
+  float: left;
+  border-radius: 5px;
+}
+.fundofalso img{
+  width: 40px;
+/*   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.100), rgba(0, 0, 0, 0.100)); */
+  z-index: 99;
+  height: 40px;
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.texto{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  position: relative;
+  left: 60px;
+  top: -12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 12px;
+  width: 240px;
+  line-height: 15px;
+  color: #fff;
+}
+.aviso{
+  font-size: 10px;
+  color: rgb(245, 241, 0);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+@keyframes imagemanimada{
+  0%{
+    transform: scale(1.2);
+  }
+  50%{
+    
+    transform: scale(1.0);
+  }
+  100%{
+    transform: scale(1.2);
+
+  }
+}
+
+@keyframes subindo {
+  0%{
+    bottom: -100px;
+  }
+  100%{        
+    bottom: 0px;
+  }
+}

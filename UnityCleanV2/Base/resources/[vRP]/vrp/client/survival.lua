@@ -34,9 +34,10 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(5)
+		local wait = 1000
 		local ped = PlayerPedId()
 		if GetEntityHealth(ped) <= 101 and deathtimer >= 0 then
+			wait = 1
 			if not nocauteado then
 				local x,y,z = table.unpack(GetEntityCoords(ped))
 				NetworkResurrectLocalPlayer(x,y,z,true,true,false)
@@ -111,6 +112,7 @@ Citizen.CreateThread(function()
 				DisableControlAction(0,344,true)
 			end
 		end
+		Citizen.Wait(wait)
 	end
 end)
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -118,9 +120,10 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(5)
+		local wait = 1000
         local ped = PlayerPedId()
         if GetEntityHealth(ped) <= 101 and deathtimer <= 0 then
+			wait = 1
             if IsControlJustPressed(0,38) then
                 TriggerEvent("resetBleeding")
                 TriggerEvent("resetDiagnostic")
@@ -143,6 +146,7 @@ Citizen.CreateThread(function()
                 end)
             end
         end
+		Citizen.Wait(wait)
     end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -201,7 +205,7 @@ function tvRP.PrisionGod()
 	end
 end
 -----------------------------------------------------------------------------------------------------------------------------------------
--- uudwaia
+-- DRAW3D
 -----------------------------------------------------------------------------------------------------------------------------------------
 function draw3DText(x,y,z, text)
 	local onScreen,_x,_y=World3dToScreen2d(x,y,z)
@@ -215,5 +219,4 @@ function draw3DText(x,y,z, text)
 	SetTextCentre(1)
 	AddTextComponentString(text)
 	DrawText(_x,_y)
-  end
----------
+end

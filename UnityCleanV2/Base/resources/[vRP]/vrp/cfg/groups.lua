@@ -126,7 +126,88 @@ cfg.groups = {
 		"burguershot.foradeservico"
 	},
 
-	--
+	-- [VIP] --
+	["standart"] = {
+		_config = {
+			title = "standart",
+			gtype = "vip",
+			dias = 30, -- Dias de VIP
+			coins = 0, -- Coins que ganha na ativação
+			dinheiro = 100000, -- Dinheiro que ganha na ativação
+			mochila = true, -- Se quando morrer a mochila fica (espaço na mochila)
+			garagem = 2 -- Garagem ADICIONAL
+		},
+		"standart.permissao",
+		"cor.permissao"
+	},
+
+	["premium"] = {
+		_config = {
+			title = "premium",
+			gtype = "vip",
+			dias = 30,
+			coins = 10,
+			dinheiro = 250000,
+			mochila = true,
+			garagem = 4,
+			itens = { -- Itens que ganha na ativação
+				{item = "cafe", quantidade = 1},
+				{item = "agua", quantidade = 3}
+			},
+			carros = { -- Carros que ganha na ativação
+				{car = "brioso"}
+			}
+		},
+		"premium.permissao",
+		"cor.permissao"
+	},
+
+	["elite"] = {
+		_config = {
+			title = "elite",
+			gtype = "vip",
+			dias = 30,
+			coins = 25,
+			dinheiro = 500000,
+			mochila = true,
+			garagem = 6,
+			itens = {
+				{item = "cafe", quantidade = 1},
+				{item = "agua", quantidade = 3}
+			},
+			carros = { -- Carros que ganha na ativação
+				{car = "brioso"}
+			}
+		},
+		"elite.permissao",
+		"cor.permissao"
+	},
+
+	["ultimate"] = {
+		_config = {
+			title = "ultimate",
+			gtype = "vip",
+			dias = 35,
+			coins = 50,
+			dinheiro = 1000000,
+			mochila = true,
+			garagem = 10,
+			itens = {
+				{item = "cafe", quantidade = 1},
+				{item = "agua", quantidade = 3}
+			},
+			carros = { -- Carros que ganha na ativação
+				{car = "brioso"},
+				{car = "sentinel"}
+			}
+		},
+		"ultimate.permissao",
+		"cor.permissao"
+	},
+
+	["mochila"] = { -- Não mexer deletar ou remover
+		"mochila.permissao"
+	},
 		
 }
 

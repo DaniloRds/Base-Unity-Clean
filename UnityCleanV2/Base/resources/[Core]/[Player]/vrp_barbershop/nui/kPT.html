@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="kPT.css">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="kPT.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+
+</head>
+<body>
+    <div id="actionmenu">
+            <div id="btn-menu-itens">
+                <div class="text">Barbearia</div>
+                <div class="content-itens">
+
+                    <div class="item">
+                        <div class="hair-item">
+                        <img src="imagens/cabelo.png">
+                    </div>
+                </div>
+
+                    <div class="item">
+                        <div class="moustache-item">
+                        <img src="imagens/bigode.png">
+                    </div>  
+                </div> 
+
+                    <div class="item">
+                        <div class="make-item">
+                        <img src="imagens/maquiagem.png">
+                    </div>   
+                </div>   
+                    
+                    <div class="item">
+                        <div class="head-item">
+                        <img src="imagens/cabeca.png">
+                    </div>  
+                </div>  
+
+                    <div class="item">
+                        <div class="eyebrow-item">
+                        <img src="imagens/eyebrow.png">
+                    </div> 
+                </div> 
+
+                    
+                </div>
+                <div class="line"></div>
+            </div>
+            <div id="btn-menu-modification">
+                <div class="introduction">
+                    <div class="title">Em qual cadeira você<br>deseja sentar?</div>
+                    <div class="cadeira">
+                        <div class="primeira"><span>1</span></div>
+                    </div>
+                    <div class="cadeira">
+                        <div class="segunda"><span>2</span></div>
+                    </div>
+                    <div class="cadeira">
+                        <div class="terceira"><span>3</span></div>
+                    </div>
+                </div>
+
+                <div class="hair">
+                    <div class="item-modification">
+                        <div class="hair-format">
+                            <div class="text-modification">Cabelo</div>
+                            <input type="range" min="0" max="72" value="36" step="1" class="slider" v-model.number="hairModel" @input="changeAppearance">
+
+                        </div>
+                    </div>
+
+                <div class="item-modification">
+                    <div class="hair-color">
+                        <div class="text-modification">Cor do Cabelo</div>
+                        <input type="range" min="0" max="63" value="31" step="1" class="slider" v-model.number="firstHairColor" @input="changeAppearance">
+                    </div>
+                </div>
+
+                <div class="item-modification">
+                    <div class="secundary-hair-color">
+                        <div class="text-modification">Cor secundaria do Cabelo</div>
+                        <input type="range" min="0" max="63" value="31" step="1" class="slider" v-model.number="secondHairColor" @input="changeAppearance">
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+                <div class="moustache">
+                    
+                    <div class="item-modification">
+                        <div class="moustache-format">
+                            <div class="text-modification">Barba</div>
+                            <input type="range" min="-1" max="28" value="14" step="1" class="slider" v-model.number="beardModel" @input="changeAppearance">
+                        </div>
+                    </div>
+
+                    <div class="item-modification">
+                        <div class="moustache-color">
+                            <div class="text-modification">Cor da Barba</div>
+                            <input type="range" min="0" max="63" value="31" step="1" class="slider" v-model.number="beardColor" @input="changeAppearance"> 
+                        </div>
+                    </div>
+
+                    <div class="item-modification">
+                        <div class="moustache-color">
+                            <div class="text-modification">Pelo No Peito</div>
+                            <input type="range" min="0" max="16" value="8" step="1" class="slider" v-model.number="chestModel" @input="changeAppearance"> 
+                        </div>
+                    </div>
+
+                    <div class="item-modification">
+                        <div class="moustache-color">
+                            <div class="text-modification">Cor do Pelo No Peito</div>
+                            <input type="range" min="0" max="63" value="32" step="1" class="slider" v-model.number="chestColor" @input="changeAppearance"> 
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="make">
+                    
+                    <div class="item-modification">
+                        <div class="make-format">
+                            <div class="text-modification">Maquiagem</div>
+                            <input type="range" min="-1" max="71" value="35" step="1" class="slider" v-model.number="makeupModel" @input="changeAppearance">
+                        </div>
+                    </div>
+
+                    <div class="item-modification">
+                        <div class="lipstick-format">
+                            <div class="text-modification">Batom</div>
+                            <input type="range" min="-1" max="9" value="4" step="1" class="slider" v-model.number="lipstickModel" @input="changeAppearance">
+                        </div>
+                    </div>
+
+                    <div class="item-modification">
+                        <div class="lipstick-color">
+                            <div class="text-modification">Cor do Batom</div>
+                            <input type="range" min="0" max="63" value="31" step="1" class="slider" v-model.number="lipstickColor" @input="changeAppearance">
+                        </div>
+                    </div>
+
+                    <div class="item-modification">
+                        <div class="blush-format">
+                            <div class="text-modification">Blush</div>
+                            <input type="range" min="-1" max="30" value="3" step="1" class="slider" v-model.number="blushModel" @input="changeAppearance">
+                        </div>
+                    </div>
+
+                    <div class="item-modification">
+                        <div class="blush-color">
+                            <div class="text-modification">Cor do Blush</div>
+                            <input type="range" min="0" max="63" value="31" step="1" class="slider" v-model.number="blushColor" @input="changeAppearance">
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="face">
+                    
+                    <div class="item-modification">
+                        <div class="Stains">
+                            <div class="text-modification">Manchas</div>
+                            <input type="range" min="-1" max="23" value="11" step="1" class="slider" v-model.number="sundamageModel" @input="changeAppearance">
+                        </div>
+                    </div>
+                    
+                    <div class="item-modification">
+                        <div class="Aging">
+                            <div class="text-modification">Envelhecimento</div>
+                            <input type="range" min="-1" max="14" value="7" step="1" class="slider" v-model.number="ageingModel" @input="changeAppearance">
+                        </div>
+                    </div>
+
+                    <div class="item-modification">
+                        <div class="Freckles">
+                            <div class="text-modification">Sardas</div>
+                            <input type="range" min="-1" max="17" value="8" step="1" class="slider" v-model.number="frecklesModel" @input="changeAppearance">
+                        </div>
+                    </div>
+
+                    <div class="item-modification">
+                        <div class="Wrinkles">
+                            <div class="text-modification">Rugas</div>
+                            <input type="range" min="-1" max="10" value="5" step="1" class="slider" v-model.number="blemishesModel" @input="changeAppearance"> 
+                        </div>
+                    </div>
+
+                </div>
+                <div class="eyebrow">
+                    
+                    <div class="item-modification">
+                        <div class="eyebrow-format">
+                            <div class="text-modification">Sobrancelhas</div>
+                            <input type="range" min="0" max="33" value="16" step="1" class="slider" v-model.number="eyebrowsModel" @input="changeAppearance">
+                        </div>
+                    </div>
+
+                    <div class="item-modification">
+                        <div class="eyebrow-color">
+                            <div class="text-modification">Cor da Sobrancelhas</div>
+                            <input type="range" min="0" max="63" value="31" step="1" class="slider" v-model.number="eyebrowsColor" @input="changeAppearance">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="btn-menu-cam">
+                <div class="line"></div>
+                    <div class="cam-itens">
+                        <div class="item">
+                            <div class="left">
+                                <img src="imagens/left-arrow.png">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="faceCam">
+                                <img src="imagens/sorridente.png">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="right">
+                                <img src="imagens/right-arrow.png">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    </div>
+
+
+    <script>
+        const app = new Vue({
+        el: '#btn-menu-modification',
+        methods: {
+            changeAppearance: function() {
+                const arr = {
+                    hairModel: this.hairModel,
+                    firstHairColor: this.firstHairColor,
+                    secondHairColor: this.secondHairColor,
+                    beardModel: this.beardModel,
+                    beardColor: this.beardColor,
+                    eyebrowsModel: this.eyebrowsModel,
+                    eyebrowsColor: this.eyebrowsColor,
+                    blushModel: this.blushModel,
+                    blushColor: this.blushColor,
+                    makeupModel: this.makeupModel,
+                    lipstickModel: this.lipstickModel,
+                    lipstickColor: this.lipstickColor,
+                    ageingModel: this.ageingModel,
+                    blemishesModel: this.blemishesModel,
+                    frecklesModel: this.frecklesModel,
+                    sundamageModel: this.sundamageModel,
+                    chestModel: this.chestModel,
+                    chestColor: this.chestColor,
+
+
+                };
+                $.post('http://vrp_barbershop/UpdateInformation', JSON.stringify(arr));
+            }
+        }
+    });
+        </script>
+</body>
+</html>

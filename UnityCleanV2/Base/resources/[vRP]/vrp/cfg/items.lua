@@ -3,13 +3,16 @@ local cfg = {}
 cfg.items = {
 	-- GERAIS
 	["identidade"] = { index = "identidade", nome = "Identidade", type = "usar", peso = 0.1 },
+
 	["colete"] = { index = "colete", nome = "Colete", type = "usar", peso = 3.0 },
+
 	["cartaodedebito"] = { index = "cartaodedebito", nome = "Cartão de Débito", type = "usar", peso = 0.1 }, 
+
 	["cartaodecredito"] = { index = "cartaodecredito", nome = "Cartão de Crédito", type = "usar", peso = 0.1 },
+
 	["maquininha"] = { index = "maquininha", nome = "Maquininha", type = "usar", peso = 0.5 },
 
 	-- ILEGAL
-	["dinheiroespecie"] = { index = "dinheiroespecie", nome = "Dinheiro em Espécie", type = "usar", peso = 0.0 },
 	["dinheirosujo"] = { index = "dinheirosujo", nome = "Dinheiro Sujo", type = "usar", peso = 0.0 },
 
 	["maconha"] = { index = "maconha", nome = "Maconha", type = "usar", peso = 0.2 },
@@ -32,8 +35,6 @@ cfg.items = {
 	
 	["logsinvasao"] = { index = "logsinvasao", nome = "L. Inv. Banco", type = "usar", peso = 0.1 },
 	["keysinvasao"] = { index = "keysinvasao", nome = "K. Inv. Banco", type = "usar", peso = 0.1 },
-	["pendriveinformacoes"] = { index = "pendriveinformacoes", nome = "P. Info.", type = "usar", peso = 0.1 },
-	["acessodeepweb"] = { index = "acessodeepweb", nome = "P. DeepWeb", type = "usar", peso = 0.1 },
 
 	["capsula"] = { index = "capsula", nome = "Cápsula", type = "usar", peso = 0.2 },
 	["polvora"] = { index = "polvora", nome = "Pólvora", type = "usar", peso = 0.1 },
@@ -54,7 +55,7 @@ cfg.items = {
 	["carteiraroubada"] = { index = "carteiraroubada", nome = "Carteira Roubada", type = "usar", peso = 0.2 },
 	["cartaoclonado"] = { index = "cartaoclonado", nome = "Cartão Clonado", type = "usar", peso = 0.2 },
 	["tabletroubado"] = { index = "tabletroubado", nome = "Tablet Roubado", type = "usar", peso = 0.2 },
-	["sapatosroubado"] = { index = "sapatosroubado", nome = "Sapatos Roubado", type = "usar", peso = 0.2 },
+	["sapatosroubado"] = { index = "sapatosroubado", nome = "Sapatos Roubados", type = "usar", peso = 0.2 },
 
 	["c4"] = { index = "c4", nome = "C4", type = "usar", peso = 3.0 },
 	["furadeira"] = { index = "furadeira", nome = "Furadeira", type = "usar", peso = 3.0 },
@@ -64,7 +65,8 @@ cfg.items = {
 	["valefone"] = { index = "valefone", nome = "Vale Troca Número", type = "usar", peso = 0.0 },
 	["valeplaca"] = { index = "valeplaca", nome = "Vale Troca Placa", type = "usar", peso = 0.0 },
 	["valemansao"] = { index = "valemansao", nome = "Vale Mansão", type = "usar", peso = 0.0 },
-
+	["valegaragem"] = { index = "valegaragem", nome = "Vale +1 Garagem", type = "usar", peso = 0.0 },
+	
 	-- LOJINHA
 	["ferramenta"] = { index = "ferramenta", nome = "Ferramenta", type = "usar", peso = 1.0 },
 	["celular"] = { index = "celular", nome = "Celular", type = "usar", peso = 0.1 },
@@ -81,17 +83,14 @@ cfg.items = {
 	-- ITENS MÉDICOS
 	["omeprazol"] = { index = "omeprazol", nome = "Omeprazol", type = "usar", peso = 0.5 },
 	["dipirona"] = { index = "dipirona", nome = "Dipirona", type = "usar", peso = 0.5 },
-	["gelol"] = { index = "gelol", nome = "Gelol", type = "usar", peso = 0.5 },
 	["paracetamol"] = { index = "paracetamol", nome = "Paracetamol", type = "usar", peso = 0.5 },
 	["decupramim"] = { index = "decupramim", nome = "Decupramim", type = "usar", peso = 0.5 },
 	["buscopan"] = { index = "buscopan", nome = "Buscopan", type = "usar", peso = 0.5 },
 	["novalgina"] = { index = "novalgina", nome = "Novalgina", type = "usar", peso = 0.5 },
 	["alivium"] = { index = "alivium", nome = "Alivium", type = "usar", peso = 0.5 },
-	["agua-oxigenada"] = { index = "agua-oxigenada", nome = "Agua-Oxigenada", type = "usar", peso = 0.5 },
 	["nokusin"] = { index = "nokusin", nome = "Nokusin", type = "usar", peso = 0.5 },
 	["sidelnafila"] = { index = "sidelnafila", nome = "Sidelnafila", type = "usar", peso = 0.5 },
 	["bandagem"] = { index = "bandagem", nome = "Bandagem", type = "usar", peso = 0.5 },
-	["dorflex"] = { index = "dorflex", nome = "Dorflex", type = "usar", peso = 0.5 },
 	["morfina"] = { index = "morfina", nome = "Morfina", type = "usar", peso = 0.5 },
 
 	-- EMPREGO

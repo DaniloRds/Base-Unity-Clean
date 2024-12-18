@@ -295,7 +295,6 @@ function tvRP.setCustomization(custom)
 	return r:wait()
 end
 
-
 function tvRP.blockAcao()
 	acao = true
 end

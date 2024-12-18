@@ -1,19 +1,14 @@
-Base CLEAN da Unity FiveM feita por danilords - Qualquer dúvida pode chamar. (Apenas sobre conteúdos da base)
+Base da Unity Dev feita por danilords - Qualquer dúvida pode chamar. (Apenas sobre conteúdos da base)
 
 Minha loja: discord.gg/pbT5wVp8e9 | Passa lá, estamos crescendo devagarinho!
 
-Esta é uma base "clean" porém deixei alguns scripts de sistemas básicos para quem quer usar só de teste também como
-garagem, barbearia essas coisas, mas a base está bem leve e otimizada para vocês.
+Esta é uma base gratuita clean porém deixei alguns scripts de sistemas feitos por mim para quem quer usar só de teste também.
+A base é de vocês, então podem fazer modificações, testes e até abrir servidores, está proibido somente a venda da base crua, como assim? você não pode vender a base da forma que eu disponibilizei, se for vender monte uma em cima e é claro deixem os créditos 
 
-Também deixei algumas coisas mais "exclusivas" como a loja vip, banco diferente, lojinhas e outros.
+Atualizações Futuras da Base 🆙 
+As únicas atualizações que vou fazer na base será em relação a bugs encontrados, não terá adição de mais nenhum conteúdo de forma gratuita. Eu deixei um script para vocês relatarem os bugs, basta digitar /bugs e escrever o ocorrido que eu vou receber a log e corrigir o mais rápido que eu puder.
 
-Ela também conta com o oxmysql já configurado!
-A base está bem atualizada, contém as dancinhas do tiktok, poses para foto, animações em dupla e etc...
-
-A hud está 100% configurada e sincronizada com a base e o voip, tudo funcional, tem vários tipos de itens e comidas
-já configurados e funcionando na base, basta filtrar o que vai usar ou não...
-
-Essa base vai ter atualizações via github, qualquer bug que encontrarem por favor reportem a equipe para resolução do mesmo.
+Essa base vai ter atualizações de bugs via github, qualquer bug que encontrarem por favor reportem no /bugs.
 
 
 

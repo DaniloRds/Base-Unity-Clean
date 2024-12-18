@@ -1,7 +1,0 @@
-Para iniciar a base você deve instalar os artefatos;
-
-https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/
-
-No link acima você vai cair em um site, lá você vai fazer o download do LATEST RECOMMENDED em um botão azul;
-
-Depois basta extrair o arquivo que você baixou para dentro dessa pasta e pronto!

@@ -3,10 +3,14 @@ local Proxy = module("vrp","lib/Proxy")
 local Tools = module("vrp","lib/Tools")
 
 tvRP = {}
-local players = {}
-Tunnel.bindInterface("vRP",tvRP)
 vRPserver = Tunnel.getInterface("vRP")
+Tunnel.bindInterface("vRP",tvRP)
 Proxy.addInterface("vRP",tvRP)
+
+local veh_list = module("cfg/vehicles")
+local vehglobal = veh_list.vehicles
+
+local players = {}
 
 local user_id
 function tvRP.setUserId(_user_id)
@@ -94,6 +98,15 @@ function tvRP.getNearestPlayer(radius)
 		end
 	end
 	return p
+end
+
+function tvRP.activePlayers()
+	local activePlayers = {}
+	for _,v in ipairs(GetActivePlayers()) do
+		activePlayers[#activePlayers + 1] = GetPlayerServerId(v)
+	end
+
+	return activePlayers
 end
 
 local anims = {}
@@ -186,6 +199,10 @@ function tvRP.playScreenEffect(name,duration)
 	end
 end
 
+function tvRP.GetVehiclesConfig()
+	return vehglobal
+end
+-----------------------------------------------------------------------------------------------------------------------------------------
 AddEventHandler("playerSpawned",function()
 	TriggerServerEvent("vRPcli:playerSpawned")
 end)

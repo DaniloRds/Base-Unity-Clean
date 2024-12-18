@@ -3,10 +3,29 @@ game 'gta5'
 
 ui_page "gui/index.html"
 
+client_scripts {
+	"lib/utils.lua",
+	-----------------
+	"cfg/vehicles.lua",
+	-----------------
+	"client/base.lua",
+	"client/basic_garage.lua",
+	"client/iplloader.lua",
+	"client/gui.lua",
+	"client/player_state.lua",
+	"client/survival.lua",
+	"client/map.lua",
+	"client/notify.lua",
+	"client/identity.lua",
+	"client/police.lua"
+}
+
 server_scripts { 
 	"lib/utils.lua",
 	"base.lua",
 	"queue.lua",
+	-----------------
+	"cfg/vehicles.lua",
 	-----------------
 	"modules/gui.lua",
 	"modules/group.lua",
@@ -20,21 +39,9 @@ server_scripts {
 	"modules/vips.lua",
 	"modules/aptitude.lua",
 	"modules/basic_items.lua",
+	"modules/prepares.lua",
+	"modules/vehicles.lua",
 	"modules/cloakroom.lua"
-}
-
-client_scripts {
-	"lib/utils.lua",
-	"client/base.lua",
-	"client/basic_garage.lua",
-	"client/iplloader.lua",
-	"client/gui.lua",
-	"client/player_state.lua",
-	"client/survival.lua",
-	"client/map.lua",
-	"client/notify.lua",
-	"client/identity.lua",
-	"client/police.lua"
 }
 
 files {
