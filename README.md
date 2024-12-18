@@ -1,59 +1,30 @@
-<h1 align="center">UNITY BASE V2.0</h1>
+<h1 align="center">UNITY DEV BASE VRPEX</h1>
 
 <img src="./src/Assets/gif.gif" alt="Descrição da imagem">
 
-> 🔎 Com vários feedbacks positivos e negativos da base clean V1, resolmevos lançar essa V2 com novidades e correções para vocês iniciarem seus projetos.
-> A base terá atualizações aqui no github para correções de bugs (se houver), conteúdos adicionais apenas via DISCORD.
+> Essa base foi feita com o intuito de agregar a comunidade fivem positivamente dando uma base simples de qualidade para todos poderem trabalhar suas ideias e projetos.
+> A base terá atualizações aqui no github para correções de bugs (se houver), conteúdos adicionais apenas no nosso [discord](https://discord.gg/pbT5wVp8e9).
 
-## :page_facing_up: Informações
+> O projeto foi realizado utilizando o framework [VRPEX](https://docs.fivem.net/natives/) conectando com o [OXMYSQL](https://github.com/overextended/oxmysql)
 
-O projeto foi realizado utilizando o framework [VRPEX](https://docs.fivem.net/natives/) conectando com o [OXMYSQL](https://github.com/overextended/oxmysql) 
+## :page_facing_up: Como faço a base funcionar?
 
-❔ **Como Iniciar a Base**
+> Assista o [vídeo tutorial](https://github.com/overextended/oxmysql) para deixar seu projeto online.
 
-> Para iniciar a base você vai precisar ter/instalar os seguintes compenentes:
+### 💠Links usados no vídeo: <br>
+[XAMPP](https://www.apachefriends.org/pt_br/index.html) ➡ Instalado. <br>
+[HeidiSQL](https://www.apachefriends.org/pt_br/index.html) ➡ Instalado. <br>
+[Artifacts](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master) ➡ Você vai fazer o download da versão <strong>recomendada</strong> e extrair dentro da pasta <em>artefacts</em> <br>
+[FiveM-Key](https://keymaster.fivem.net/login) ➡ Você vai precisar gerar sua KEY. <br>
+[Steam-Key](https://steamcommunity.com/dev/apikey) ➡ Você vai precisar gerar sua WebApiKey. <br>
 
-[XAMPP](https://www.apachefriends.org/pt_br/index.html) ➡ Instalado. <br/><br/>
-[HeidiSQL](https://www.apachefriends.org/pt_br/index.html) ➡ Instalado. <br/><br/>
-[Artifacts](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master) ➡ Você vai fazer o download da versão <strong>recomendada</strong> e extrair dentro da pasta <em>artefacts</em> <br/><br/>
-[FiveM-Key](https://keymaster.fivem.net/login) ➡ Você vai precisar gerar sua KEY, após isso você vai colocar ela em <em> UnityCleanV2\Base\config\keys.cfg</em> na linha 2. <br/><br/>
-[Steam-Key](https://steamcommunity.com/dev/apikey) ➡ Você vai precisar gerar sua WebApiKey, após isso você vai colocar ela em <em> UnityCleanV2\Base\config\keys.cfg</em> na linha 1. <br/><br/>
+### 💠Como desativo os NPCs? <br>
+Para desativar os NPCS na base você precisa abrir o arquivo `start.exe` com um bloco ne notas e adicionar a opção `onesync_population false` na frende do número 2612.
 
 
-💠 **Instruções**
-
-
-Após baixar a base e os arquivos acima, relembrando, você precisa baixar os [artifacts](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master) e jogar dentro da pasta <em>artifacts</em>, após isso você vai colocar a [KEY](https://keymaster.fivem.net/login) e a [WebApiKey](https://steamcommunity.com/dev/apikey) no local citado.
-
-Depois você vai abrir o arquivo <em>SQL</em> com 2 clicks, feito isso vai abrir o aplicativo [HeidiSql](https://www.apachefriends.org/pt_br/index.html) e nele você vai dar início na tabela do banco de dados da base. (Imagens a baixo passo-a-passo)
-
-<br/>
-
-Feito isso basta iniciar o <em>start.exe</em> e o servidor vai estar online em sua localhost.
-
-💠 **Como coloco NPC?**
-
-Para ativar os NPCS na base você precisa abrir o arquivo `start.exe` com um bloco ne notas e mudar a opção `onesync_population false` para --> `onesync_population true`
-
-Feito isso você vai procurar pela pasta <em>unity-dispatch</em> e vai abrir o arquivo `dispatch.lua`, você vai ir nas linhas 10 e 39 e apagar os comentários.
-
-<br/>
-
-⚠️ **Conteúdo Adicional**
-
-A base tem alguns conteúdos adicionais que vou colocar aqui para download, em breve podem vir mais conteúdos adicionais que vou postar no meu [Discord](https://discord.gg/pbT5wVp8e9)
-
-> Veículos
-
-Todos esses veículos já estão configurados na base! <br/>
-É importante que baixe os 2 conteúdos para não ficar faltando nada. <br/>
-[Download Parte 01](https://drive.google.com/file/d/1dNGMvcTJdqcbqXurX7iVlHftGHi6dmqk/view?usp=sharing) <br/>
-[Download Parte 02](https://drive.google.com/file/d/1LarBEDmIvzdHDsFPA32x9ZkkM7SPRkxI/view?usp=sharing) <br/>
-
-> Inventário | Loja Vip | Roupas
-
-Aqui estão as imagens desses itens. <br/>
-[Download Imagens](https://drive.google.com/file/d/14KDx7OAcECGqpS8IIPV8QYSUfvJv3uiM/view?usp=sharing) <strong>Coloque essas imagens dentro da pasta htdocs do seu xampp.</strong>
+### 📷Imagens dos Itens <br>
+Aqui está o link de download das imagens, após fazer o download acesse o diretório `C:\xampp\htdocs` e extraia elas lá.<br>
+[Download Imagens](https://drive.google.com/file/d/14KDx7OAcECGqpS8IIPV8QYSUfvJv3uiM/view?usp=sharing)
 
 ## 🤝 Colaboradores
 
