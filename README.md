@@ -9,11 +9,11 @@
 
 ## :page_facing_up: Como faço a base funcionar?
 
-> Assista o [vídeo tutorial](https://github.com/overextended/oxmysql) para deixar seu projeto online.
+> Assista o [vídeo tutorial]([https://github.com/overextended/oxmysql](https://youtu.be/A8k84Tor5jg)) para deixar seu projeto online.
 
 ### 💠Links usados no vídeo: <br>
 [XAMPP](https://www.apachefriends.org/pt_br/index.html) ➡ Instalado. <br>
-[HeidiSQL](https://www.apachefriends.org/pt_br/index.html) ➡ Instalado. <br>
+[HeidiSQL]([https://www.apachefriends.org/pt_br/index.html](https://www.heidisql.com/)) ➡ Instalado. <br>
 [Artifacts](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master) ➡ Você vai fazer o download da versão <strong>recomendada</strong> e extrair dentro da pasta <em>artefacts</em> <br>
 [FiveM-Key](https://keymaster.fivem.net/login) ➡ Você vai precisar gerar sua KEY. <br>
 [Steam-Key](https://steamcommunity.com/dev/apikey) ➡ Você vai precisar gerar sua WebApiKey. <br>
