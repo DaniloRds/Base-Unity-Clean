@@ -187,6 +187,7 @@ end
 --
 RegisterNUICallback("comprarCarro", function(data, cb)
     SetNuiFocus(false, false)
+    TriggerEvent('hudOff',false)
     SendNUIMessage({
         action = "hideMenu"
     })
@@ -213,6 +214,7 @@ end)
 
 RegisterNUICallback("venderCarro", function(data, cb)
     SetNuiFocus(false, false)
+    TriggerEvent('hudOff',false)
     SendNUIMessage({
         action = "hideMenu"
     })
