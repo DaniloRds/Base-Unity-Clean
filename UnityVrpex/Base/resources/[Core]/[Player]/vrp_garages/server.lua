@@ -665,7 +665,7 @@ function src.spawnVehicles(name,use)
 					end
 				else
 					-- Alugados
-					local spawnveh,vehid = vCLIENT.spawnVehicle(source,name,1000,1000,100,{},alugado_inroad,0,0,true)
+					local spawnveh,vehid = vCLIENT.spawnVehicle(source,name,1000,1000,100,{},alugado_inroad,{},{},true)
 					if spawnveh then
 						activeVehicles[user_id] = activeVehicles[user_id] or {}
 						activeVehicles[user_id][name] = name
