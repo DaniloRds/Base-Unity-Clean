@@ -48,7 +48,7 @@ const updateChest = () => {
 			<div class="peso2"><b>OCUPADO:</b>  ${(data.peso2).toFixed(2)}    <s>|</s>    <b>DISPONÍVEL:</b>  ${(data.maxpeso2-data.peso2).toFixed(2)}    <s>|</s>    <b>TAMANHO:</b>  ${(data.maxpeso2).toFixed(2)}</div>
 			<div class="esquerda">
 				${nameList2.map((item) => (`
-					<div class="item" style="background-image: url('http://localhost:80/cidade/inventory/${item.index}.png');" data-item-key="${item.key}">
+					<div class="item" style="background-image: url('https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${item.index}.png');" data-item-key="${item.key}">
 						<div id="peso">${(item.peso*item.amount).toFixed(2)}</div>
 						<div id="quantity">${formatarNumero(item.amount)}x</div>
 						<div id="itemname">${item.name}</div>
@@ -64,7 +64,7 @@ const updateChest = () => {
 
 			<div class="direita">
 				${nameList.map((item) => (`
-					<div class="item2" style="background-image: url('http://localhost:80/cidade/inventory/${item.index}.png');" data-item-key="${item.key}">
+					<div class="item2" style="background-image: url('https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${item.index}.png');" data-item-key="${item.key}">
 						<div id="peso">${(item.peso*item.amount).toFixed(2)}</div>
 						<div id="quantity">${formatarNumero(item.amount)}x</div>
 						<div id="itemname">${item.name}</div>
