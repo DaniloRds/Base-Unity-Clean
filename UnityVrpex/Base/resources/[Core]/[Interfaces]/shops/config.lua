@@ -1,6 +1,6 @@
 local cfg = {}
 
-cfg.imagesIp = "http://localhost:80/cidade/inventory/"
+cfg.imagesIp = "https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/"
 
 cfg.shops ={
 
