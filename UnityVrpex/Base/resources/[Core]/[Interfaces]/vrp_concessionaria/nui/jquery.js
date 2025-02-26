@@ -130,7 +130,7 @@ function listPossuidos(tipo){
 			$('.overflow-cars').prepend(`
 
 				<div class="item-cars" onclick="vendercarro(this)" data-k="${key.k}">
-					<img class="imagem-carro" src="http://localhost:80/cidade/carros/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
+					<img class="imagem-carro" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
 					<div class="nome-carro"><ss>Possuido</ss> ${key.carro}</div>
 					<div class="preço-carro"><i class="fa-duotone fa-boxes fa-beat iconPreco"></i>${key.bau} kg</div>
 				</div>
@@ -151,7 +151,7 @@ function listCarros(tipo){
 				$('.overflow-cars').prepend(`
 
 					<div class="item-cars" onclick="verCarro(this)" data-k="${key.k}" data-link="${key.link}" data-seguro="${formatMoney(key.seguro)}" data-carro="${key.carro}" data-bau="${key.bau}" data-valor="${formatMoney(key.valor)}" data-valor2="${key.valor2}" data-tipo="${key.tipo}">
-						<img class="imagem-carro" src="http://localhost:80/cidade/carros/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
+						<img class="imagem-carro" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
 						<div class="nome-carro"><ss>${key.estoque}</ss> ${key.carro}</div>
 						<div class="preço-carro"><i class="fa-duotone fa-tags fa-beat iconPreco"></i>${formatMoney(key.valor)}$</div>
 					</div>
@@ -172,7 +172,7 @@ function listAntigos(tipo){
 				$('.overflow-cars').prepend(`
 
 					<div class="item-cars" onclick="verCarro(this)" data-k="${key.k}" data-link="${key.link}" data-seguro="${formatMoney(key.seguro)}" data-carro="${key.carro}" data-bau="${key.bau}" data-valor="${formatMoney(key.valor)}" data-valor2="${key.valor2}" data-tipo="${key.tipo}">
-						<img class="imagem-carro" src="http://localhost:80/cidade/carros/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
+						<img class="imagem-carro" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
 						<div class="nome-carro"><ss>${key.estoque}</ss> ${key.carro}</div>
 						<div class="preço-carro"><i class="fa-duotone fa-tags fa-beat iconPreco"></i>${formatMoney(key.valor)}$</div>
 						<div class="kg-carro"><i class="fa-duotone fa-boxes fa-beat iconPreco"></i>${key.bau} kg</div>
@@ -194,7 +194,7 @@ function listSuv(tipo){
 				$('.overflow-cars').prepend(`
 
 					<div class="item-cars" onclick="verCarro(this)" data-k="${key.k}" data-link="${key.link}" data-seguro="${formatMoney(key.seguro)}" data-carro="${key.carro}" data-bau="${key.bau}" data-valor="${formatMoney(key.valor)}" data-valor2="${key.valor2}" data-tipo="${key.tipo}">
-						<img class="imagem-carro" src="http://localhost:80/cidade/carros/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
+						<img class="imagem-carro" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
 						<div class="nome-carro"><ss>${key.estoque}</ss> ${key.carro}</div>
 						<div class="preço-carro"><i class="fa-duotone fa-tags fa-beat iconPreco"></i>${formatMoney(key.valor)}$</div>
 						<div class="kg-carro"><i class="fa-duotone fa-boxes fa-beat iconPreco"></i>${key.bau} kg</div>
@@ -216,7 +216,7 @@ function listSport(tipo){
 				$('.overflow-cars').prepend(`
 
 					<div class="item-cars" onclick="verCarro(this)" data-k="${key.k}" data-link="${key.link}" data-seguro="${formatMoney(key.seguro)}" data-carro="${key.carro}" data-bau="${key.bau}" data-valor="${formatMoney(key.valor)}" data-valor2="${key.valor2}" data-tipo="${key.tipo}">
-						<img class="imagem-carro" src="http://localhost:80/cidade/carros/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
+						<img class="imagem-carro" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
 						<div class="nome-carro"><ss>${key.estoque}</ss> ${key.carro}</div>
 						<div class="preço-carro"><i class="fa-duotone fa-tags fa-beat iconPreco"></i>${formatMoney(key.valor)}$</div>
 						<div class="kg-carro"><i class="fa-duotone fa-boxes fa-beat iconPreco"></i>${key.bau} kg</div>
@@ -238,7 +238,7 @@ function listMoto(tipo){
 				$('.overflow-cars').prepend(`
 
 					<div class="item-cars" onclick="verCarro(this)" data-k="${key.k}" data-link="${key.link}" data-seguro="${formatMoney(key.seguro)}" data-carro="${key.carro}" data-bau="${key.bau}" data-valor="${formatMoney(key.valor)}" data-valor2="${key.valor2}" data-tipo="${key.tipo}">
-						<img class="imagem-carro" src="http://localhost:80/cidade/carros/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
+						<img class="imagem-carro" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
 						<div class="nome-carro"><ss>${key.estoque}</ss> ${key.carro}</div>
 						<div class="preço-carro"><i class="fa-duotone fa-tags fa-beat iconPreco"></i>${formatMoney(key.valor)}$</div>
 						<div class="kg-carro"><i class="fa-duotone fa-boxes fa-beat iconPreco"></i>${key.bau} kg</div>
@@ -261,7 +261,7 @@ function listOther(tipo){
 				$('.overflow-cars').prepend(`
 
 					<div class="item-cars" onclick="verCarro(this)" data-k="${key.k}" data-link="${key.link}" data-seguro="${formatMoney(key.seguro)}" data-carro="${key.carro}" data-bau="${key.bau}" data-valor="${formatMoney(key.valor)}" data-valor2="${key.valor2}" data-tipo="${key.tipo}">
-						<img class="imagem-carro" src="http://localhost:80/cidade/carros/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
+						<img class="imagem-carro" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${key.k}.png" onerror="if (this.src != 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png') this.src = 'https://media.discordapp.net/attachments/623619036462448683/1092963441154723921/160895.png';" alt="">
 						<div class="nome-carro"><ss>${key.estoque}</ss> ${key.carro}</div>
 						<div class="preço-carro"><i class="fa-duotone fa-tags fa-beat iconPreco"></i>${formatMoney(key.valor)}$</div>
 						<div class="kg-carro"><i class="fa-duotone fa-boxes fa-beat iconPreco"></i>${key.bau} kg</div>
@@ -285,7 +285,7 @@ function vendercarro(data){
 };
 
 function verCarro(data){
-	$(".disposi-carro").attr(`src`,"http://localhost:80/cidade/carros/" + data.dataset.k + ".png");
+	$(".disposi-carro").attr(`src`,"https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/" + data.dataset.k + ".png");
 	$("#carroDKsadask").html(data.dataset.carro);
 	$("#Tipodsakds").html(data.dataset.tipo);
 	$("#bauQuantidade").html(data.dataset.bau + 'KG');
