@@ -88,7 +88,7 @@ const updateCarrosVip1 = () => {
 			<div class="modelContainer">
 				<div class="model" data-name-key="${item.k}">
 					<div class="image">
-					<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="http://localhost:80/cidade/lojavip/${item.k}.png" />
+					<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${item.k}.png" />
 					</div>
 					<div class="name">${item.nome}</div>
 					<div class="alt"><b class="esquerda">Preço:</b> <b class="direita"><img style="width: 14px; height: 14px;"  src="https://i.imgur.com/7s6CFr7.png"/> ${formatarNumero(item.price)}</b></div>
@@ -111,7 +111,7 @@ const updateCarrosVip2 = () => {
 			<div class="modelContainer">
 				<div class="model" data-name-key="${item.k}">
 					<div class="image">
-					<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="http://localhost:80/cidade/lojavip/${item.k}.png" />
+					<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${item.k}.png" />
 					</div>
 					<div class="name">${item.nome}</div>
 					<div class="alt"><b class="esquerda">Preço:</b> <b class="direita"><img style="width: 14px; height: 14px;"  src="https://i.imgur.com/7s6CFr7.png"/> ${formatarNumero(item.price)}</b></div>
@@ -134,7 +134,7 @@ const updateCarrosVip3 = () => {
 			<div class="modelContainer">
 				<div class="model" data-name-key="${item.k}">
 					<div class="image">
-					<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="http://localhost:80/cidade/lojavip/${item.k}.png" />
+					<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${item.k}.png" />
 					</div>
 					<div class="name">${item.nome}</div>
 					<div class="alt"><b class="esquerda">Preço:</b> <b class="direita"><img style="width: 14px; height: 14px;"  src="https://i.imgur.com/7s6CFr7.png"/> ${formatarNumero(item.price)}</b></div>
@@ -157,7 +157,7 @@ const updateMotosVip = () => {
 			<div class="modelContainer">
 				<div class="model" data-name-key="${item.k}">
 					<div class="image">
-					<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="http://localhost:80/cidade/lojavip/${item.k}.png" />
+					<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${item.k}.png" />
 					</div>
 					<div class="name">${item.nome}</div>
 					<div class="alt"><b class="esquerda">Preço:</b> <b class="direita"><img style="width: 14px; height: 14px;"  src="https://i.imgur.com/7s6CFr7.png"/> ${formatarNumero(item.price)}</b></div>
@@ -180,7 +180,7 @@ const updateAdicionaisVip = () => {
 				<div class="modelContainer">
 					<div class="model" data-name-key="${item.k}">
 						<div class="image">
-						<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="http://localhost:80/cidade/lojavip/${item.k}.png" />
+						<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${item.k}.png" />
 						</div>
 						<div class="name">${item.nome}</div>
 						<div class="alt"><b class="esquerda">Preço:</b> <b class="direita"><img style="width: 14px; height: 14px;"  src="https://i.imgur.com/7s6CFr7.png"/> ${formatarNumero(item.price)}</b></div>
@@ -201,7 +201,7 @@ const updatePacotesVip = () => {
 			<div class="modelContainer">
 				<div class="model" data-name-key="${item.k}">
 					<div class="image">
-					<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="http://localhost:80/cidade/lojavip/${item.k}.png" />
+					<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${item.k}.png" />
 					</div>
 					<div class="name">${item.nome}</div>
 					<div class="alt"><b class="esquerda">Preço:</b> <b class="direita"><img style="width: 14px; height: 14px;"  src="https://i.imgur.com/7s6CFr7.png"/> ${formatarNumero(item.price)}</b></div>
@@ -222,7 +222,7 @@ const updatePossuidosVip = () => {
 			<div class="modelContainer">
 				<div class="model" data-name-key="${item.k}">
 					<div class="image">
-					<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="http://localhost:80/cidade/lojavip/${item.k}.png" />
+					<img style="max-width: 100%; max-height: 132px; width: 890px; height: 470px;" src="https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${item.k}.png" />
 					</div>
 					<div class="name2">${item.nome}</div>
 					<div class="alt"><b class="esquerda">Preço:</b> <b class="direita"><img style="width: 14px; height: 14px;"  src="https://i.imgur.com/pb44970.png"/> ${formatarNumero(item.price)}</b></div>
