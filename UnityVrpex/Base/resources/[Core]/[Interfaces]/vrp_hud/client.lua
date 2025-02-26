@@ -231,7 +231,7 @@ Citizen.CreateThread(function()
 
 			if sBuffer[2] ~= nil and not CintoSeguranca and GetEntitySpeedVector(car,true).y > 1.0 and sBuffer[1] > 10.25 and (sBuffer[2] - sBuffer[1]) > (sBuffer[1] * 0.255) then
 				SetEntityHealth(ped,GetEntityHealth(ped)-10)
-				TaskLeaveVehicle(ped,GetVehiclePedIsIn(ped),4160)
+				--TaskLeaveVehicle(ped,GetVehiclePedIsIn(ped),4160)
 			end
 
 			if IsControlJustReleased(1,47) then
