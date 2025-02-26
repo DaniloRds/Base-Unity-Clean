@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/general.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f1911509d9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container" style="display: none;">
+        <div class="title">
+            <h1>SISTEMA DE FPS <b>BOOST</b></h1>
+        </div>
+        <div class="slides">
+            <div class="slidecontainer">
+                <h1>
+                    <b></b>
+                    <i class="fa-solid fa-percent"></i> diminuir renderização
+                </h1>
+                <input type="range" min="0" max="9" value="1" class="slider" id="distance">
+            </div>
+            <div class="slidecontainer">
+                <h1>
+                    <b></b>
+                    <i class="fa-solid fa-percent"></i> Otimizar luzes
+                </h1>
+                <input type="range" min="0" max="2" value="1" class="slider" id="light">
+            </div>
+            <div class="slidecontainer">
+                <h1>
+                    <b></b>
+                    <i class="fa-solid fa-percent"></i> otimizar textura
+                </h1>
+                <input type="range" min="0" max="2" value="1" class="slider" id="texture">
+            </div>
+            <div class="slidecontainer">
+                <h1>
+                    <b></b>
+                    <i class="fa-solid fa-percent"></i> otimizar sombra
+                </h1>
+                <input type="range" min="0" max="2" value="1" class="slider" id="shadow">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="scripts/general.js"></script>
+
+</html>
