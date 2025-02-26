@@ -157,7 +157,7 @@ var templateTrunkChest = (key, amount, image, name, weight, target) => {
       <span class="amount">${formatarNumero(amount)}</span>
     </div>
     <div class="row">
-      <div class="image" style="background-image: url('http://localhost:80/cidade/inventory/${image}.png');"></div>
+      <div class="image" style="background-image: url('https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${image}.png');"></div>
     </div>
     <div class="row">
       <div class="name">${name} <i>(${(weight * amount).toFixed(2)}kg)</i></div>
