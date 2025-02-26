@@ -338,7 +338,7 @@ const updateMochila = () => {
 
         for(let i = 0; i < itensInv.length; i++) { // SETANDO OS SLOTS
             $('#itens').append(`
-			<div id="item${i}" class="item itemInv"  style="background-image: url('http://localhost:80/cidade/inventory/${itensInv[i].index}.png'); background-size: 100% 100%; background-position: center;"  data-item-key="${itensInv[i].key}" data-item-type="${itensInv[i].type}" data-name-key="${itensInv[i].name}" class="item"></div>
+			<div id="item${i}" class="item itemInv"  style="background-image: url('https://r2.fivemanage.com/3f14FTnNqMTYPNd23NBRQ/images/${itensInv[i].index}.png'); background-size: 100% 100%; background-position: center;"  data-item-key="${itensInv[i].key}" data-item-type="${itensInv[i].type}" data-name-key="${itensInv[i].name}" class="item"></div>
 			`);
             for(let f = 0; f < itensInv.length; f++) {
                 $('#item' + f).html(`
