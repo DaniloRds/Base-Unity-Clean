@@ -27,31 +27,31 @@ local pacotesvip = {}
 Citizen.CreateThread(function()
 	for k,v in pairs(vRP.vehicleGlobal()) do 
 		if v.tipo == "carrosvip1" then
-			local vehicle = vRP.query("creative/get_estoque",{ vehicle = k })
+			local vehicle = vRP.query("creative/get_estoque_vip",{ vehicle = k })
 			if vehicle[1] ~= nil then
 				local bau = vRP.vehicleMala(k) or 50
-				table.insert(carrosvip1,{ k = k, nome = v.name, price = v.price2, chest = parseInt(bau), stock = parseInt(vehicle[1].quantidade)})
+				table.insert(carrosvip1,{ k = k, nome = v.name, price = v.price2, chest = parseInt(bau), stock = parseInt(vehicle[1].estoque)})
 			end
 		end
 		if v.tipo == "carrosvip2" then
-			local vehicle = vRP.query("creative/get_estoque",{ vehicle = k })
+			local vehicle = vRP.query("creative/get_estoque_vip",{ vehicle = k })
 			if vehicle[1] ~= nil then
 				local bau = vRP.vehicleMala(k) or 50
-				table.insert(carrosvip2,{ k = k, nome = v.name, price = v.price2, chest = parseInt(bau), stock = parseInt(vehicle[1].quantidade)})
+				table.insert(carrosvip2,{ k = k, nome = v.name, price = v.price2, chest = parseInt(bau), stock = parseInt(vehicle[1].estoque)})
 			end
 		end
 		if v.tipo == "carrosvip3" then
-			local vehicle = vRP.query("creative/get_estoque",{ vehicle = k })
+			local vehicle = vRP.query("creative/get_estoque_vip",{ vehicle = k })
 			if vehicle[1] ~= nil then
 				local bau = vRP.vehicleMala(k) or 50
-				table.insert(carrosvip3,{ k = k, nome = v.name, price = v.price2, chest = parseInt(bau), stock = parseInt(vehicle[1].quantidade)})
+				table.insert(carrosvip3,{ k = k, nome = v.name, price = v.price2, chest = parseInt(bau), stock = parseInt(vehicle[1].estoque)})
 			end
 		end
 		if v.tipo == "motosvip" then
-			local vehicle = vRP.query("creative/get_estoque",{ vehicle = k })
+			local vehicle = vRP.query("creative/get_estoque_vip",{ vehicle = k })
 			if vehicle[1] ~= nil then
 				local bau = vRP.vehicleMala(k) or 50
-				table.insert(motosvip,{ k = k, nome = v.name, price = v.price2, chest = parseInt(bau), stock = parseInt(vehicle[1].quantidade)})
+				table.insert(motosvip,{ k = k, nome = v.name, price = v.price2, chest = parseInt(bau), stock = parseInt(vehicle[1].estoque)})
 			end
 		end
 	end
@@ -78,10 +78,10 @@ function src.updateVehicles(vname,vehtype)
 		for k,v in pairs(carrosvip1) do
 			if v.k == vname then
 				table.remove(carrosvip1,k)
-				local vehicle = vRP.query("creative/get_estoque",{ vehicle = vname })
+				local vehicle = vRP.query("creative/get_estoque_vip",{ vehicle = vname })
 				if vehicle[1] ~= nil then
 					local bau = vRP.vehicleMala(vname) or 50
-					table.insert(carrosvip1,{ k = vname, nome = vRP.vehicleName(vname), price = (vRP.vehiclePrice2(vname)), chest = parseInt(bau), stock = parseInt(vehicle[1].quantidade)})
+					table.insert(carrosvip1,{ k = vname, nome = vRP.vehicleName(vname), price = (vRP.vehiclePrice2(vname)), chest = parseInt(bau), stock = parseInt(vehicle[1].estoque)})
 				end
 			end
 		end
@@ -89,10 +89,10 @@ function src.updateVehicles(vname,vehtype)
 		for k,v in pairs(carrosvip2) do
 			if v.k == vname then
 				table.remove(carrosvip2,k)
-				local vehicle = vRP.query("creative/get_estoque",{ vehicle = vname })
+				local vehicle = vRP.query("creative/get_estoque_vip",{ vehicle = vname })
 				if vehicle[1] ~= nil then
 					local bau = vRP.vehicleMala(vname) or 50
-					table.insert(carrosvip2,{ k = vname, nome = vRP.vehicleName(vname), price = vRP.vehiclePrice2(vname), chest = parseInt(bau), stock = parseInt(vehicle[1].quantidade)})
+					table.insert(carrosvip2,{ k = vname, nome = vRP.vehicleName(vname), price = vRP.vehiclePrice2(vname), chest = parseInt(bau), stock = parseInt(vehicle[1].estoque)})
 				end
 			end
 		end
@@ -100,10 +100,10 @@ function src.updateVehicles(vname,vehtype)
 		for k,v in pairs(carrosvip3) do
 			if v.k == vname then
 				table.remove(carrosvip3,k)
-				local vehicle = vRP.query("creative/get_estoque",{ vehicle = vname })
+				local vehicle = vRP.query("creative/get_estoque_vip",{ vehicle = vname })
 				if vehicle[1] ~= nil then
 					local bau = vRP.vehicleMala(vname) or 50
-					table.insert(carrosvip3,{ k = vname, nome = vRP.vehicleName(vname), price = vRP.vehiclePrice2(vname), chest = parseInt(bau), stock = parseInt(vehicle[1].quantidade)})
+					table.insert(carrosvip3,{ k = vname, nome = vRP.vehicleName(vname), price = vRP.vehiclePrice2(vname), chest = parseInt(bau), stock = parseInt(vehicle[1].estoque)})
 				end
 			end
 		end
@@ -111,10 +111,10 @@ function src.updateVehicles(vname,vehtype)
 		for k,v in pairs(motosvip) do
 			if v.k == vname then
 				table.remove(motosvip,k)
-				local vehicle = vRP.query("creative/get_estoque",{ vehicle = vname })
+				local vehicle = vRP.query("creative/get_estoque_vip",{ vehicle = vname })
 				if vehicle[1] ~= nil then
 					local bau = vRP.vehicleMala(vname) or 50
-					table.insert(motosvip,{ k = vname, nome = vRP.vehicleName(vname), price = vRP.vehiclePrice2(vname), chest = parseInt(bau), stock = parseInt(vehicle[1].quantidade)})
+					table.insert(motosvip,{ k = vname, nome = vRP.vehicleName(vname), price = vRP.vehiclePrice2(vname), chest = parseInt(bau), stock = parseInt(vehicle[1].estoque)})
 				end
 			end
 		end
@@ -218,7 +218,18 @@ function src.buyShop(name)
 	local user_id = vRP.getUserId(source)
 
 	if user_id then
-		if vRP.itemVipType(name) == "adicionaisvip" then
+		local itensVip = vRP.itemVip()
+		local verifyItens = false
+		local typeItem = ""
+
+		for k,v in pairs(itensVip) do
+			if name == k then
+				verifyItens = true
+				typeItem = v.tipo
+			end
+		end
+
+		if verifyItens and typeItem == "adicionaisvip" then
 			if name == "valemansao" then
 				if vRP.tryPaymentCoin(user_id,parseInt(vRP.itemVipPrice(name))) then
 					vRP.giveInventoryItem(user_id,"valemansao",1)
@@ -244,6 +255,8 @@ function src.buyShop(name)
 				if vRP.tryPaymentCoin(user_id,parseInt(vRP.itemVipPrice(name))) then
 					vRP.giveBankMoney(user_id,parseInt(vRP.itemVipPrice2(name)))
 					TriggerClientEvent("Notify",source,"compras","Você comprou $ <b>"..vRP.format(parseInt(vRP.itemVipPrice2(name))).." Dólares</b> por <b> "..vRP.format(parseInt(vRP.itemVipPrice(name))).." Moedas</b>.",10000)
+				else
+					TriggerClientEvent("Notify",source,"negado","Moedas Insuficiente.",10000)
 				end
 			end
 
@@ -257,7 +270,7 @@ function src.buyShop(name)
 -- PARA ADICIONAR ESSES COMANDOS BASTA COLOCALOS ABAIXO DE vRP.insertNewVip NO VIP QUE DESEJA.
 
 
-		elseif vRP.itemVipType(name) == "pkgvips" then
+		elseif verifyItens and typeItem == "pkgvips" then
 			if name == "pacoteVip1" then 
 				if not vRP.getVipActive(user_id) then
 					if vRP.tryPaymentCoin(user_id,parseInt(vRP.itemVipPrice(name))) then
@@ -342,13 +355,14 @@ function src.buyShop(name)
 				TriggerClientEvent("Notify",source,"importante","Você já possui um <b>"..vRP.vehicleName(name).."</b> em sua garagem.",10000)
 				return
 			else
-				local rows2 = vRP.query("creative/get_estoque",{ vehicle = name })
-				if parseInt(rows2[1].quantidade) <= 0 then
+				local rows2 = vRP.query("creative/get_estoque_vip",{ vehicle = name })
+				if parseInt(rows2[1].estoque) <= 0 then
 					TriggerClientEvent("Notify",source,"aviso","Estoque de <b>"..vRP.vehicleName(name).."</b> indisponivel.",8000)
 					return
 				end
 				if vRP.tryPaymentCoin(user_id,vRP.vehiclePrice2(name)*1) then
-					vRP.execute("creative/set_estoque",{ vehicle = name, quantidade = parseInt(rows2[1].quantidade) - 1 })
+					print(parseInt(rows2[1].estoque),name)
+					vRP.execute("creative/set_estoque_vip",{ vehicle = name, estoque = (parseInt(rows2[1].estoque) - 1) })
 					vRP.execute("creative/add_vehicle",{ user_id = parseInt(user_id), vehicle = name, ipva = os.time() })
 					TriggerClientEvent("Notify",source,"compras","Você comprou um <b>"..vRP.vehicleName(name).."</b> por <b> "..vRP.format(parseInt(vRP.vehiclePrice2(name)*1)).." moedas</b>.",10000)
 					src.updateVehicles(name,vRP.vehicleType(name))
@@ -377,12 +391,12 @@ function src.sellShop(name)
 	local user_id = vRP.getUserId(source)
 	if user_id then
 		local vehicle = vRP.query("creative/get_vehicles",{ user_id = parseInt(user_id), vehicle = name })
-		local rows2 = vRP.query("creative/get_estoque",{ vehicle = name })
+		local rows2 = vRP.query("creative/get_estoque_vip",{ vehicle = name })
 		if vehicle[1] then
 			vRP.execute("creative/rem_vehicle",{ user_id = parseInt(user_id), vehicle = name })
 			vRP.execute("creative/rem_srv_data",{ dkey = "custom:u"..parseInt(user_id).."veh_"..name })
 			vRP.execute("creative/rem_srv_data",{ dkey = "chest:u"..parseInt(user_id).."veh_"..name })
-			vRP.execute("creative/set_estoque",{ vehicle = name, quantidade = parseInt(rows2[1].quantidade) + 1 })
+			vRP.execute("creative/set_estoque_vip",{ vehicle = name, estoque = parseInt(rows2[1].estoque) + 1 })
 			vRP.giveBankMoney(user_id,parseInt(vRP.vehiclePrice(name)))
 			TriggerClientEvent("Notify",source,"sucesso","Você vendeu um <b>"..vRP.vehicleName(name).."</b> por <b>$"..vRP.format(parseInt(vRP.vehiclePrice(name)*1)).." $</b>.",10000)
 			src.updateVehicles(name,vRP.vehicleType(name))
