@@ -22,8 +22,8 @@ vRP.prepare("creative/move_vehicle","UPDATE vrp_user_vehicles SET user_id = @nus
 vRP.prepare("creative/add_vehicle","INSERT IGNORE INTO vrp_user_vehicles(user_id,vehicle,ipva) VALUES(@user_id,@vehicle,@ipva)")
 vRP.prepare("creative/con_maxvehs","SELECT COUNT(vehicle) as qtd FROM vrp_user_vehicles WHERE user_id = @user_id")
 vRP.prepare("creative/rem_srv_data","DELETE FROM vrp_srv_data WHERE dkey = @dkey")
-vRP.prepare("creative/get_estoque","SELECT * FROM vrp_lojavip WHERE vehicle = @vehicle")
-vRP.prepare("creative/set_estoque","UPDATE vrp_estoque SET quantidade = @quantidade WHERE vehicle = @vehicle")
+vRP.prepare("creative/get_estoque","SELECT * FROM vrp_estoque WHERE vehicle = @vehicle")
+vRP.prepare("creative/set_estoque","UPDATE vrp_estoque SET estoque = @estoque WHERE vehicle = @vehicle")
 vRP.prepare("creative/get_users","SELECT * FROM vrp_users WHERE id = @user_id")
 vRP.prepare("creative/up_garage","UPDATE vrp_users SET garagem = @garagem WHERE id = @id")
 ------------------------------------------------------------
@@ -34,3 +34,5 @@ vRP.prepare("vRP/userid","SELECT user_id FROM vrp_user_ids WHERE identifier = @i
 vRP.prepare("vRP/get_user_vip_active","SELECT user_id FROM vrp_vips WHERE user_id = @user_id AND data_contrat <= @data_contrat")
 vRP.prepare("vRP/insert_new_vip","INSERT IGNORE INTO vrp_vips(user_id,vipName,data_contrat) VALUES (@user_id,@vipName,@data_contrat)")
 vRP.prepare("vRP/delete_user_vip","DELETE FROM vrp_vips WHERE user_id = @user_id")
+vRP.prepare("creative/get_estoque_vip","SELECT * FROM vrp_lojavip WHERE vehicle = @vehicle")
+vRP.prepare("creative/set_estoque_vip","UPDATE vrp_lojavip SET estoque = @estoque WHERE vehicle = @vehicle")
