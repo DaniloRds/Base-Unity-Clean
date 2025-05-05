@@ -844,12 +844,11 @@ end)
 RegisterCommand('cdsh',function(source,args,rawCommand)
 	local user_id = vRP.getUserId(source)
 	if vRP.hasPermission(user_id,"admin.permissao") then
-		local x,y,z = vRPclient.getPosition(source)
-		local lugar = vRP.prompt(source,"Lugar:","")
-		if lugar == "" then
-			return
-		end
-	    SendWebhookMessage(webhookcds,"```prolog\n[PASSAPORTE]: "..user_id.." \n[LUGAR]: "..lugar.." \n[CDSH]: ['x'] = "..tD(x)..", ['y'] = "..tD(y)..", ['z'] = "..tD(z)..", ['name'] = "..lugar..", \r```")
+		local x, y, z = vRPclient.getPosition(source)
+		local h = GetEntityHeading(GetPlayerPed(source))
+		local coords = "['x'] = "..tD(x)..", ['y'] = "..tD(y)..", ['z'] = "..tD(z)..", ['h'] = "..tD(h)..", ['name'] = 'Local Atual'"
+		vRP.prompt(source, "Coordenadas:", coords)
+		--SendWebhookMessage(webhookcds,"```prolog\n[PASSAPORTE]: "..user_id.." \n[CDSH]: "..coords.." \r```")
 	end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
