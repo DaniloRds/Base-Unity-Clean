@@ -33,30 +33,29 @@ AddEventHandler('DropSystem:drop',function(item,count)
 end)
 
 RegisterServerEvent('DropSystem:take')
-AddEventHandler('DropSystem:take',function(id)
+AddEventHandler('DropSystem:take', function(id)
 	local source = source
 	local user_id = vRP.getUserId(source)
-	if user_id then
-		if items[id] ~= nil then
-			local new_weight = vRP.getInventoryWeight(user_id)+vRP.getItemWeight(items[id].item)*items[id].count
-			if new_weight <= vRP.getInventoryMaxWeight(user_id) then
-				if items[id] == nil then
-					return
-				end
-				local d = items[id]
-				items[id] = nil
+	if user_id == nil then return end    
+	if items[id] == nil then return end
+	       	
+	local itemData = items[id]       
+	items[id] = nil -- Remove o item do array global imediatamente, para evitar dup.
 
-				vRP.giveInventoryItem(user_id,d.item,d.count)
-				vRPclient._playAnim(source,true,{{"pickup_object","pickup_low"}},false)
-				local identity = vRP.getUserIdentity(user_id)
-				SendWebhookMessage(webhookpegaritem,"```prolog\n[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[PEGOU]: "..d.name.." \n[QUANTIDADE]: "..d.count.." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
-				markers_ids:free(id)
-				TriggerClientEvent('DropSystem:remove',-1,id)
-			else
-				TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.")
-			end
-		end
+	
+	if vRP.getInventoryWeight(user_id) + vRP.getItemWeight(itemData.item) * itemData.count > vRP.getInventoryMaxWeight(user_id) then
+		items[id] = itemData -- Retorna ao Array global
+		TriggerClientEvent("Notify", source, "negado", "<b>Mochila</b> cheia.")
+		return
 	end
+	
+	-- Dá o item ao jogador
+	vRP.giveInventoryItem(user_id, itemData.item, itemData.count)
+	vRPclient._playAnim(source, true, {{"pickup_object","pickup_low"}}, false)  
+	local identity = vRP.getUserIdentity(user_id)
+	SendWebhookMessage(webhookpegaritem,"```prolog\n[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[PEGOU]: "..itemData.name.." \n[QUANTIDADE]: "..itemData.count.." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")   		                                          
+	markers_ids:free(id)
+	TriggerClientEvent('DropSystem:remove', -1, id)			
 end)
 
 Citizen.CreateThread(function()
