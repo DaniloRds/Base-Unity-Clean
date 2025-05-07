@@ -2,7 +2,7 @@
 
 echo ===---------[BASE UNITY]---------===
 echo     Base Vrpex (final version)
-echo     Bugs Fixed Version: 3.0.3
+echo     Bugs Fixed Version: 3.0.4
 echo     Developed by: Unity Dev 
 echo     Discord: discord.gg/kYFy8JwVfd
 echo ===---------------------------------===
