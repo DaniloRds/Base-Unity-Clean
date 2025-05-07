@@ -149,12 +149,14 @@ function func.takePhoto()
 	local source = source
 	local user_id = vRP.getUserId(source)
 	local teste = fclient.requestPhoto(source,config.webhook, true)
-	if teste then
-	end
-	for k,v in pairs(teste.attachments) do
-		for l,w in pairs(v) do
-			if l == "url" then
-				vRP.execute('vRP/updatePhoto', {user_id = user_id, foto = w})		
+	if not teste then
+		print("[ERRO] - VOCÊ PRECISA CONFIGURAR UMA WEBHOOK EM [vrp_identity/config/config.lua] PARA SALVAR AS FOTOS.")
+	else
+		for k,v in pairs(teste.attachments) do	
+			for l,w in pairs(v) do
+				if l == "url" then
+					vRP.execute('vRP/updatePhoto', {user_id = user_id, foto = w})		
+				end
 			end
 		end
 	end
