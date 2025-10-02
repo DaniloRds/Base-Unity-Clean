@@ -97,7 +97,7 @@ function TriggerCamController(statusSent)
 		SetCamCoord(cam,vector3(402.6,-997.2,-98.3))
 		SetCamRot(cam,f(0),f(0),f(358),15)
 		SetCamActive(cam,true)
-		RenderScriptCams(true,true,20000000000000000000000000,0,0,0)
+		RenderScriptCams(true, true, 2000, true, true, true)
 	end
 end
 
